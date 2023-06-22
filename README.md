@@ -1,0 +1,23 @@
+## System Design
+
+- client, server, and model
+- networks protocols
+- storage
+- latency and throughput
+- availability and consistency
+- caching
+- proxies
+- load balancing
+- hashing
+- SQL and NoSQL
+- replication and sharding
+- leader election
+- P2P
+- polling and streaming
+- configuration
+- rate limiting
+- logging and monitoring
+- publish/subscribe
+- map reduce
+- security and HTTPS
+- API design
