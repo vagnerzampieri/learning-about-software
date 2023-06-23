@@ -43,5 +43,8 @@
 
 2 - Faz um primeiro high level design (buy in)
   - seria um primeiro rascunho do que seria o sistema, validando com o cliente
-  
-[reference miro](https://miro.com/app/board/uXjVORFgFfA=/)
+
+### References:
+
+- [miro](https://miro.com/app/board/uXjVORFgFfA=/)
+- [architectural katas](https://nealford.com/katas/list.html)
