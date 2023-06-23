@@ -28,7 +28,8 @@
 ### Example: Feed News
 
 [SYSTEM DESIGN: ALÉM DA ENTREVISTA](https://www.youtube.com/watch?v=-8tdjn30SSw)
-![Feed News](./images/feed-news-v1.png)
+![Feed News - v1](./images/feed-news-v1.png)
+![Feed News - v2](./images/feed-news-v2.png)
 
 1 - Questionar
   - mobile? web? app?
@@ -42,3 +43,5 @@
 
 2 - Faz um primeiro high level design (buy in)
   - seria um primeiro rascunho do que seria o sistema, validando com o cliente
+  
+[reference miro](https://miro.com/app/board/uXjVORFgFfA=/)
