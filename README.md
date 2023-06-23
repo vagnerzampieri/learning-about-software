@@ -4,7 +4,7 @@
 - networks protocols
 - storage
 - latency and throughput
-- availability and consistency
+- higher availability and consistency
 - caching
 - proxies
 - load balancing
@@ -21,3 +21,23 @@
 - map reduce
 - security and HTTPS
 - API design
+- elasticity and scalability
+  - elasticity: sazionalidade de picos
+  - scalability: quantia do DAU
+
+### Example: Feed News
+
+![Feed News](./images/feed-news-v1.png)
+
+1 - Questionar
+  - mobile? web? app?
+    - tudo
+  - quais são as features mais importantes?
+    - post / ver notícias dos amigos
+  - quantos usuários vão usar a aplicação por dia? volume de tráfego?
+    - 10 milhões de DAU (daily active users)
+  - pode ter imagem? vídeo? gif?
+    - sim
+
+2 - Faz um primeiro high level design (buy in)
+  - seria um primeiro rascunho do que seria o sistema, validando com o cliente
