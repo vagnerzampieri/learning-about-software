@@ -44,6 +44,10 @@
 2 - Faz um primeiro high level design (buy in)
   - seria um primeiro rascunho do que seria o sistema, validando com o cliente
 
+### Videos:
+
+  - [20 System Design Concepts Explained in 10 Minutes](https://www.youtube.com/watch?v=i53Gi_K3o7I)
+
 ### References:
 
 - [miro](https://miro.com/app/board/uXjVORFgFfA=/)
