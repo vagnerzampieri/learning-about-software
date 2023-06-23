@@ -27,6 +27,7 @@
 
 ### Example: Feed News
 
+[SYSTEM DESIGN: ALÉM DA ENTREVISTA](https://www.youtube.com/watch?v=-8tdjn30SSw)
 ![Feed News](./images/feed-news-v1.png)
 
 1 - Questionar
