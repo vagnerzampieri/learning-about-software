@@ -41,3 +41,46 @@
     - não será um sistema com alto índice de leitura e escrita.
     - precisa guardar os comprovantes de pagamento.
     - poderá receber em dinheiro, cartão de crédito, débito e pix.
+    - é necessário uma aplicação web e mobile.
+
+### Modelagem do banco de dados
+
+- Parking
+  - name
+  - address
+  - zipcode
+  - city
+  - state
+  - complement
+
+- Parking Space
+  - name
+  - type (bike, car, motorcycle, large car)
+  - parking_id
+  
+- Employee
+  - role
+  - parking_id
+
+- Customer
+  - name
+  - email
+  - phone
+
+- Vehicle
+  - type (bike, car, motorcycle, large car)
+  - license_plate
+  - customer_id
+
+- Reservation
+  - customer_id
+  - parking_space_id
+  - vehicle_id
+  - start_date
+  - end_date
+  - payment_id
+  
+- Payment
+  - type (cash, credit card, debit card, pix)
+  - state (paid, pending, canceled)
+  - external_id
