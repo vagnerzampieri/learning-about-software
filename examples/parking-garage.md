@@ -1,0 +1,43 @@
+## Example: Parking Garage
+
+[Amazon System Design Interview: Design Parking Garage](https://www.youtube.com/watch?v=NtMvNh0WFVM)
+
+- Qual é o objetivo principal do sistema?
+  - reservar uma vaga de estacionamento.
+- Quem serão os usuários do sistema e quais são suas necessidades?
+  - cliente: alocar uma vaga no estacionamento em uma determinada data para o seu veículo.
+  - funcionário: gerenciar as vagas do estacionamento.
+- Quais são os requisitos funcionais e não funcionais do sistema?
+  - requisitos funcionais:
+    - o cliente deve ser capaz de:
+      - se cadastrar no sistema.
+      - cadastrar um ou vários veículos.
+      - reservar uma vaga de estacionamento em uma determinada data.
+      - fazer o pagamento da reserva.
+      - cancelar uma reserva.
+      - visualizar as vagas disponíveis.
+      - receber um comprovante de pagamento.
+    - o funcionário deve ser capaz de:
+      - adicionar uma vaga.
+      - cadastrar algum cliente.
+      - cadastrar algum veículo.
+      - reservar uma vaga para algum cliente.
+      - cancelar uma reserva.
+      - visualizar as vagas disponíveis.
+      - remover uma ou mais vagas.
+      - emitir comprovante de pagamento.
+      - cadastrar algum funcionário.
+  - requisitos não funcionais o sistema deve ser:
+    - consistente.
+    - altamente disponível.
+    - tolerante a falhas.
+    - escalável.
+    - seguro. 
+  - Qual é a escala do sistema? Quantos usuários ele precisa suportar?
+    - não foi especificado.
+  - Quais as considerações técnicas gerais?
+    - será usado um banco de dados relacional para armazenar os dados dos clientes, veículos, vagas e reservas.
+    - será usado um meio de pagamento como stripe ou paypal para processar os pagamentos.
+    - não será um sistema com alto índice de leitura e escrita.
+    - precisa guardar os comprovantes de pagamento.
+    - poderá receber em dinheiro, cartão de crédito, débito e pix.

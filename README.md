@@ -46,46 +46,13 @@
   - Como você irá documentar o sistema e compartilhar conhecimento sobre sua arquitetura e funcionamento?
 
 ### Example: Feed News
-[SYSTEM DESIGN: ALÉM DA ENTREVISTA](https://www.youtube.com/watch?v=-8tdjn30SSw)
-![Feed News - v1](./images/feed-news-v1.png)
-![Feed News - v2](./images/feed-news-v2.png)
+  
+  [Link para o exemplo](examples/feed-news.md)
 
 ### Example: Parking Garage
-[Amazon System Design Interview: Design Parking Garage
-](https://www.youtube.com/watch?v=NtMvNh0WFVM)
+  
+  [Link para o exemplo](examples/parking-garage.md)
 
-- Qual é o objetivo principal do sistema?
-  - reservar uma vaga de estacionamento.
-- Quem serão os usuários do sistema e quais são suas necessidades?
-  - cliente: alocar uma vaga no estacionamento em uma determinada data para o seu veículo.
-  - funcionário: gerenciar as vagas do estacionamento.
-- Quais são os requisitos funcionais e não funcionais do sistema?
-  - requisitos funcionais:
-    - o cliente deve ser capaz de:
-      - se cadastrar no sistema.
-      - cadastrar um ou vários veículos.
-      - reservar uma vaga de estacionamento em uma determinada data.
-      - fazer o pagamento da reserva.
-      - cancelar uma reserva.
-      - visualizar as vagas disponíveis.
-      - receber um comprovante de pagamento.
-    - o funcionário deve ser capaz de:
-      - adicionar uma vaga.
-      - cadastrar algum cliente.
-      - cadastrar algum veículo.
-      - reservar uma vaga para algum cliente.
-      - cancelar uma reserva.
-      - visualizar as vagas disponíveis.
-      - remover uma ou mais vagas.
-      - emitir comprovante de pagamento.
-      - cadastrar algum funcionário.
-  - requisitos não funcionais:
-    - o sistema deve ser altamente disponível.
-    - o sistema deve ser tolerante a falhas.
-    - o sistema deve ser escalável.
-    - o sistema deve ser seguro. 
-  - Qual é a escala do sistema? Quantos usuários ele precisa suportar?
-    - não foi especificado.
 ### Videos:
 
   - [20 System Design Concepts Explained in 10 Minutes](https://www.youtube.com/watch?v=i53Gi_K3o7I)
