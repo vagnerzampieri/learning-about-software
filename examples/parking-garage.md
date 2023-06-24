@@ -84,3 +84,7 @@
   - type (cash, credit card, debit card, pix)
   - state (paid, pending, canceled)
   - external_id
+  
+### Diagrama
+
+![Parking Garage - v1](../images/parking-garage-v1.png)
