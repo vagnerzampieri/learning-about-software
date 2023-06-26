@@ -59,10 +59,13 @@
   - parking_id
   
 - Employee
+  - name
   - role
   - parking_id
+  - login
+  - password
 
-- Customer
+- Customer (oauth gmail, microsoft, facebook)
   - name
   - email
   - phone
@@ -105,7 +108,110 @@
   - body:
     - external_id*
     - state*
+  - considerações: o sistema irá atualizar o estado do pagamento.
+
+- GET /reservations
+  - params:
+    - customer_name
+    - payment_state
+    - start_date
+    - end_date
+  - considerações: o sistema irá retornar as reservas de acordo com os filtros.
   
+- GET /reservations/:id
+  - considerações: o sistema irá retornar os detalhes da reserva.
+
+- POST /signup?parking_id=ID
+  - considerações: o sistema irá cadastrar um novo cliente usando oath.
+
+- POST /login
+  - considerações: o sistema irá autenticar o cliente usando oath.
+
+- POST /customer/vehicles
+  - body:
+    - type*
+    - license_plate*
+    - customer_id*
+  - considerações: o sistema irá cadastrar um novo veículo.
+
+- GET /customer/vehicles/
+  - params:
+    - type
+    - license_plate
+  - considerações: o sistema irá retornar os veículos de acordo com os filtros.
+
+- GET /customer/vehicles/:id
+  - considerações: o sistema irá retornar os detalhes do veículo.
+
+- GET /vehicles
+  - params:
+    - type
+    - license_plate
+  - considerações: o sistema irá retornar os veículos de acordo com os filtros. 
+
+- POST /parkings
+  - body:
+    - name*
+    - address*
+    - zipcode*
+    - city*
+    - state*
+    - complement
+  - considerações: o sistema irá cadastrar um novo estacionamento.
+
+- POST /parking_spaces
+  - body:
+    - name*
+    - type*
+    - parking_id*
+  - considerações: o sistema irá cadastrar uma nova vaga.
+
+- POST /parking_spaces/bulk
+  - body:
+    - name*
+    - type*
+    - parking_id*
+  - considerações: o sistema irá cadastrar várias vagas. Essas vagas serão cadastradas em um arquivo csv.
+
+- GET /parking_spaces
+  - params:
+    - type
+    - name
+  - considerações: o sistema irá retornar as vagas de acordo com os filtros.
+
+- GET /parking_spaces/:id
+  - considerações: o sistema irá retornar os detalhes da vaga.
+
+- POST /employees
+  - body:
+    - name*
+    - role*
+    - parking_id*
+    - login*
+    - pawssword*
+  - considerações: o sistema irá cadastrar um novo funcionário. Pode ser usado uma ferramenta como o Devise. 
+
+- GET /employees
+  - params:
+    - name
+    - role
+    - parking_id
+  - considerações: o sistema irá retornar os funcionários de acordo com os filtros.
+
+- GET /employees/:id
+  - considerações: o sistema irá retornar os detalhes do funcionário.
+
+- POST /prices/bulk
+  - body:
+    - parking_id*
+    - type*
+    - amount*
+  - considerações: o sistema irá cadastrar os preços das vagas. Esses preços serão cadastrados em um arquivo csv.
+
+- GET /prices
+  - considerações: o sistema irá retornar os preços das vagas.
+
+
 ### Diagrama
 
 ![Parking Garage - v1](../images/parking-garage-v1.png)
