@@ -84,6 +84,27 @@
   - type (cash, credit card, debit card, pix)
   - state (paid, pending, canceled)
   - external_id
+  - amount
+
+- Price
+  - parking_id
+  - type (bike, car, motorcycle, large car)
+  - amount
+
+### Endpoints
+
+- POST /reservations
+  - body:
+    - customer_id*
+    - vehicle_id*
+    - start_date*
+    - end_date
+  - considerações: o parking_space será definido pelo tamanho do veículo e disponibilidade para o horário. Caso não tenha, será informado pelo sistema. Não é necessário cadastrar uma data final. O sistema irá calcular o valor total da reserva.
+  
+- POST /webhooks/payments
+  - body:
+    - external_id*
+    - state*
   
 ### Diagrama
 
