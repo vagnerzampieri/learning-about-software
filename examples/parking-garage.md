@@ -214,4 +214,5 @@
 
 ### Diagrama
 
-![Parking Garage - v1](../images/parking-garage-v1.png)
+![Parking Garage - customer reservations - v1](../images/parking-garage-v1.png)
+![Parking garage - show reservations](../images/parking-garage-show-reservations.png)
