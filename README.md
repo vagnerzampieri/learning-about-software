@@ -110,9 +110,18 @@
 - map reduce
 - security and HTTPS
 - API design
-- elasticity and scalability
-  - elasticity: sazionalidade de picos
-  - scalability: quantia do DAU
+- idempotency
+<details>
+  <summary>elasticity and scalability</summary>
+
+  Elasticidade e escalabilidade são dois conceitos relacionados à capacidade de expansão e adaptação de sistemas e recursos computacionais. Ambos são importantes para lidar com demandas variáveis e crescentes, mas possuem diferenças sutis. Vamos entender melhor cada um deles:
+
+  1. Elasticidade: A elasticidade refere-se à capacidade de um sistema se adaptar dinamicamente às mudanças de carga ou demanda. Isso envolve aumentar ou diminuir automaticamente os recursos, como capacidade de processamento, armazenamento e largura de banda, de acordo com as necessidades em tempo real. A elasticidade permite que um sistema dimensione seus recursos de forma dinâmica para lidar com picos de demanda, garantindo um desempenho adequado e evitando sobrecarga ou desperdício de recursos em períodos de baixa demanda. Por exemplo, em serviços de nuvem, a elasticidade permite que os recursos computacionais sejam dimensionados automaticamente com base na carga de trabalho atual.
+
+  2. Escalabilidade: A escalabilidade refere-se à capacidade de um sistema aumentar sua capacidade para atender a uma demanda crescente. Ela envolve adicionar recursos adicionais, como servidores, nós de processamento, bancos de dados ou infraestrutura de rede, para acomodar um número maior de usuários, maior volume de dados ou cargas de trabalho mais intensivas. A escalabilidade pode ser alcançada de forma vertical (escalabilidade vertical) ou horizontal (escalabilidade horizontal). A escalabilidade vertical envolve aumentar a capacidade dos recursos existentes, como adicionar mais memória ou processadores a um servidor. Já a escalabilidade horizontal envolve adicionar mais instâncias de recursos, como adicionar mais servidores ao sistema. A escalabilidade é geralmente planejada e implementada antes que o aumento da demanda ocorra, garantindo que o sistema possa crescer conforme necessário.
+
+  Em resumo, a elasticidade está relacionada à capacidade de um sistema se ajustar de forma dinâmica às mudanças na demanda em tempo real, enquanto a escalabilidade está relacionada à capacidade de um sistema crescer de forma planejada e adicionar recursos adicionais para acomodar um aumento na demanda ao longo do tempo. Ambos os conceitos são cruciais para sistemas e serviços modernos, permitindo que sejam flexíveis, responsivos e capazes de lidar com cargas de trabalho variáveis.
+</details>
 
 ### Perguntas para entender o problema
 
