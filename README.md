@@ -95,8 +95,38 @@
   O caching é uma técnica poderosa para melhorar o desempenho, reduzir a carga em sistemas e otimizar a experiência do usuário, tornando o acesso a dados frequentes mais rápido e eficiente.
 </details>
 
-- proxies
-- load balancing
+<details>
+  <summary>proxies</summary>
+
+  Proxies (ou servidores proxy) são intermediários entre os clientes e os servidores de destino em uma rede. Eles atuam como uma camada intermediária que recebe as solicitações dos clientes e encaminha essas solicitações aos servidores de destino, agindo em nome dos clientes. Os proxies podem desempenhar várias funções e oferecer diferentes benefícios. Vamos explorar algumas delas:
+
+  1. Anonimato e privacidade: Um proxy pode ocultar o endereço IP do cliente, substituindo-o pelo seu próprio endereço IP. Isso proporciona anonimato e privacidade ao navegar na Internet, pois os servidores de destino não têm conhecimento direto do endereço IP do cliente original.
+
+  2. Cache e aceleração de conteúdo: Os proxies podem armazenar em cache as respostas de servidores de destino para solicitações comuns. Quando um cliente faz uma solicitação semelhante, o proxy pode fornecer a resposta armazenada em cache em vez de encaminhar a solicitação ao servidor de destino novamente. Isso reduz o tempo de resposta e economiza largura de banda.
+
+  3. Filtragem de conteúdo: Proxies podem ser usados para filtrar e bloquear certos tipos de conteúdo indesejado, como sites maliciosos, spam, anúncios ou conteúdo inapropriado. Isso é útil em ambientes corporativos ou em redes públicas para proteger os usuários contra ameaças e garantir o cumprimento de políticas de uso aceitável.
+
+  4. Balanceamento de carga: Proxies também podem ser usados para distribuir o tráfego de entrada entre vários servidores de destino, distribuindo a carga de trabalho de forma mais equilibrada. Isso melhora o desempenho e a disponibilidade, evitando sobrecarga de servidores individuais.
+
+  5. Controle de acesso: Os proxies podem ser configurados para controlar o acesso a recursos específicos, permitindo ou negando solicitações com base em regras de segurança ou políticas de acesso. Isso ajuda a reforçar a segurança da rede e proteger os recursos contra acessos não autorizados.
+
+  Existem diferentes tipos de proxies, como proxies HTTP, proxies SOCKS, proxies reversos e proxies transparentes, cada um com suas características específicas e casos de uso. Os proxies podem ser implementados em hardware dedicado ou como software em sistemas ou dispositivos específicos.
+
+  É importante mencionar que o uso de proxies também pode apresentar desvantagens, como a possível introdução de um ponto único de falha, impacto na latência das comunicações devido à introdução de um nó intermediário e a necessidade de configurar corretamente as políticas e regras de proxy para evitar problemas de acesso ou desempenho.
+
+  Em resumo, os proxies desempenham um papel importante na rede, fornecendo funcionalidades adicionais, como anonimato, cache, filtragem, balanceamento de carga e controle de acesso. Eles são ferramentas versáteis que podem melhorar a segurança, desempenho e eficiência da comunicação entre clientes e servidores em uma rede.
+</details>
+
+<details>
+  <summary>load balancing</summary>
+
+  Load balancing é o processo de distribuir eficientemente o tráfego de rede de entrada em um grupo de servidores de back-end, também conhecido como um pool ou farm de servidores¹. Isso é feito para garantir que nenhum servidor fique sobrecarregado, o que poderia prejudicar o desempenho. Se um único servidor falhar, o balanceador de carga redireciona o tráfego para os servidores restantes que estão online. Quando um novo servidor é adicionado ao grupo de servidores, o balanceador de carga automaticamente começa a enviar solicitações para ele.
+
+  Existem diferentes algoritmos de balanceamento de carga que fornecem diferentes benefícios; a escolha do método de balanceamento de carga depende das suas necessidades. Alguns exemplos incluem Round Robin, Least Connections, Least Time, Hash e IP Hash.
+
+  O balanceamento de carga é importante porque ajuda a reduzir o tempo de inatividade, aumentar a escalabilidade e a redundância, fornecer flexibilidade e melhorar a eficiência. É comumente usado em sites com alto tráfego, servidores DNS, bancos de dados e sites FTP. Isso garante que as solicitações do usuário sejam processadas rapidamente e com precisão².
+</details>
+
 - hashing
 - SQL and NoSQL
 - replication and sharding
