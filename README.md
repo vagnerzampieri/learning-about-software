@@ -61,8 +61,40 @@
 
 </details>
 
-- higher availability and consistency
-- caching
+<details>
+  <summary>higher availability and consistency</summary>
+
+  Alta disponibilidade e consistência são dois conceitos fundamentais em sistemas distribuídos e serviços online. Ambos visam garantir a confiabilidade e a qualidade dos sistemas em diferentes aspectos. Vamos entender melhor cada um deles:
+
+  1. Alta disponibilidade: A alta disponibilidade refere-se à capacidade de um sistema ou serviço estar continuamente disponível e acessível aos usuários, com um tempo de inatividade mínimo. Isso implica que o sistema esteja funcionando corretamente e que os usuários possam acessá-lo sempre que precisarem. Para alcançar alta disponibilidade, são implementadas medidas como redundância de hardware e software, replicação de dados, balanceamento de carga, sistemas de recuperação de falhas e tolerância a falhas. Essas estratégias garantem que, mesmo se ocorrerem falhas em componentes individuais, o sistema continue operacional e os serviços permaneçam disponíveis para os usuários.
+
+  2. Consistência: A consistência refere-se à propriedade de um sistema de garantir que todos os seus nós ou componentes tenham uma visão coerente e atualizada dos dados. Em sistemas distribuídos, onde várias cópias dos dados são mantidas em diferentes nós, garantir a consistência dos dados é um desafio. A consistência pode ser alcançada através de técnicas de sincronização e controle de concorrência, onde as operações de escrita e leitura são coordenadas para evitar leituras desatualizadas ou inconsistências nos dados. Diferentes modelos de consistência, como consistência forte ou consistência eventual, são adotados com base nos requisitos específicos do sistema e das aplicações.
+
+  É importante destacar que há um trade-off entre alta disponibilidade e consistência. Em muitos casos, manter alta disponibilidade pode resultar em algum grau de inconsistência temporária nos dados, enquanto garantir uma consistência estrita pode levar a períodos de inatividade para sincronização e atualização dos dados. A escolha entre alta disponibilidade e consistência depende dos requisitos e das necessidades do sistema ou serviço em questão. Alguns sistemas podem priorizar a alta disponibilidade em cenários onde a disponibilidade contínua é crítica, enquanto outros podem priorizar a consistência em cenários onde a precisão dos dados é fundamental.
+</details>
+
+<details>
+  <summary>caching</summary>
+
+  Caching (ou cache) é uma técnica amplamente utilizada em sistemas de computação para melhorar o desempenho e a eficiência ao armazenar dados temporariamente em um local mais rápido e de acesso mais rápido do que a fonte original. O cache é uma memória auxiliar que armazena cópias de dados frequentemente acessados para fornecer acesso rápido a esses dados, reduzindo a necessidade de acessar a fonte original, que pode ser mais lenta.
+
+  Quando um sistema faz uma solicitação por determinados dados, a primeira instância é verificar se esses dados estão disponíveis no cache. Se os dados estiverem no cache, eles são acessados diretamente, evitando a necessidade de recuperá-los da fonte original. Isso resulta em tempos de acesso mais rápidos e uma melhoria geral no desempenho.
+
+  O cache é usado em vários níveis e em diferentes componentes de sistemas de computação. Alguns exemplos comuns incluem:
+
+  1. Cache de hardware: Processadores modernos possuem caches embutidos em diferentes níveis (L1, L2, L3) para armazenar cópias de dados e instruções frequentemente utilizados. Esses caches são projetados para minimizar a latência de acesso à memória principal e acelerar a execução de instruções.
+
+  2. Cache de software: Aplicativos e sistemas operacionais também podem utilizar caches em nível de software para armazenar dados frequentemente acessados. Isso pode incluir o cache de páginas da web em navegadores, cache de banco de dados, cache de arquivos em sistemas de arquivos, entre outros.
+
+  3. Cache de rede: Em redes de computadores, os caches são usados para armazenar cópias de páginas da web, objetos de mídia, arquivos e outros dados frequentemente acessados. Isso é especialmente útil em servidores proxy, servidores de conteúdo em CDN (Content Delivery Network) e outros dispositivos de rede, que podem fornecer respostas mais rápidas aos clientes ao acessar dados armazenados em cache localmente.
+
+  4. Cache de aplicativo: Aplicativos podem implementar caches para armazenar resultados de cálculos computacionalmente intensivos, resultados de consultas de banco de dados ou qualquer dado que possa ser reutilizado posteriormente. Esses caches ajudam a evitar o processamento repetido e a acelerar a resposta do aplicativo.
+
+  Ao implementar caches, é necessário considerar estratégias de gerenciamento, como a substituição de dados no cache (políticas de substituição) e a atualização dos dados em cache para refletir mudanças na fonte original (invalidação ou expiração). O tamanho do cache também precisa ser considerado para equilibrar o espaço de armazenamento disponível e o benefício do cache.
+
+  O caching é uma técnica poderosa para melhorar o desempenho, reduzir a carga em sistemas e otimizar a experiência do usuário, tornando o acesso a dados frequentes mais rápido e eficiente.
+</details>
+
 - proxies
 - load balancing
 - hashing
