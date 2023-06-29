@@ -1,5 +1,101 @@
 ## System Design
 
+### Summary of System Design
+
+  - How do define system requirements? 
+    - System Requirements
+    - Functional Requirements
+    - High Availability
+    - Fault Tolerance, resilience, reliability
+    - Scalability
+    - Performance
+    - Durability
+    - Consistency
+    - Mentability, security, cost
+  - How to achieve certain system qualities with the help of hardware?
+    - Regions, availability zones, data centers, racks, servers
+    - Physical servers, virtual machines, containers, serverless
+  - Fundamentals of reliable, scalable, and fast communication
+    - Syncronous vs Asyncronous communication
+    - Asynchronous messaging patterns
+    - Network protocols
+    - Blocking vs non-blocking I/O
+    - Data encoding formats
+    - Message acknowledgement
+  - How to improve system performance with caching?
+    - Caching 
+    - Caching strategies
+    - Cache invalidation
+    - Cache eviction policies
+    - Cache consistency
+    - Cache coherency
+    - Cache partitioning
+    - Cache aside vs read through vs write through
+    - Deduplication cache
+    - Metadata cache
+  - The importance of queues in distributed systems
+    - Message queues
+    - Task queues
+    - Priority queues
+    - Delay queues
+    - Bounded queues
+    - Unbounded queues
+    - Blocking queues
+    - Producer-consumer pattern
+    - Thread pools
+  - Data store internals
+    - Log
+    - Index
+    - Time series data
+    - Simple key-value database
+    - B-tree index
+    - Embedded database
+    - RocksDB
+    - LSM-tree vs B-tree
+    - Page cache
+  - How to build efficient communication in distributed systems?
+    - Push vs pull
+    - Host discovery
+    - Service discovery
+    - Peer discovery
+    - How to choose a network protocol?
+    - Network protocols in real-life systems
+    - Video over HTTP
+    - CDN
+    - Push and pull technologies
+    - Large scale push architectures
+  - How to deliver data reliably?
+    - What else to know to build reliable, scalable, and fast systems?
+    - What to do with failed requests?
+    - When to retry?
+    - How to retry?
+    - Message delivery garanties
+    - Consummer offsets
+  - How to delivery data quickly?
+    - Batching
+    - Compression
+  - How to deliver data at large scale?
+    - How to scale message consumption?
+    - Partitioning in real-life systems
+    - Partioning strategies
+    - Request routing
+    - Rebalancing partitions
+    - Consistent hashing
+  - How to protect servers from clients?
+    - System overload
+    - Autoscaling
+    - Autoscaling system design
+    - Load shedding
+    - Rate Limiting
+  - How to protect clients from servers?
+    - Syncronous vs Asyncronous clients
+    - Circuit breaker
+    - Fail-fast design principle
+    - Bulkhead
+    - Shuffle sharding
+
+### System Design Basics
+
 <details>
   <summary>client-server model</summary>
   
