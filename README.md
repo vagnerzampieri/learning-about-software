@@ -236,6 +236,10 @@
 - map reduce
 - security and HTTPS
 - API design
+- API gateways
+  - https://www.redhat.com/en/topics/api/what-does-an-api-gateway-do
+- servless
+  - https://www.redhat.com/en/topics/cloud-native-apps/what-is-serverless
 - idempotency
 - webRTC
   - https://ably.com/topic/webrtc-vs-websocket
