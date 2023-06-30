@@ -286,6 +286,7 @@
     - [miro](https://miro.com/app/board/uXjVPfOXbs8=/) 
   - [Design a Payment System - System Design Interview](https://www.youtube.com/watch?v=olfaBgJrUBI) 
   - [Design a Basic Search Engine (Google or Bing) | System Design Interview Prep](https://www.youtube.com/watch?v=0LTXCcVRQi0)
+  - [System Design Mock Interview: Design WhatsApp](https://www.youtube.com/watch?v=0iyLURrWIgQ)
 
 ### References:
 
