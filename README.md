@@ -238,6 +238,7 @@
 - API design
 - idempotency
 - webRTC
+  - https://ably.com/topic/webrtc-vs-websocket
 <details>
   <summary>elasticity and scalability</summary>
 
