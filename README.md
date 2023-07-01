@@ -236,9 +236,33 @@
 - map reduce
 - security and HTTPS
 - API design
-- API gateways
+
+<details>
+  <summary>API gateways</summary>
+
+  - API gateways (portões de acesso de API) são componentes de infraestrutura que atuam como pontos de entrada para as APIs (Interfaces de Programação de Aplicativos). Eles desempenham um papel fundamental no gerenciamento, segurança e otimização do tráfego de uma API, atuando como intermediários entre os clientes e os serviços subjacentes.
+
+  - Aqui estão algumas funcionalidades e benefícios dos API gateways:
+
+  1. Gerenciamento de tráfego: Os API gateways atuam como um ponto centralizado de controle para o tráfego de uma API. Eles direcionam as solicitações dos clientes para os serviços correspondentes, garantindo que as solicitações sejam roteadas corretamente e distribuídas de forma equilibrada entre os serviços disponíveis.
+
+  2. Segurança: Os API gateways fornecem camadas de segurança para proteger as APIs contra ameaças e ataques maliciosos. Eles podem autenticar e autorizar as solicitações dos clientes, aplicar políticas de segurança, como controle de acesso baseado em função (RBAC) e limitação de taxa, e criptografar o tráfego entre os clientes e os serviços.
+
+  3. Transformação de dados: Os API gateways podem realizar transformações nos dados das solicitações e respostas da API. Isso inclui conversões de formatos, agregação de dados de diferentes fontes, enriquecimento de dados e validações. Essas transformações permitem que os clientes e os serviços se comuniquem de maneira eficiente e compatível.
+
+  4. Cache: Os API gateways podem implementar camadas de cache para melhorar o desempenho e reduzir a carga nos serviços subjacentes. Eles podem armazenar em cache as respostas das solicitações para reutilização posterior, evitando que as mesmas solicitações sejam processadas repetidamente pelos serviços.
+
+  5. Monitoramento e análise: Os API gateways podem coletar métricas e registros detalhados sobre o tráfego da API, fornecendo informações valiosas sobre o desempenho, utilização e comportamento dos clientes. Isso permite monitorar a saúde da API, detectar problemas, identificar gargalos de desempenho e tomar decisões informadas de otimização.
+
+  6. Versionamento e controle: Os API gateways facilitam o gerenciamento de versões das APIs. Eles permitem que diferentes versões das APIs coexistam e sejam acessadas por clientes específicos. Isso ajuda a garantir a compatibilidade com versões anteriores e a introdução suave de alterações nas APIs.
+
+  7. Integração de serviços: Os API gateways podem simplificar a integração de serviços diferentes, permitindo que sejam expostos por uma única interface unificada. Isso reduz a complexidade para os clientes, pois eles podem acessar diferentes serviços por meio de uma única API.
+
+  - Em resumo, os API gateways são componentes essenciais para o gerenciamento, segurança e otimização de APIs. Eles fornecem recursos como gerenciamento de tráfego, segurança, transformação de dados, cache, monitoramento e análise, versionamento e controle, e integração de serviços. Essas funcionalidades ajudam a simplificar o desenvolvimento, melhorar a segurança, otimizar o desempenho e facilitar a integração de sistemas complex
+
   - https://www.redhat.com/en/topics/api/what-does-an-api-gateway-do
   
+</details>
 <details>
   <summary>serverless</summary>
   
@@ -279,9 +303,34 @@
 </details>
 
 - idempotency
-- webRTC
+
+<details>
+  <summary>webRTC</summary>
+
+  - WebRTC (Web Real-Time Communication) é uma tecnologia de comunicação em tempo real que permite a transmissão de áudio, vídeo e dados diretamente entre navegadores da web, sem a necessidade de plugins ou aplicativos adicionais. É uma API de código aberto que faz parte dos padrões web e é suportada por navegadores modernos, como Chrome, Firefox, Safari e Edge.
+
+  - Aqui estão alguns conceitos e recursos-chave do WebRTC:
+
+  1. Comunicação ponto a ponto: O WebRTC permite a comunicação direta entre dois navegadores da web, estabelecendo uma conexão ponto a ponto (peer-to-peer) sem a necessidade de servidores intermediários. Isso permite a transmissão de áudio, vídeo e dados em tempo real entre os participantes.
+
+  2. Acesso a dispositivos: O WebRTC oferece acesso aos dispositivos de áudio e vídeo do usuário, como microfone e câmera, diretamente pelo navegador. Isso permite que os aplicativos web utilizem esses dispositivos para capturar e transmitir áudio e vídeo em tempo real.
+
+  3. NAT traversal: O WebRTC incorpora técnicas de Network Address Translation (NAT) traversal para superar os desafios de estabelecer conexões ponto a ponto através de roteadores e firewalls. Ele utiliza protocolos como ICE (Interactive Connectivity Establishment) e STUN (Session Traversal Utilities for NAT) para descobrir e estabelecer a melhor rota de comunicação entre os participantes.
+
+  4. Compartilhamento de tela: O WebRTC também suporta o compartilhamento de tela, permitindo que os usuários compartilhem suas telas com outros participantes em uma chamada ou sessão. Isso é útil em cenários de colaboração, apresentações e suporte remoto.
+
+  5. Segurança: O WebRTC possui recursos de segurança integrados, incluindo criptografia de ponta a ponta para proteger a privacidade e a integridade dos dados transmitidos. Ele utiliza protocolos como DTLS (Datagram Transport Layer Security) para garantir a segurança da comunicação.
+
+  6. APIs e eventos: O WebRTC é acessado por meio de uma API JavaScript, que fornece métodos e eventos para controlar e gerenciar a comunicação em tempo real. Isso inclui funções para estabelecer conexões, transmitir mídia, gerenciar dados e lidar com eventos relacionados à comunicação.
+
+  - O WebRTC é usado em uma variedade de aplicativos e serviços, incluindo videoconferências, chamadas de voz, bate-papo em tempo real, jogos multiplayer e transmissões ao vivo. Ele oferece uma alternativa nativa para a comunicação em tempo real na web, eliminando a necessidade de plugins ou soluções proprietárias.
+
+  - É importante mencionar que o WebRTC funciona melhor em redes com boa largura de banda e latência baixa, pois a qualidade da comunicação depende desses fatores. Além disso, em alguns casos, pode ser necessário utilizar servidores de sinalização para ajudar na inicialização e coordenação das conexões entre os navegadores.
+
   - https://ably.com/topic/webrtc-vs-websocket
-  
+
+</details>
+
 <details>
   <summary>elasticity and scalability</summary>
 
