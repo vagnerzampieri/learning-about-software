@@ -366,7 +366,29 @@
   
 </details>
 
-- idempotency
+<details>
+  <summary>idempotency</summary>
+
+  - Idempotência é um conceito importante em computação e se refere à propriedade de uma operação ou função que, quando aplicada várias vezes, produz o mesmo resultado do que quando aplicada uma única vez. Em outras palavras, realizar a mesma operação múltiplas vezes não tem efeito adicional além do efeito da primeira execução.
+
+  - Para uma operação ser idempotente, ela deve satisfazer duas condições:
+
+  1. O resultado da operação deve ser o mesmo, independentemente do número de vezes que a operação é executada.
+  
+  2. A execução repetida da operação não deve ter efeitos colaterais indesejados além da primeira execução.
+   
+  - A idempotência é especialmente importante em sistemas distribuídos e em comunicações de rede, onde mensagens podem ser perdidas, duplicadas ou entregues fora de ordem. Ao projetar sistemas ou APIs, a idempotência é uma propriedade desejável para evitar resultados inesperados ou indesejados.
+
+  - Alguns exemplos de operações idempotentes incluem:
+
+  1. Ler um arquivo: A leitura de um arquivo é uma operação idempotente, pois a mesma leitura do arquivo produzirá sempre o mesmo conteúdo, independentemente de quantas vezes seja realizada.
+
+  2. Excluir um recurso: A exclusão de um recurso, como um registro em um banco de dados, é uma operação idempotente. Se o recurso já foi excluído, a operação não terá efeito adicional.
+
+  3. Atualizar um recurso com os mesmos valores: Se você atualiza um recurso com os mesmos valores várias vezes, o resultado será o mesmo. Por exemplo, se você atualiza um campo de um registro em um banco de dados com o mesmo valor repetidamente, o resultado será o mesmo e o registro não será alterado além da primeira atualização.
+
+  A idempotência é uma propriedade importante a ser considerada no design de sistemas distribuídos, APIs e operações críticas, pois ajuda a garantir consistência, previsibilidade e segurança nas interações entre componentes ou sistemas.
+</details>
 
 <details>
   <summary>webRTC</summary>
