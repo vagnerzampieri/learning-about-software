@@ -327,6 +327,16 @@
 
   - É importante mencionar que o WebRTC funciona melhor em redes com boa largura de banda e latência baixa, pois a qualidade da comunicação depende desses fatores. Além disso, em alguns casos, pode ser necessário utilizar servidores de sinalização para ajudar na inicialização e coordenação das conexões entre os navegadores.
 
+  - O WebRTC pode ser usado em aplicativos móveis, incluindo aplicativos de mensagens como o WhatsApp. O WebRTC é suportado pelos principais sistemas operacionais móveis, como Android e iOS, por meio de seus respectivos navegadores embutidos.
+
+  - No caso do WhatsApp, ele utiliza o WebRTC para fornecer chamadas de voz e vídeo em tempo real entre os usuários. Quando você realiza uma chamada no WhatsApp, a tecnologia subjacente que permite a comunicação em tempo real é o WebRTC. Isso permite que os usuários do WhatsApp façam chamadas de áudio e vídeo diretamente através do aplicativo, sem a necessidade de plugins adicionais.
+
+  - Em aplicativos móveis, o uso do WebRTC é semelhante ao seu uso em navegadores da web. Através da API do WebRTC, os aplicativos móveis podem estabelecer conexões ponto a ponto, transmitir áudio e vídeo em tempo real, compartilhar telas e realizar outras funcionalidades de comunicação em tempo real.
+
+  - Além do WhatsApp, existem muitos outros aplicativos de mensagens e chamadas de voz/vídeo que utilizam o WebRTC em seus aplicativos móveis para fornecer recursos de comunicação em tempo real. Isso inclui aplicativos como o Signal, Facebook Messenger, Google Meet, entre outros.
+
+  - Portanto, o WebRTC é uma tecnologia versátil que pode ser usada tanto em aplicativos web como em aplicativos móveis, permitindo a comunicação em tempo real em diferentes plataformas.
+
   - https://ably.com/topic/webrtc-vs-websocket
 
 </details>
