@@ -299,7 +299,29 @@
 </details>
 
 - P2P
-- polling and streaming
+  
+<details>
+  <summary>polling and streaming</summary>
+
+  - Polling e streaming são duas abordagens diferentes para comunicação de dados em tempo real. Vamos entender cada uma delas:
+
+  - Polling (consulta):
+    - No modelo de polling, o cliente faz repetidas solicitações ao servidor para verificar se há novos dados disponíveis. O cliente envia solicitações em intervalos regulares para verificar se houve atualizações ou novas informações. O servidor responde a cada solicitação, independentemente de haver ou não novos dados. Se não houver atualizações, o servidor pode enviar uma resposta vazia. O cliente, então, inicia uma nova solicitação em um intervalo pré-definido.
+
+    - O polling pode ser realizado de duas maneiras principais:
+
+      - Polling regular: O cliente faz solicitações em intervalos fixos, independentemente de haver ou não novos dados disponíveis. Isso pode resultar em uma sobrecarga desnecessária no servidor se não houver atualizações frequentes.
+
+      - Long polling: Nesse caso, o cliente faz uma solicitação ao servidor e mantém essa solicitação aberta por um período mais longo. O servidor retém a solicitação até que haja dados disponíveis para enviar ou até que o tempo limite seja atingido. Isso ajuda a reduzir a sobrecarga do polling regular, pois a resposta do servidor é enviada apenas quando há novos dados disponíveis ou quando o tempo limite é alcançado.
+
+  - Streaming (fluxo):
+    - No streaming, os dados são transmitidos continuamente do servidor para o cliente em tempo real. Diferentemente do polling, o cliente não precisa fazer repetidas solicitações para receber atualizações. Em vez disso, o servidor estabelece uma conexão persistente com o cliente e envia dados assim que eles estão disponíveis. O cliente recebe os dados em tempo real, conforme são transmitidos.
+
+    - Existem diferentes protocolos e tecnologias que suportam streaming, como o WebSocket, Server-Sent Events (SSE) e WebRTC. Essas tecnologias permitem uma comunicação bidirecional e contínua entre o cliente e o servidor, facilitando a transmissão de dados em tempo real.
+
+  - Em resumo, enquanto o polling envolve o cliente fazendo repetidas solicitações para verificar atualizações, o streaming permite que o servidor envie dados continuamente para o cliente sem a necessidade de polling constante. O streaming é mais eficiente e adequado para cenários em que os dados precisam ser transmitidos em tempo real, como streaming de mídia, chat em tempo real, monitoramento de sensores, entre outros.
+</details>
+
 - configuration
 
 <details>
@@ -326,8 +348,54 @@
 </details>
 
 - logging and monitoring
-- publish/subscribe
-- map reduce
+
+
+<details>
+  <summary>MapReduce</summary>
+
+  - MapReduce é um modelo de programação e uma estrutura de processamento de dados usado para processar grandes volumes de dados de forma paralela e distribuída em um ambiente de cluster. Foi popularizado pelo Google e se tornou uma técnica amplamente utilizada para processamento de dados em larga escala.
+
+  - O modelo MapReduce consiste em duas etapas principais: a etapa de mapeamento (map) e a etapa de redução (reduce).
+
+  1. Etapa de mapeamento (Map):
+     - Nesta etapa, os dados de entrada são divididos em partes menores e independentes, chamadas de "splits".
+      
+      - Cada split é processado por uma função de mapeamento, que transforma os dados em pares chave-valor intermediários.
+    
+      - A função de mapeamento é especificada pelo programador e pode ser aplicada a cada split de forma paralela em diferentes nós do cluster.
+  
+  2. Etapa de redução (Reduce):
+     - Nesta etapa, os pares chave-valor intermediários são agrupados com base na chave comum.
+      - Cada grupo de pares com a mesma chave é processado por uma função de redução, que combina e resume os valores relacionados a essa chave.
+  
+      - A função de redução também é especificada pelo programador e pode ser aplicada em paralelo para diferentes grupos de chaves em diferentes nós do cluster.
+  
+      - O modelo MapReduce fornece uma abstração poderosa para lidar com tarefas de processamento de dados complexas em um ambiente distribuído. Ele oferece as seguintes vantagens:
+   
+  - Escalabilidade: O modelo MapReduce pode lidar com grandes volumes de dados distribuídos em um cluster de computadores, permitindo o processamento paralelo e distribuído.
+  
+  - Tolerância a falhas: Como os dados são processados em várias etapas e em diferentes nós do cluster, o modelo MapReduce oferece resiliência a falhas de nós individuais.
+  
+  - Programação simplificada: Os programadores podem se concentrar nas funções de mapeamento e redução, sem se preocupar com detalhes de concorrência, particionamento de dados ou comunicação entre os nós do cluster.
+  
+  - Reutilização: O modelo MapReduce é flexível e pode ser aplicado a uma ampla variedade de problemas de processamento de dados, facilitando a reutilização de código e o desenvolvimento rápido de soluções.
+     
+  - O Hadoop é uma implementação popular e de código aberto do modelo MapReduce, fornecendo uma estrutura para processamento distribuído de dados em clusters. Além do Hadoop, existem outras ferramentas e frameworks que suportam o modelo MapReduce, como o Apache Spark e o Apache Flink, que oferecem recursos avançados e melhor desempenho em comparação com o Hadoop.
+
+  - Alguns exemplos de utilização:
+    1. Análise de logs: O processamento de logs de servidores ou aplicativos em grande escala é um caso comum para o uso do MapReduce. Os logs podem ser divididos em splits, onde o mapeamento pode extrair informações relevantes, como contagem de acessos, erros ou padrões específicos. A redução pode ser usada para agrupar e resumir os dados, fornecendo insights valiosos sobre o desempenho do sistema ou a detecção de problemas.
+
+    2. Indexação de documentos: Ao indexar grandes volumes de documentos, como páginas da web, o MapReduce pode ser usado para extrair palavras-chave, criar um índice invertido e gerar metadados úteis. O mapeamento pode processar cada documento separadamente, enquanto a redução pode agrupar os dados relevantes e gerar um índice eficiente para pesquisa.
+
+    3. Análise de dados financeiros: O processamento de dados financeiros em grande escala, como transações de ações, pode se beneficiar do MapReduce. O mapeamento pode ser usado para filtrar e categorizar as transações com base em critérios específicos, enquanto a redução pode calcular estatísticas, como média, soma ou desvio padrão, para análise posterior.
+
+    4. Processamento de dados de sensores: Em ambientes de Internet das Coisas (IoT), onde há uma grande quantidade de dados gerados por sensores, o MapReduce pode ser usado para processar e analisar esses dados. O mapeamento pode realizar tarefas como filtragem, normalização e agregação de dados dos sensores, enquanto a redução pode ser usada para obter insights sobre tendências, padrões ou detecção de anomalias.
+
+    5. Processamento de grandes conjuntos de dados: Em geral, o MapReduce é útil para processar grandes conjuntos de dados em paralelo. Isso pode incluir tarefas como classificação, ordenação, agrupamento, cálculos estatísticos, processamento de imagens ou processamento de linguagem natural. O modelo MapReduce permite dividir o processamento em várias partes independentes, facilitando o processamento distribuído e paralelo em um cluster de computadores.
+
+    - Esses são apenas alguns exemplos de utilização do modelo MapReduce. A flexibilidade e escalabilidade do modelo permitem sua aplicação em uma ampla variedade de domínios e problemas de processamento de dados em larga escala.
+</details>
+
 - security and HTTPS
 - API design
 
@@ -421,7 +489,84 @@
 </details>
 
 <details>
-  <summary>webRTC</summary>
+  <summary>publish and subscribe</summary>
+
+  - Publish and subscribe (pub/sub) é um padrão de comunicação em que os participantes são divididos em duas categorias: publicadores (publishers) e assinantes (subscribers). Nesse padrão, os publicadores enviam mensagens para um tópico (ou canal) e os assinantes se inscrevem nesse tópico para receber as mensagens relevantes.
+
+  - Publicadores (Publishers): São as entidades responsáveis por enviar mensagens para um determinado tópico. Os publicadores não têm conhecimento sobre os assinantes, eles apenas publicam as mensagens nos tópicos de interesse. Por exemplo, em um sistema de publicação de notícias, um editor pode ser um publicador que envia notícias para o tópico "Notícias Gerais".
+
+  - Assinantes (Subscribers): São as entidades que se inscrevem em tópicos específicos para receber mensagens relevantes. Os assinantes não estão diretamente conectados aos publicadores, mas ao tópico em si. Por exemplo, um usuário interessado em esportes pode se inscrever no tópico "Esportes" e receber atualizações sobre eventos esportivos.
+
+  - Tópicos (Topics): Os tópicos são canais ou categorias aos quais os assinantes podem se inscrever. Eles funcionam como intermediários entre os publicadores e os assinantes. Cada mensagem enviada por um publicador é associada a um ou mais tópicos. Os assinantes só recebem as mensagens relacionadas aos tópicos em que estão inscritos.
+
+  - Distribuição das mensagens: Quando um publicador envia uma mensagem para um tópico, o sistema de publish and subscribe é responsável por distribuir essa mensagem para todos os assinantes interessados nesse tópico. Cada assinante receberá a mensagem assim que ela for publicada, permitindo uma comunicação eficiente e assíncrona.
+
+  - O padrão de publish and subscribe é amplamente utilizado em sistemas de mensagens, eventos em tempo real, sistemas de notificações e muitas outras aplicações. Ele permite a comunicação escalável e flexível entre diferentes componentes de um sistema distribuído, garantindo que as mensagens sejam entregues apenas aos assinantes interessados.
+
+  - Vale ressaltar que existem várias implementações e tecnologias que suportam o padrão de publish and subscribe, como RabbitMQ, Apache Kafka, MQTT, Redis Pub/Sub, entre outros. Cada uma dessas tecnologias possui suas próprias características e recursos específicos para atender a diferentes necessidades de aplicação.
+
+</details>
+
+<details>
+  <summary>Server-Sent Events (SSE)</summary>
+
+  - Server-Sent Events (SSE) é uma tecnologia de comunicação assíncrona em tempo real entre um servidor web e um cliente. Ela permite que o servidor envie dados para o cliente de forma contínua, sem que o cliente precise fazer solicitações repetidas.
+
+  - Ao contrário do protocolo WebSocket, que estabelece uma conexão bidirecional persistente, o SSE é uma comunicação unidirecional, onde o servidor envia eventos para o cliente. Esses eventos podem ser atualizações, notificações, mensagens ou qualquer tipo de dado em tempo real.
+
+  - Aqui estão algumas características e componentes-chave do SSE:
+
+    - Estabelecimento da conexão: O cliente inicia uma solicitação HTTP padrão para o servidor para estabelecer a conexão SSE. O servidor responde com um cabeçalho especial "Content-Type" definido como "text/event-stream" para indicar que está enviando eventos SSE.
+
+    - Fluxo contínuo de eventos: Após a conexão ser estabelecida, o servidor envia eventos para o cliente usando o formato de texto simples. Cada evento é enviado como uma linha de texto com campos como "event", "data" e opcionalmente "id". O campo "event" especifica o tipo de evento, enquanto o campo "data" contém os dados associados ao evento.
+
+    - Recepção de eventos no cliente: O cliente implementa um EventSource, um objeto JavaScript que permite a recepção dos eventos SSE. O cliente pode registrar ouvintes de eventos para tratar os eventos recebidos do servidor. Quando um evento é recebido, o cliente pode processá-lo e atualizar a interface do usuário de acordo.
+
+    - Reconexão automática: No caso de uma interrupção na conexão SSE, o cliente tenta automaticamente reconectar-se ao servidor. Isso garante uma comunicação contínua, mesmo em cenários de falha de rede temporária.
+
+  - O SSE é amplamente utilizado em várias aplicações web que requerem atualizações em tempo real, como feeds de notícias, atualizações de mídia social, cotações de ações em tempo real, notificações push e muito mais. Ele oferece uma alternativa simples e leve para implementar a comunicação assíncrona em tempo real entre o servidor e o cliente, sem a necessidade de bibliotecas ou protocolos mais complexos.
+
+  - No lado do servidor, muitas linguagens de programação e frameworks têm suporte embutido para a geração de eventos SSE. No lado do cliente, os navegadores modernos têm suporte nativo para o objeto EventSource, simplificando a implementação da recepção de eventos SSE.
+
+  - Exemplos:
+
+    - Atualizações de feeds de notícias: Um site de notícias pode usar SSE para fornecer atualizações em tempo real aos usuários. O servidor pode enviar eventos SSE com as últimas notícias ou artigos publicados, permitindo que os clientes recebam automaticamente as atualizações sem a necessidade de atualizar a página.
+
+    - Atualizações de mídia social: Plataformas de mídia social podem utilizar SSE para notificar os usuários sobre novas mensagens, solicitações de amizade, atualizações de status e outras atividades em tempo real. Os eventos SSE são enviados aos clientes para manter os usuários atualizados sobre as atividades recentes em suas redes sociais.
+
+    - Monitoramento de dados em tempo real: O SSE é útil em cenários em que é necessário monitorar continuamente dados em tempo real. Isso inclui o monitoramento de sensores em IoT, dados de mercado financeiro em tempo real, métricas de desempenho de servidores e outras aplicações em que a detecção imediata de alterações é essencial.
+
+    - Notificações e alertas em tempo real: Aplicações que exigem notificações instantâneas para os usuários, como sistemas de mensagens instantâneas, aplicativos de chat em tempo real ou sistemas de suporte ao cliente, podem utilizar SSE para enviar notificações em tempo real aos clientes.
+
+    - Sincronização de dados em tempo real: O SSE pode ser usado para sincronizar dados em tempo real entre várias instâncias de um aplicativo distribuído. Por exemplo, em um aplicativo de colaboração em tempo real, as atualizações feitas por um usuário podem ser transmitidas para outros usuários conectados usando SSE.
+
+  - Esses são apenas alguns exemplos de como o SSE pode ser aplicado. A flexibilidade do SSE em fornecer atualizações contínuas em tempo real torna-o uma opção viável em vários cenários onde a comunicação assíncrona e em tempo real é necessária.
+
+</details>
+  
+<details>
+  <summary>WebSockets</summary>
+
+  - WebSockets é um protocolo de comunicação bidirecional em tempo real que permite a troca de dados entre um navegador (cliente) e um servidor de forma contínua. Diferentemente do HTTP tradicional, que segue o modelo de solicitação-resposta, os WebSockets permitem uma comunicação interativa e em tempo real, onde tanto o cliente quanto o servidor podem enviar mensagens para o outro lado sem a necessidade de solicitações repetidas.
+
+  - Aqui estão algumas características e componentes-chave dos WebSockets:
+
+  1. Estabelecimento da conexão: A comunicação WebSocket começa com uma solicitação HTTP padrão do cliente para o servidor, mas inclui um cabeçalho especial chamado "Upgrade" para indicar que deseja iniciar uma conexão WebSocket. Se o servidor aceitar a solicitação, ocorre uma troca de cabeçalhos e a conexão WebSocket é estabelecida.
+
+  2. Canal de comunicação bidirecional: Uma vez estabelecida a conexão WebSocket, tanto o cliente quanto o servidor podem enviar mensagens para o outro lado a qualquer momento. Isso permite uma comunicação bidirecional em tempo real, onde o servidor pode enviar atualizações, notificações ou outros dados para o cliente, e o cliente pode enviar comandos, eventos ou dados para o servidor.
+
+  3. Mensagens WebSocket: As mensagens WebSocket são enviadas em formato binário ou texto. Elas podem conter qualquer tipo de dado, como texto simples, JSON, XML, imagens ou até mesmo streams de áudio e vídeo. As mensagens são encapsuladas em pacotes WebSocket e enviadas de forma assíncrona entre o cliente e o servidor.
+
+  4. Baixa latência: A comunicação WebSocket possui uma latência muito menor em comparação com o polling ou outras técnicas baseadas em HTTP, uma vez que não há a sobrecarga de estabelecer uma nova conexão para cada solicitação. A conexão persistente permite a transmissão instantânea de dados entre o cliente e o servidor.
+
+  5. Eventos e tratamento de erros: A API WebSocket fornece eventos que permitem ao cliente e ao servidor manipular a abertura da conexão, o recebimento de mensagens, o fechamento da conexão e possíveis erros. Os desenvolvedores podem definir funções de tratamento de eventos para lidar com esses eventos e responder adequadamente a eles.
+
+  - Os WebSockets são amplamente utilizados em uma variedade de aplicativos e casos de uso, incluindo bate-papo em tempo real, jogos multiplayer, notificações push, colaboração em tempo real, streaming de dados, entre outros. Muitas linguagens de programação e frameworks têm suporte para implementação de servidores WebSocket, tornando relativamente fácil desenvolver aplicativos interativos em tempo real. Nos navegadores, a API WebSocket está disponível nativamente na maioria dos principais navegadores modernos.
+
+</details> 
+
+<details>
+  <summary>WebRTC</summary>
 
   - WebRTC (Web Real-Time Communication) é uma tecnologia de comunicação em tempo real que permite a transmissão de áudio, vídeo e dados diretamente entre navegadores da web, sem a necessidade de plugins ou aplicativos adicionais. É uma API de código aberto que faz parte dos padrões web e é suportada por navegadores modernos, como Chrome, Firefox, Safari e Edge.
 
