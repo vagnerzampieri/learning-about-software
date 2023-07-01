@@ -238,11 +238,50 @@
 - API design
 - API gateways
   - https://www.redhat.com/en/topics/api/what-does-an-api-gateway-do
-- servless
+  
+<details>
+  <summary>serverless</summary>
+  
+  - Serverless computing (computação sem servidor) é um modelo de computação em nuvem em que os desenvolvedores podem escrever e executar código sem a necessidade de gerenciar a infraestrutura subjacente. Nesse modelo, o provedor de serviços em nuvem é responsável por provisionar, dimensionar e gerenciar automaticamente os recursos necessários para executar o código.
+
+  - Em um ambiente serverless, os desenvolvedores se concentram na escrita do código da aplicação em vez de lidar com a configuração e manutenção dos servidores. Eles criam funções individuais (também chamadas de funções serverless ou funções como serviço) que são acionadas por eventos específicos, como uma solicitação HTTP, uma atualização em um banco de dados ou um arquivo sendo enviado para um armazenamento em nuvem.
+
+  - Aqui estão algumas características e benefícios do modelo serverless:
+
+  1. Escalabilidade automática: O provedor de serviços em nuvem dimensiona automaticamente a infraestrutura para atender à demanda. As funções serverless são escaladas horizontalmente, o que significa que várias instâncias da função podem ser executadas simultaneamente para lidar com cargas de trabalho mais pesadas.
+
+  2. Pagamento por uso: O modelo serverless permite que os desenvolvedores paguem apenas pelos recursos consumidos durante a execução de suas funções. Os provedores de serviços em nuvem geralmente oferecem uma estrutura de preços baseada no tempo de execução e nos recursos consumidos, em vez de um modelo de pagamento por servidor ou capacidade fixa.
+
+  3. Gerenciamento simplificado: Com o modelo serverless, os desenvolvedores podem se concentrar apenas na lógica do código e não precisam se preocupar com a administração de servidores, patches de segurança, escalabilidade manual, etc. O provedor de serviços em nuvem cuida de todas essas tarefas operacionais.
+
+  4. Tempo de resposta rápido: As funções serverless são projetadas para serem executadas rapidamente em resposta a eventos. Isso permite um tempo de resposta mais rápido em comparação com o modelo tradicional de provisionamento de servidores.
+
+  5. Maior produtividade: Com a infraestrutura gerenciada pelo provedor de serviços em nuvem, os desenvolvedores podem se concentrar mais na lógica do aplicativo e na entrega de valor aos usuários finais. Isso aumenta a produtividade e acelera o processo de desenvolvimento.
+
+  - Em resumo, o modelo serverless permite que os desenvolvedores se concentrem na lógica do código, enquanto a infraestrutura é gerenciada automaticamente pelo provedor de serviços em nuvem. Isso oferece escalabilidade, pagamento por uso, gerenciamento simplificado e maior produtividade.
+  
+  - O modelo serverless pode ser utilizado em uma variedade de casos de uso, incluindo:
+
+  1. Aplicações web: O serverless é adequado para o desenvolvimento de aplicações web que possuem demanda variável e podem enfrentar picos de tráfego. Ele permite que as aplicações sejam dimensionadas automaticamente para lidar com o aumento de usuários e solicitações, sem a necessidade de gerenciar manualmente a infraestrutura.
+
+  2. Processamento de eventos em tempo real: O serverless é eficaz para lidar com eventos em tempo real, como processamento de streams de dados, análise de logs, processamento de eventos de IoT (Internet das Coisas) e notificações em tempo real. As funções serverless podem ser acionadas por esses eventos e executar as ações necessárias de forma rápida e escalável.
+
+  3. APIs e serviços back-end: O modelo serverless é frequentemente usado para desenvolver APIs e serviços back-end, onde as funções serverless podem ser acionadas por solicitações HTTP. Isso permite criar facilmente serviços de API escaláveis, sem a necessidade de gerenciar servidores ou preocupar-se com a infraestrutura subjacente.
+
+  4. Tarefas agendadas: O serverless também pode ser aplicado em tarefas agendadas, como processamento em lotes, geração de relatórios programados, atualização de caches e outras tarefas recorrentes. As funções serverless podem ser programadas para serem executadas em intervalos específicos ou em determinados momentos, automatizando essas tarefas sem a necessidade de manter servidores em execução o tempo todo.
+
+  5. Processamento de imagens e vídeos: O serverless é útil para processamento de mídia, como redimensionamento de imagens, transcodificação de vídeos, reconhecimento de imagens e processamento de vídeo em tempo real. As funções serverless podem ser acionadas por eventos de upload de arquivos e realizar o processamento necessário sem a necessidade de infraestrutura dedicada.
+
+  - Esses são apenas alguns exemplos de casos de uso em que o modelo serverless pode ser aplicado. Sua flexibilidade e escalabilidade tornam-no uma opção atraente para uma ampla gama de aplicações e serviços.
+  
   - https://www.redhat.com/en/topics/cloud-native-apps/what-is-serverless
+  
+</details>
+
 - idempotency
 - webRTC
   - https://ably.com/topic/webrtc-vs-websocket
+  
 <details>
   <summary>elasticity and scalability</summary>
 
