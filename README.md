@@ -226,11 +226,54 @@
 - hashing
 - SQL and NoSQL
 - replication and sharding
-- leader election
+<details>
+  <summary>leader election</summary>
+
+  - Leader election (eleição de líder) é um processo utilizado em sistemas distribuídos para selecionar um único nó (ou processo) entre vários para atuar como líder ou coordenador. O líder é responsável por tomar decisões e coordenar as atividades dos demais nós no sistema distribuído.
+
+  - A eleição de líder é necessária em sistemas distribuídos para garantir a consistência e a coerência das operações. Quando o líder atual falha ou é desconectado do sistema, um novo líder precisa ser eleito para assumir suas responsabilidades. Esse processo de eleição ocorre de forma automática entre os nós remanescentes e é crucial para manter a continuidade do sistema.
+
+  - Existem várias abordagens e algoritmos para realizar a eleição de líder. Alguns dos algoritmos populares incluem:
+
+  1. Algoritmo do Bully: Neste algoritmo, cada nó tem um identificador único e o nó com o maior identificador assume o papel de líder. Quando um nó descobre que o líder atual está inativo, ele convoca uma eleição enviando mensagens para os outros nós com identificadores mais altos. Se nenhum nó responder, ele se declara líder. Caso contrário, o nó com o identificador mais alto assume a liderança.
+
+  2. Algoritmo do Anel: Neste algoritmo, os nós são organizados em uma topologia em anel. Cada nó possui um identificador único e o processo de eleição ocorre no sentido horário ou anti-horário ao longo do anel. Quando um nó detecta a falha do líder atual, ele envia uma mensagem para o próximo nó no anel. A mensagem de eleição é passada pelos nós até chegar a um nó com o identificador mais alto, que se torna o novo líder.
+
+  3. Algoritmo do Wave: Neste algoritmo, cada nó tem um identificador único e é atribuído um número sequencial chamado "onda" para cada eleição. Quando um nó inicia uma eleição, ele envia mensagens para todos os outros nós com um número de onda mais alto. Os nós que recebem a mensagem de eleição escolhem o identificador mais alto entre si e continuam propagando a mensagem para os outros nós. O nó com o identificador mais alto se torna o novo líder.
+
+  - Esses são apenas alguns exemplos de algoritmos de eleição de líder. Cada algoritmo tem suas características e requisitos específicos, e a escolha depende do contexto e das necessidades do sistema distribuído em questão.
+
+  - A eleição de líder é um mecanismo fundamental para garantir a continuidade das operações em sistemas distribuídos, permitindo que um novo líder seja selecionado automaticamente quando o líder atual não estiver mais disponível.
+
+</details>
+
 - P2P
 - polling and streaming
 - configuration
-- rate limiting
+
+<details>
+  <summary>rate limiting</summary>
+
+  - Rate limiting (limitação de taxa) é uma técnica usada para controlar e limitar a taxa de solicitações ou acessos a um sistema, serviço ou API. É uma estratégia de gerenciamento de tráfego que impõe restrições na frequência com que uma determinada ação pode ser executada por um cliente ou usuário.
+
+  - A implementação do rate limiting geralmente envolve definir limites em termos de número de solicitações por unidade de tempo (por exemplo, X solicitações por segundo ou Y solicitações por minuto). Quando um cliente ou usuário ultrapassa esse limite, o sistema responde com um código de status apropriado (como 429 Too Many Requests) e nega temporariamente ou restringe o acesso adicional por um período de tempo determinado.
+
+  - Existem várias razões para implementar o rate limiting em um sistema:
+
+  1. Proteção contra abuso: O rate limiting ajuda a prevenir abusos e ataques, limitando a frequência com que um cliente ou usuário pode acessar recursos ou realizar solicitações. Isso evita sobrecargas no sistema e protege contra ataques de negação de serviço (DoS) ou ataques de força bruta.
+
+  2. Garantia de desempenho e estabilidade: Ao limitar o número de solicitações em um determinado período de tempo, o rate limiting ajuda a evitar a sobrecarga do sistema e a garantir que ele permaneça estável e responsivo. Isso é especialmente importante em sistemas com recursos limitados ou em momentos de pico de tráfego.
+
+  3. Equilíbrio da carga: Ao impor limites na taxa de solicitações, o rate limiting permite distribuir a carga de forma equilibrada entre os usuários ou clientes. Isso evita que alguns usuários monopolizem os recursos e garante uma experiência justa para todos os usuários do sistema.
+
+  4. Cumprimento de políticas de uso: O rate limiting pode ser usado para fazer cumprir políticas de uso, como limites de acesso por assinatura, planos de pagamento ou restrições de uso gratuito. Ele garante que os usuários estejam aderindo aos termos e condições estabelecidos e impede o uso excessivo ou não autorizado dos recursos.
+
+  5. Controle de custos: Em sistemas baseados em nuvem ou que envolvem custos de infraestrutura, o rate limiting pode ser usado para controlar e limitar o consumo de recursos, ajudando a evitar faturas inesperadas ou excessivas.
+
+  - A implementação do rate limiting pode variar dependendo do sistema ou serviço em questão. Pode envolver o uso de cabeçalhos HTTP, tokens de autenticação, contadores de solicitações ou outras técnicas de controle de acesso. A configuração adequada dos limites de taxa depende das necessidades e capacidades do sistema, equilibrando a segurança, desempenho e experiência do usuário.
+
+</details>
+
 - logging and monitoring
 - publish/subscribe
 - map reduce
