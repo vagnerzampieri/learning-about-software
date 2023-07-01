@@ -298,7 +298,28 @@
 
 </details>
 
-- P2P
+<details>
+  <summary>P2P</summary>
+
+  - P2P (Peer-to-Peer) refere-se a uma arquitetura de rede descentralizada na qual os computadores individuais, chamados de pares ou nós, se comunicam diretamente entre si sem a necessidade de um servidor centralizado. Nesse modelo, todos os nós têm capacidades semelhantes e podem atuar tanto como clientes quanto como servidores, compartilhando recursos e serviços uns com os outros.
+
+  - Aqui estão algumas características e exemplos de aplicativos que utilizam a arquitetura P2P:
+
+    - Descentralização: No modelo P2P, não há um ponto central de controle ou autoridade. Cada nó é igualmente responsável pela execução e gerenciamento da rede, permitindo que os recursos sejam compartilhados de maneira distribuída.
+
+    - Compartilhamento de arquivos: O compartilhamento de arquivos é um caso de uso popular para redes P2P. Exemplos incluem aplicativos como BitTorrent, em que os usuários compartilham e baixam arquivos diretamente entre si, sem depender de um servidor central para armazenar os arquivos.
+
+    - Comunicação e colaboração: Aplicativos de mensagens instantâneas, como o Skype e o Bitmessage, utilizam a arquitetura P2P para permitir a comunicação direta entre os usuários, sem depender de servidores intermediários. Isso permite que as mensagens sejam transmitidas de forma mais eficiente e segura.
+
+    - Redes sociais descentralizadas: Alguns projetos exploram a ideia de redes sociais baseadas em P2P, onde os usuários têm controle total sobre seus dados e podem se conectar diretamente com outros usuários sem depender de uma plataforma centralizada.
+
+    - Computação distribuída: A arquitetura P2P também pode ser usada para distribuir tarefas de computação em uma rede de nós. Isso permite que a capacidade de processamento seja compartilhada entre os participantes, resultando em maior escalabilidade e capacidade de processamento.
+
+    - Blockchain: A tecnologia blockchain, usada em criptomoedas como o Bitcoin, é baseada em uma arquitetura P2P. Ela permite que os nós participantes da rede colaborem para validar e registrar transações, garantindo a segurança e a integridade do sistema.
+
+  - A arquitetura P2P oferece vantagens como escalabilidade, resistência a falhas e independência de um ponto central de controle. No entanto, também apresenta desafios, como gerenciamento de recursos, segurança e coordenação entre os nós. Cada aplicativo P2P pode implementar diferentes mecanismos de comunicação e protocolos, dependendo dos requisitos específicos do sistema.
+
+</details>
   
 <details>
   <summary>polling and streaming</summary>
