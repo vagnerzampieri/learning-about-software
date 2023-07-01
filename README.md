@@ -223,7 +223,28 @@
   O balanceamento de carga é importante porque ajuda a reduzir o tempo de inatividade, aumentar a escalabilidade e a redundância, fornecer flexibilidade e melhorar a eficiência. É comumente usado em sites com alto tráfego, servidores DNS, bancos de dados e sites FTP. Isso garante que as solicitações do usuário sejam processadas rapidamente e com precisão².
 </details>
 
-- hashing
+<details>
+  <summary>hashing</summary>
+
+  - Hashing é um processo utilizado para mapear dados de tamanho variável para um valor fixo, geralmente uma sequência de caracteres de tamanho fixo. O resultado desse processo é chamado de "hash" ou "valor de hash". O objetivo do hashing é gerar um resumo único e representativo dos dados de entrada, de forma eficiente e determinística.
+
+  - Principais características e usos do hashing:
+
+  1. Unicidade: Um bom algoritmo de hash deve minimizar a probabilidade de colisões, ou seja, de gerar o mesmo valor de hash para diferentes conjuntos de dados. Embora seja possível que dois conjuntos de dados diferentes gerem o mesmo valor de hash (colisão), algoritmos de hash comumente utilizados possuem uma baixa taxa de colisões.
+
+  2. Integridade: O valor de hash é usado para verificar se os dados foram alterados ou corrompidos. Qualquer modificação nos dados de entrada resultará em um valor de hash completamente diferente. Isso torna o hashing útil para detectar alterações acidentais ou maliciosas nos dados.
+
+  3. Eficiência: Algoritmos de hash são projetados para serem rápidos e eficientes, permitindo o processamento rápido dos dados e o cálculo do valor de hash. Mesmo para grandes volumes de dados, o tempo necessário para calcular o valor de hash é geralmente muito pequeno.
+
+  4. Criptografia: Algoritmos de hash criptográficos, como SHA-256 (Secure Hash Algorithm 256 bits), são usados para garantir a segurança e a confidencialidade dos dados. Esses algoritmos são amplamente utilizados em aplicações como autenticação de senhas, assinatura digital e verificação de integridade de arquivos.
+
+  5. Indexação e pesquisa: O hashing também é usado em estruturas de dados como tabelas de dispersão (hash tables), que permitem uma pesquisa eficiente de elementos com base em suas chaves. Os valores de hash são usados para mapear as chaves para posições de armazenamento, acelerando o processo de busca.
+
+  - Alguns exemplos de algoritmos de hashing amplamente utilizados são MD5 (Message Digest Algorithm 5), SHA-1 (Secure Hash Algorithm 1), SHA-256, SHA-3 e HMAC (Hash-based Message Authentication Code). Cada um desses algoritmos tem suas próprias características e níveis de segurança, sendo selecionados de acordo com as necessidades específicas de cada aplicação.
+
+  - É importante notar que, embora os algoritmos de hash sejam úteis em várias aplicações, eles não são reversíveis. Isso significa que, uma vez que os dados são convertidos em um valor de hash, não é possível recuperar os dados originais a partir do valor de hash. Portanto, os algoritmos de hash são usados principalmente para verificação, resumo e pesquisa eficiente, mas não para fins de criptografia ou armazenamento seguro de dados.
+</details>
+
 - SQL and NoSQL
 - replication and sharding
 <details>
