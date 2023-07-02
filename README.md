@@ -494,8 +494,25 @@
     - Esses são apenas alguns exemplos de utilização do modelo MapReduce. A flexibilidade e escalabilidade do modelo permitem sua aplicação em uma ampla variedade de domínios e problemas de processamento de dados em larga escala.
 </details>
 
-- security and HTTPS
-- API design
+<details>
+  <summary>security and HTTPS</summary>
+
+  - Segurança é um aspecto fundamental em qualquer comunicação online ou troca de dados. O HTTPS (Hypertext Transfer Protocol Secure) é um protocolo que garante comunicação segura em uma rede de computadores, geralmente a internet. Ele é uma extensão do protocolo HTTP, porém com uma camada adicional de criptografia fornecida pelos protocolos SSL/TLS (Secure Sockets Layer/Transport Layer Security).
+
+    - Criptografia: O HTTPS utiliza criptografia SSL/TLS para proteger os dados trocados entre um cliente (como um navegador web) e um servidor. Essa criptografia garante que os dados transmitidos pela rede estejam protegidos contra acesso não autorizado ou interceptação. Ela previne a espionagem e a adulteração dos dados, pois criptografa a comunicação usando algoritmos criptográficos.
+
+    - Integridade dos Dados: O HTTPS utiliza certificados digitais para estabelecer a autenticidade e a integridade do servidor. O certificado é emitido por uma autoridade de certificação (AC) confiável e contém informações sobre a identidade do servidor. Ao verificar o certificado do servidor, o cliente pode garantir que está se comunicando com o servidor correto e que os dados não foram modificados durante a transmissão.
+
+    - Confiança e Autenticação: O HTTPS oferece um nível de confiança e autenticação aos usuários. Quando um site utiliza o HTTPS, ele exibe um ícone de cadeado ou uma barra de endereço verde no navegador, indicando que a conexão é segura. Os usuários podem confiar que suas informações sensíveis, como senhas ou números de cartão de crédito, estão sendo transmitidas de forma segura.
+
+  - O uso do HTTPS é crucial para proteger a privacidade e a segurança das comunicações online. Ele é especialmente importante em transações financeiras, troca de informações pessoais e qualquer atividade que envolva dados sensíveis.
+</details>
+
+<details>
+  <summary>API design</summary>
+
+  - O design de API, ou projeto de API, refere-se ao processo de criar e definir a estrutura, o comportamento e as especificações de uma Interface de Programação de Aplicativos (API). Isso envolve determinar os pontos de extremidade (endpoints), formatos de dados, padrões de requisição e resposta e funcionalidade geral da API.
+</details>
 
 <details>
   <summary>API gateways</summary>
