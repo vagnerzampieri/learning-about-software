@@ -375,7 +375,23 @@
   - Em resumo, enquanto o polling envolve o cliente fazendo repetidas solicitações para verificar atualizações, o streaming permite que o servidor envie dados continuamente para o cliente sem a necessidade de polling constante. O streaming é mais eficiente e adequado para cenários em que os dados precisam ser transmitidos em tempo real, como streaming de mídia, chat em tempo real, monitoramento de sensores, entre outros.
 </details>
 
-- configuration
+<details>
+  <summary>configuration</summary>
+
+  - Configuração, ou configuração do sistema, refere-se ao processo de configurar e personalizar as configurações de software e hardware para otimizar seu comportamento e funcionalidade. Isso envolve definir parâmetros, opções e configurações que determinam como um sistema ou aplicativo opera.
+
+  - Aqui estão alguns aspectos-chave da configuração:
+
+    - Configuração de Software: No contexto do software, a configuração envolve especificar várias configurações e opções para ajustar o comportamento de um aplicativo ou sistema. Isso inclui parâmetros como detalhes de conexão do banco de dados, configurações de rede, níveis de registro, configurações de segurança e muito mais. A configuração de software é geralmente realizada durante a instalação ou como parte do processo de configuração inicial.
+
+    - Configuração de Hardware: A configuração de hardware envolve configurar e personalizar componentes de hardware para garantir o funcionamento adequado e o desempenho ideal. Isso inclui tarefas como conectar dispositivos, configurar drivers, ajustar configurações do BIOS, atribuir recursos (como memória, espaço em disco) a diferentes componentes e garantir a compatibilidade entre os componentes de hardware.
+
+    - Arquivos de Configuração: As configurações são frequentemente armazenadas em arquivos de configuração dedicados. Esses arquivos contêm dados estruturados ou baseados em texto que especificam os parâmetros e opções desejados para um determinado software ou componente de hardware. Os arquivos de configuração podem ser editados manualmente ou modificados por meio de ferramentas ou interfaces de configuração dedicadas.
+
+    - Gerenciamento de Configuração: O gerenciamento de configuração é a prática de gerenciar e controlar sistematicamente as alterações nas configurações de software e hardware ao longo de seu ciclo de vida. Isso envolve processos e ferramentas para rastrear e manter as configurações, gerenciar o controle de versão, garantir consistência e garantir a documentação adequada das alterações.
+
+  - A configuração desempenha um papel crucial em garantir que sistemas e aplicativos sejam configurados corretamente, otimizados e alinhados com requisitos e objetivos específicos. Uma configuração eficaz pode contribuir para melhorar o desempenho, a segurança, a escalabilidade e a confiabilidade geral do sistema.
+</details>
 
 <details>
   <summary>rate limiting</summary>
