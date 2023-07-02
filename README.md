@@ -772,6 +772,12 @@
   Em resumo, a elasticidade está relacionada à capacidade de um sistema se ajustar de forma dinâmica às mudanças na demanda em tempo real, enquanto a escalabilidade está relacionada à capacidade de um sistema crescer de forma planejada e adicionar recursos adicionais para acomodar um aumento na demanda ao longo do tempo. Ambos os conceitos são cruciais para sistemas e serviços modernos, permitindo que sejam flexíveis, responsivos e capazes de lidar com cargas de trabalho variáveis.
 </details>
 
+<details>
+  <summary>Memory Unit table</summary>
+
+  ![Memory Unit table](./images/memory-unit-table.webp)
+</details>
+
 ### Perguntas para entender o problema
 
   Devemos fazer algumas perguntas para entender o problema e definir os requisitos do sistema, como:
