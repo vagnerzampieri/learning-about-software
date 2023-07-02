@@ -3,7 +3,29 @@
 ### Summary of System Design
 
   - How do define system requirements? 
-    - System Requirements
+  
+    <details>
+      <summary>System Requirements</summary>
+      
+      1. Requisitos de desempenho: Determine as metas de desempenho do sistema, como tempo de resposta, throughput, capacidade de processamento e escalabilidade. Isso ajudará a dimensionar adequadamente a infraestrutura e os recursos necessários.
+
+      2. Requisitos de disponibilidade: Estabeleça os requisitos de tempo de atividade e disponibilidade do sistema. Isso pode incluir a necessidade de alta disponibilidade, recuperação de falhas e tolerância a falhas para garantir a continuidade dos serviços.
+
+      3. Requisitos de segurança: Identifique os requisitos de segurança do sistema, como autenticação, autorização, criptografia, controle de acesso e proteção contra ameaças, a fim de garantir a integridade e confidencialidade dos dados.
+
+      4. Requisitos de escalabilidade: Considere a capacidade de dimensionamento do sistema para lidar com aumento de carga, tráfego e usuários. Isso pode envolver a capacidade de adicionar ou remover recursos de forma dinâmica, como servidores, nós de processamento ou bancos de dados.
+
+      5. Requisitos de integração: Determine os requisitos de integração do sistema com outros sistemas, serviços externos ou APIs. Isso inclui a definição de protocolos de comunicação, formatos de dados, métodos de autenticação e autorização, e requisitos de troca de informações.
+
+      6. Requisitos de manutenção: Considere os requisitos de manutenção do sistema, como facilidade de atualização, monitoramento, registros e gerenciamento de erros. Isso ajudará a garantir a operação eficiente e a resolução rápida de problemas.
+
+      7. Requisitos de usabilidade: Avalie os requisitos de usabilidade e experiência do usuário, considerando a interface do usuário, a facilidade de navegação, a capacidade de resposta e a acessibilidade.
+
+      8. Requisitos legais e regulatórios: Verifique se o sistema precisa cumprir requisitos legais, regulatórios ou de conformidade específicos, como privacidade de dados, proteção de informações pessoais ou conformidade com padrões de segurança.
+
+      - Esses são apenas alguns exemplos de requisitos de sistema comuns. É importante adaptar esses requisitos às necessidades específicas do projeto e do domínio de aplicação em questão.
+    </details>
+
     - Functional Requirements
     - High Availability
     - Fault Tolerance, resilience, reliability
