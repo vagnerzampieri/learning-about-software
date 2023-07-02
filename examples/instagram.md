@@ -74,6 +74,13 @@
     - image_path
     - video_path
 
+- GET /feed
+  - params:
+    - user_id
+  - consiferações: 
+    - ordenar por data de criação.
+    - mostrar apenas os posts dos usuários que o usuário segue.
+
 - GET /posts/:id
 
 - DELETE /posts/:id
