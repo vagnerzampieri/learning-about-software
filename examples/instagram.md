@@ -124,5 +124,22 @@
 
 ### Diagrama
 
+![Instagram - v1](../images/instagram-v1.png)
 
-### Conclusão
+### Informações adicionais
+
+Para um sistema como o Instagram, com um volume muito grande de imagens dinâmicas e um feed com elas, uma estratégia eficiente para armazenamento pode ser a seguinte:
+
+  - Armazenamento de imagens em servidores de arquivos distribuídos: Utilize um sistema de armazenamento distribuído para armazenar as imagens, como o Amazon S3, Google Cloud Storage ou um sistema de arquivos distribuído personalizado. Esses sistemas oferecem escalabilidade, alta disponibilidade e durabilidade para lidar com um grande volume de imagens.
+
+  - Caching de imagens: Implemente um mecanismo de cache no nível do aplicativo e/ou por meio de uma CDN (Content Delivery Network) especializada para armazenar em cache as imagens mais populares ou recentemente acessadas. Isso reduzirá a carga nos servidores de armazenamento e melhorará o desempenho ao entregar as imagens aos usuários.
+
+  - Dimensionamento horizontal dos servidores de armazenamento: Distribua o armazenamento das imagens em vários servidores para permitir um dimensionamento horizontal adequado. Isso significa dividir as imagens em vários servidores para que cada um deles lide com uma parte do volume total de imagens. Isso ajuda a melhorar a escalabilidade, a capacidade de resposta e o desempenho do sistema.
+
+  - Indexação e metadados: Utilize técnicas eficientes de indexação e metadados para organizar e pesquisar as imagens. Isso facilita a recuperação rápida das imagens com base em critérios como usuário, localização, hashtags, etc.
+
+  - Compactação e otimização de imagens: Aplique técnicas de compactação e otimização de imagens para reduzir o tamanho do arquivo e melhorar o tempo de carregamento. Isso pode incluir o uso de formatos de imagem eficientes, como WebP, e a aplicação de técnicas de compressão sem perdas ou com perdas.
+
+  - Uso de serviços de processamento de imagem: Considere o uso de serviços de processamento de imagem, como o Amazon Rekognition ou o Google Cloud Vision, para realizar tarefas como reconhecimento de objetos, detecção de rostos ou análise de conteúdo. Isso pode ajudar a classificar e filtrar as imagens com base em determinados critérios.
+
+Essas estratégias combinadas ajudarão a lidar com o grande volume de imagens dinâmicas e fornecerão um desempenho escalável e responsivo para os usuários. É importante avaliar constantemente o desempenho e a capacidade do sistema, ajustando e otimizando a estratégia de armazenamento à medida que o sistema cresce e evolui.

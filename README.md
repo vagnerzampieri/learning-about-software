@@ -825,3 +825,4 @@
 - [architectural katas](https://nealford.com/katas/list.html)
 - [system design course](https://github.com/karanpratapsingh/system-design)
 - [sytem desgin roadmap](https://roadmap.sh/system-design)
+- [chatGPT](https://chat.openai.com)
