@@ -211,7 +211,6 @@
 - GET /prices
   - considerações: o sistema irá retornar os preços das vagas.
 
-
 ### Diagrama
 
 ![Parking Garage - customer reservations - v1](../images/parking-garage-v1.png)

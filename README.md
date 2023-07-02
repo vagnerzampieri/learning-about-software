@@ -26,7 +26,28 @@
       - Esses são apenas alguns exemplos de requisitos de sistema comuns. É importante adaptar esses requisitos às necessidades específicas do projeto e do domínio de aplicação em questão.
     </details>
 
-    - Functional Requirements
+    <details>
+      <summary>Functional Requirements</summary>
+
+      1. Autenticação e autorização: O sistema deve fornecer recursos de autenticação para verificar a identidade dos usuários e autorização para controlar o acesso aos recursos com base em papéis ou permissões específicas.
+
+      2. Gerenciamento de usuários: O sistema deve permitir o cadastro, gerenciamento e manutenção de informações de usuários, incluindo perfis, credenciais de login e dados pessoais.
+
+      3. Fluxo de trabalho e processos: O sistema deve suportar fluxos de trabalho específicos ou processos de negócios, fornecendo recursos para rastrear, gerenciar e automatizar as etapas e a colaboração envolvida.
+
+      4. Gerenciamento de conteúdo: O sistema deve permitir a criação, edição, exclusão e publicação de conteúdo, como artigos, documentos, imagens ou vídeos.
+
+      5. Comunicação e colaboração: O sistema deve oferecer recursos de comunicação e colaboração entre os usuários, como mensagens instantâneas, compartilhamento de arquivos, fóruns ou espaços de trabalho compartilhados.
+
+      6. Processamento de transações: Se o sistema estiver envolvido em transações financeiras ou comerciais, ele deve ser capaz de processar transações de forma segura e confiável, incluindo verificação, autorização e registro de transações.
+
+      7. Relatórios e análises: O sistema deve fornecer recursos para gerar relatórios e análises com base em dados coletados ou gerados pelo sistema, permitindo insights e tomada de decisões informadas.
+
+      8. Integração de sistemas: O sistema pode precisar integrar-se a outros sistemas, como serviços externos, bancos de dados ou APIs, para troca de informações ou interoperabilidade.
+
+      Lembre-se de que esses requisitos funcionais devem ser adaptados às necessidades específicas do projeto e do domínio de aplicação em questão. É importante entender bem os requisitos do sistema e envolver as partes interessadas relevantes para garantir que os requisitos funcionais sejam abordados adequadamente no design do sistema.
+    </details>
+
     - High Availability
     - Fault Tolerance, resilience, reliability
     - Scalability
@@ -778,6 +799,10 @@
 ### Example: Parking Garage
   
   [Link para o exemplo](examples/parking-garage.md)
+
+### Example: Instagram
+    
+  [Link para o exemplo](examples/instagram.md)
 
 ### Videos:
 
