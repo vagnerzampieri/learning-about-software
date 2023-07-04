@@ -120,4 +120,4 @@
 
 - A modelagem com Redis será o mínimo de dado possível, a ideia é fazer um contador em cima de um token, esse token vai representar a url de um cliente, é necessário que seja único e bem pequeno. De tempos em tempos esses dados vão ser extraídos para um DB que possa ser consultado com mais facilidade por alguma ferramenta de estatística.
 
-- Ex.: { t: 123456, v: 200, c: 10 } -> { token: 123456, views: 200, clicks: 10 } ... a idea é que o token seja um número bem pequeno, para que seja possível fazer uma consulta rápida no Redis. Cada byte conta para o Redis, então, quanto menor o registro, melhor.
+- Ex.: { token: 123456, views: 200, clicks: 10 } ... a idea é que o token seja um número bem pequeno, para que seja possível fazer uma consulta rápida no Redis. Cada byte conta para o Redis, então, quanto menor o registro, melhor.
