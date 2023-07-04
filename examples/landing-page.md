@@ -25,8 +25,26 @@
 
 ### Modelagem do banco de dados
 
+- Company
+  - id
+  - name
+  - email
+  - created_at
+  - updated_at
+  - deleted_at
+
+- User
+  - id
+  - company_id
+  - name
+  - email
+  - password
+  - created_at
+  - updated_at
+
 - Landing Page
   - id
+  - company_id
   - name
   - url
   - token (necessary for redis)
@@ -38,8 +56,14 @@
   - published_at
   - deleted_at
 
-- 
-
+- Landing Page View
+  - id
+  - landing_page_id
+  - clicks
+  - views
+  - created_at (to know the day)
+  - updated_at
+  - considerações: essa tabela ficará em um serviço separado, esse serviço pegará os dados do Redis e salvará no banco de dados.
    
 ### Endpoints
 
