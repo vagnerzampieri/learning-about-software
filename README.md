@@ -856,6 +856,10 @@
     
   [Link para o exemplo](examples/instagram.md)
 
+### Example: Landing Page
+
+  [Link para o exemplo](examples/landing-page.md)
+
 ### Videos:
 
   - [20 System Design Concepts Explained in 10 Minutes](https://www.youtube.com/watch?v=i53Gi_K3o7I)
