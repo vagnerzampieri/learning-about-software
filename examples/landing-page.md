@@ -46,7 +46,6 @@
   - id
   - company_id
   - name
-  - url
   - token (necessary for redis)
   - logo
   - image
@@ -55,6 +54,13 @@
   - updated_at
   - published_at
   - deleted_at
+
+- Lead
+  - id
+  - landing_page_id
+  - data (json, com as informações do lead, os campos são dinâmicos vindo de LandingPage#fields)
+  - created_at
+  - updated_at
 
 - Landing Page View
   - id
@@ -67,6 +73,45 @@
    
 ### Endpoints
 
+- POST /landing_pages
+  - company_id
+  - name
+  - logo
+  - image
+  - fields
+  - published_at
+  - considerações: é possível passar os campos para a landing page, mas não é obrigatório, caso não seja passado, a landing page será criada com os campos padrões. O token será gerado automaticamente, ele será uma concatenação de id e url.
+
+- PATCH /landing_pages/:id
+  - name
+  - logo
+  - image
+  - fields
+  - published_at
+
+- GET /landing_pages/:id
+
+- POST /landing_pages/:id/views
+  - token
+  - clicks
+  - views
+  - considerações: esse endpoint será usado para enviar as estatísticas de ao entrar na view e de click com as informações do Lead.
+
+- POST /company
+  - name
+  - email
+
+- POST /signup
+  - body:
+    - company_id
+    - name
+    - email
+    - password
+
+- POST /login
+  - body:
+    - email/nickname
+    - password 
 
 ### Diagrama
 
@@ -74,3 +119,5 @@
 ### Informações adicionais
 
 - A modelagem com Redis será o mínimo de dado possível, a ideia é fazer um contador em cima de um token, esse token vai representar a url de um cliente, é necessário que seja único e bem pequeno. De tempos em tempos esses dados vão ser extraídos para um DB que possa ser consultado com mais facilidade por alguma ferramenta de estatística.
+
+- Ex.: { t: 123456, v: 200, c: 10 } -> { token: 123456, views: 200, clicks: 10 } ... a idea é que o token seja um número bem pequeno, para que seja possível fazer uma consulta rápida no Redis. Cada byte conta para o Redis, então, quanto menor o registro, melhor.
