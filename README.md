@@ -289,6 +289,32 @@
 </details>
 
 <details>
+  <summary>Data Structures</summary>
+
+  - Estruturas de dados se referem à forma como os dados são organizados, armazenados e manipulados em programas de computador. Elas fornecem uma maneira eficiente de armazenar e recuperar dados, realizar operações sobre eles e representar relacionamentos entre diferentes partes de dados. Aqui estão algumas estruturas de dados comuns:
+
+    1. Array: Um array é uma coleção de elementos do mesmo tipo, armazenados em locais de memória contíguos. Os elementos em um array podem ser acessados usando seu índice. Os arrays têm um tamanho fixo e são eficientes para acesso aleatório, mas podem ser custosos para inserções ou remoções.
+    
+    2. Linked List: Uma lista encadeada é uma coleção de nós, onde cada nó contém dados e uma referência (link) para o próximo nó. Ao contrário dos arrays, as listas encadeadas podem crescer e diminuir dinamicamente. As listas encadeadas são eficientes para inserções e remoções, mas o acesso aos elementos por índice requer percorrer a lista a partir do início.
+    
+    3. Stack: Uma pilha é uma estrutura de dados Last-In-First-Out (LIFO), onde os elementos são adicionados e removidos do mesmo extremo chamado topo. Ela segue as operações "push" (adição) e "pop" (remoção).
+    
+    4. Queue: Uma fila é uma estrutura de dados First-In-First-Out (FIFO), onde os elementos são adicionados no final e removidos no início. Ela segue as operações "enqueue" (adição) e "dequeue" (remoção).
+    
+    5. Tree: Uma fila é uma estrutura de dados First-In-First-Out (FIFO), onde os elementos são adicionados no final e removidos no início. Ela segue as operações "enqueue" (adição) e "dequeue" (remoção).
+    
+    6. Graph: Um grafo é uma coleção de nós (vértices) conectados por arestas. Ele representa relacionamentos entre diferentes entidades. Os grafos podem ser direcionados (as arestas têm uma direção específica) ou não direcionados (as arestas não têm direção).
+    
+    7. Hash Table: Uma tabela de hash (ou mapa de hash) é uma estrutura de dados que usa uma função de hash para mapear chaves aos valores. Ela fornece operações eficientes de inserção, remoção e recuperação. As tabelas de hash são comumente usadas para implementar dicionários e bancos de dados.
+    
+    8. Heap: Um heap é uma estrutura de dados baseada em árvore binária que satisfaz a propriedade de heap. Ele permite a recuperação eficiente do elemento máximo (ou mínimo). Heaps são frequentemente usados em filas de prioridade e algoritmos de classificação.
+    
+    9. Graphical Structures: Isso inclui várias estruturas de dados usadas para representar objetos gráficos, como linhas, formas, imagens e polígonos. Exemplos incluem vetores, matrizes e árvores quádruplas.
+
+  - A escolha da estrutura de dados apropriada depende dos requisitos específicos do problema em questão, considerando fatores como eficiência, uso de memória e o tipo de operações necessárias. Compreender e utilizar efetivamente as estruturas de dados é essencial para o design eficiente de algoritmos e otimização na programação de computadores.
+</details>
+
+<details>
   <summary>SQL and NoSQL</summary>
 
   - SQL (Structured Query Language) e NoSQL (Not Only SQL) são dois tipos diferentes de bancos de dados, cada um com suas características, modelos de armazenamento e casos de uso distintos. Vamos entender melhor cada um deles:
