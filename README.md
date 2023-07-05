@@ -301,7 +301,7 @@
     
     4. Queue: Uma fila é uma estrutura de dados First-In-First-Out (FIFO), onde os elementos são adicionados no final e removidos no início. Ela segue as operações "enqueue" (adição) e "dequeue" (remoção).
     
-    5. Tree: Uma fila é uma estrutura de dados First-In-First-Out (FIFO), onde os elementos são adicionados no final e removidos no início. Ela segue as operações "enqueue" (adição) e "dequeue" (remoção).
+    5. Tree: Uma fila é uma estrutura de dados First-In-First-Out (FIFO), onde os elementos são adicionados no final e removidos no início. Ela segue as operações "enqueue" (adição) e "dequeue" (remoção). https://www.geeksforgeeks.org/introduction-to-tree-data-structure-and-algorithm-tutorials/
     
     6. Graph: Um grafo é uma coleção de nós (vértices) conectados por arestas. Ele representa relacionamentos entre diferentes entidades. Os grafos podem ser direcionados (as arestas têm uma direção específica) ou não direcionados (as arestas não têm direção).
     
@@ -317,6 +317,7 @@
   ![linked-list](./images/data-structures/linked-list.png)
   ![stack](./images/data-structures/stack.png)
   ![queue](./images/data-structures/queue.png)
+  ![tree](./images/data-structures/tree.png)
 </details>
 
 <details>
