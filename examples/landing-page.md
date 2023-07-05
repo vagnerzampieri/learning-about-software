@@ -62,7 +62,7 @@
   - created_at
   - updated_at
 
-- Landing Page View
+- Counter
   - id
   - landing_page_id
   - clicks
@@ -91,7 +91,7 @@
 
 - GET /landing_pages/:id
 
-- POST /landing_pages/:id/views
+- POST /landing_pages/:id/counter
   - token
   - clicks
   - views
@@ -115,6 +115,7 @@
 
 ### Diagrama
 
+![Landing Page - v1](../images/landing-page-v1.png)
 
 ### Informações adicionais
 
