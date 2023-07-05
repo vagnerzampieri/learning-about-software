@@ -316,6 +316,7 @@
   ![array](./images/data-structures/array.png)
   ![linked-list](./images/data-structures/linked-list.png)
   ![stack](./images/data-structures/stack.png)
+  ![queue](./images/data-structures/queue.png)
 </details>
 
 <details>
