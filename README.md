@@ -583,6 +583,31 @@
   - https://www.redhat.com/en/topics/api/what-does-an-api-gateway-do
   
 </details>
+
+<details>
+  <summary>stateless</summary>
+
+  - É um termo usado para descrever um sistema ou componente que não mantém informações de estado entre as solicitações. Em outras palavras, cada solicitação é tratada de forma independente, sem conhecimento ou dependência de solicitações anteriores.
+
+  - Em um sistema stateless, todas as informações necessárias para processar uma solicitação são fornecidas na própria solicitação. Não há necessidade de armazenar ou rastrear informações específicas de um usuário ou sessão entre as solicitações. Isso torna o sistema mais simples, escalável e fácil de manter.
+
+  - Algumas características e benefícios de um sistema stateless são:
+
+    1. Independência de solicitações: Cada solicitação é tratada individualmente e não há dependência de solicitações anteriores. Isso permite que o sistema seja facilmente escalável, pois as solicitações podem ser distribuídas entre diferentes servidores sem a necessidade de compartilhar informações de estado.
+
+    2. Balanceamento de carga: Como não há estado a ser mantido, os servidores podem ser facilmente dimensionados horizontalmente e o balanceamento de carga pode ser aplicado de forma eficiente para lidar com um grande número de solicitações.
+
+    3. Facilidade de manutenção: A ausência de informações de estado reduz a complexidade do sistema. Os servidores podem ser atualizados ou substituídos sem afetar a continuidade das solicitações, já que cada solicitação contém todas as informações necessárias para o processamento.
+
+    4. Escalabilidade: Um sistema stateless pode ser facilmente dimensionado para atender a um maior número de solicitações, já que cada solicitação é tratada independentemente e não há restrições de estado compartilhado.
+
+    5. Tolerância a falhas: Em caso de falha de um servidor, o sistema pode continuar a operar normalmente, pois as solicitações não dependem do estado mantido pelo servidor específico.
+
+  - Um exemplo comum de aplicação stateless é a arquitetura REST (Representational State Transfer), em que cada solicitação HTTP contém todas as informações necessárias para identificar e processar a solicitação, sem a necessidade de sessões ou estado persistente. Isso permite que os sistemas REST sejam altamente escaláveis e independentes de plataforma.
+
+  - No entanto, é importante notar que nem todos os sistemas podem ser totalmente stateless. Alguns aplicativos exigem algum nível de estado ou armazenamento de informações entre solicitações, especialmente aqueles que envolvem autenticação de usuário, carrinhos de compras ou fluxos de trabalho complexos. Nessas situações, uma abordagem híbrida pode ser adotada, com componentes stateless e stateful trabalhando juntos para atender aos requisitos do sistema.
+</details>
+
 <details>
   <summary>serverless</summary>
   
