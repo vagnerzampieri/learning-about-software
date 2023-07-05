@@ -312,6 +312,10 @@
     9. Graphical Structures: Isso inclui várias estruturas de dados usadas para representar objetos gráficos, como linhas, formas, imagens e polígonos. Exemplos incluem vetores, matrizes e árvores quádruplas.
 
   - A escolha da estrutura de dados apropriada depende dos requisitos específicos do problema em questão, considerando fatores como eficiência, uso de memória e o tipo de operações necessárias. Compreender e utilizar efetivamente as estruturas de dados é essencial para o design eficiente de algoritmos e otimização na programação de computadores.
+
+  ![array](./images/data-structures/array.png)
+  ![linked-list](./images/data-structures/linked-list.png)
+  ![stack](./images/data-structures/stack.png)
 </details>
 
 <details>
