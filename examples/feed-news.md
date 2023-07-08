@@ -42,18 +42,17 @@
   - user_id
   - blocked_user_id
 
-// pensar sobre o post, pq todo é post, inclusive comentário
 - Post
   - id
   - user_id
   - description
-  - post_id (parent_id)
+  - parent_id (post_id)
+  - considerações: um post funciona como um comentário tbm, tendo outros comentários encadeados a ele, como uma lista encadeada. O post que não tiver um parent_id é um post raiz.
 
 - Like
   - id
   - user_id
   - post_id
-
 
 ### Diagramas
 
