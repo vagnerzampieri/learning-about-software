@@ -2,11 +2,11 @@
 
 ### Summary of System Design
 
-  - How do define system requirements? 
-  
+  - How do define system requirements?
+
     <details>
       <summary>System Requirements</summary>
-      
+
       1. Requisitos de desempenho: Determine as metas de desempenho do sistema, como tempo de resposta, throughput, capacidade de processamento e escalabilidade. Isso ajudará a dimensionar adequadamente a infraestrutura e os recursos necessários.
 
       2. Requisitos de disponibilidade: Estabeleça os requisitos de tempo de atividade e disponibilidade do sistema. Isso pode incluir a necessidade de alta disponibilidade, recuperação de falhas e tolerância a falhas para garantir a continuidade dos serviços.
@@ -66,7 +66,7 @@
     - Data encoding formats
     - Message acknowledgement
   - How to improve system performance with caching?
-    - Caching 
+    - Caching
     - Caching strategies
     - Cache invalidation
     - Cache eviction policies
@@ -141,7 +141,7 @@
 
 <details>
   <summary>client-server model</summary>
-  
+
   O modelo cliente-servidor é uma abordagem arquitetônica utilizada em sistemas de rede e aplicativos de computador, onde há uma divisão clara de papéis e responsabilidades entre os componentes chamados "cliente" e "servidor". Esse modelo permite que dispositivos ou programas se comuniquem e trabalhem juntos de maneira eficiente.
 
   Nesse modelo, o cliente é um dispositivo ou programa que solicita e utiliza os serviços fornecidos por outro dispositivo ou programa chamado servidor. O cliente inicia a comunicação enviando uma solicitação ao servidor, e o servidor responde a essa solicitação fornecendo os serviços ou recursos solicitados. Essa interação é baseada em um protocolo de comunicação, como HTTP (Hypertext Transfer Protocol) para aplicativos da web ou SMTP (Simple Mail Transfer Protocol) para envio de e-mails.
@@ -294,19 +294,19 @@
   - Estruturas de dados se referem à forma como os dados são organizados, armazenados e manipulados em programas de computador. Elas fornecem uma maneira eficiente de armazenar e recuperar dados, realizar operações sobre eles e representar relacionamentos entre diferentes partes de dados. Aqui estão algumas estruturas de dados comuns:
 
     1. Array: Um array é uma coleção de elementos do mesmo tipo, armazenados em locais de memória contíguos. Os elementos em um array podem ser acessados usando seu índice. Os arrays têm um tamanho fixo e são eficientes para acesso aleatório, mas podem ser custosos para inserções ou remoções.
-    
+
     2. Linked List: Uma lista encadeada é uma coleção de nós, onde cada nó contém dados e uma referência (link) para o próximo nó. Ao contrário dos arrays, as listas encadeadas podem crescer e diminuir dinamicamente. As listas encadeadas são eficientes para inserções e remoções, mas o acesso aos elementos por índice requer percorrer a lista a partir do início.
-    
+
     3. Stack: Uma pilha é uma estrutura de dados Last-In-First-Out (LIFO), onde os elementos são adicionados e removidos do mesmo extremo chamado topo. Ela segue as operações "push" (adição) e "pop" (remoção).
-    
+
     4. Queue: Uma fila é uma estrutura de dados First-In-First-Out (FIFO), onde os elementos são adicionados no final e removidos no início. Ela segue as operações "enqueue" (adição) e "dequeue" (remoção).
-    
+
     5. Tree: Uma árvore é uma estrutura de dados hierárquica composta por nós. Cada nó tem um valor e referências para seus nós filhos. As árvores têm um nó raiz no topo e podem ser usadas para representações hierárquicas e algoritmos de busca. https://www.geeksforgeeks.org/introduction-to-tree-data-structure-and-algorithm-tutorials/
-   
+
          - Binary Search Tree: As árvores de busca binária são amplamente utilizadas para armazenar e pesquisar dados ordenados. Elas permitem realizar buscas eficientes, onde a complexidade é proporcional à altura da árvore, o que geralmente é melhor do que a busca linear em estruturas não ordenadas.
-      
+
          - File Systems: Muitos sistemas de arquivos usam estruturas de árvore para organizar e representar a hierarquia de diretórios e arquivos. Cada nó na árvore representa um diretório e seus nós filhos representam arquivos e subdiretórios.
-  
+
          - Expression Tree: As árvores de expressão são usadas para representar e avaliar expressões matemáticas e lógicas. Cada nó da árvore representa um operador ou operando, e os nós filhos representam as subexpressões.
 
          - Computer Networks: As tabelas de roteamento em redes de computadores são frequentemente implementadas usando estruturas de árvores. Cada nó representa um roteador e seus nós filhos representam os roteadores adjacentes.
@@ -316,13 +316,13 @@
          - Database Indexing: As estruturas de índice em bancos de dados, como árvores B e árvores B+, são usadas para melhorar a eficiência de pesquisa e recuperação de dados em grandes conjuntos de dados.
 
          - Tree of Trees: As árvores podem ser usadas para criar estruturas hierárquicas mais complexas, onde cada nó em uma árvore representa outra árvore. Isso é útil para organizar e representar dados complexos com múltiplos níveis de hierarquia.
-    
+
     6. Graph: Um grafo é uma coleção de nós (vértices) conectados por arestas. Ele representa relacionamentos entre diferentes entidades. Os grafos podem ser direcionados (as arestas têm uma direção específica) ou não direcionados (as arestas não têm direção).
-    
+
     7. Hash Table: Uma tabela de hash (ou mapa de hash) é uma estrutura de dados que usa uma função de hash para mapear chaves aos valores. Ela fornece operações eficientes de inserção, remoção e recuperação. As tabelas de hash são comumente usadas para implementar dicionários e bancos de dados.
-    
+
     8. Heap: Um heap é uma estrutura de dados baseada em árvore binária que satisfaz a propriedade de heap. Ele permite a recuperação eficiente do elemento máximo (ou mínimo). Heaps são frequentemente usados em filas de prioridade e algoritmos de classificação.
-    
+
     9.  Graphical Structures: Isso inclui várias estruturas de dados usadas para representar objetos gráficos, como linhas, formas, imagens e polígonos. Exemplos incluem vetores, matrizes e árvores quádruplas.
 
   - A escolha da estrutura de dados apropriada depende dos requisitos específicos do problema em questão, considerando fatores como eficiência, uso de memória e o tipo de operações necessárias. Compreender e utilizar efetivamente as estruturas de dados é essencial para o design eficiente de algoritmos e otimização na programação de computadores.
@@ -365,9 +365,13 @@
 
       - Modelos de dados variados: Os bancos de dados NoSQL oferecem diferentes modelos de armazenamento, como chave-valor, documento, coluna larga (wide column) e grafos. Cada modelo é adequado para diferentes tipos de dados e casos de uso específicos.
 
+      - links:
+        - [Introdução ao NoSQL e MongoDB](https://www.youtube.com/watch?v=04gyv76r_Ts)
+        - [Data Modeling with MongoDB](https://www.youtube.com/watch?v=3GHZd0zv170)
+
   - Os bancos de dados SQL e NoSQL têm seus prós e contras, e a escolha entre eles depende dos requisitos e das características do projeto em questão. Em geral, os bancos de dados SQL são amplamente utilizados em aplicativos que exigem integridade de dados, consultas complexas e transações ACID, enquanto os bancos de dados NoSQL são mais adequados para cenários que requerem escalabilidade, flexibilidade de esquema e desempenho em larga escala.
 </details>
-  
+
 <details>
   <summary>replication and sharding</summary>
 
@@ -441,7 +445,7 @@
   - A arquitetura P2P oferece vantagens como escalabilidade, resistência a falhas e independência de um ponto central de controle. No entanto, também apresenta desafios, como gerenciamento de recursos, segurança e coordenação entre os nós. Cada aplicativo P2P pode implementar diferentes mecanismos de comunicação e protocolos, dependendo dos requisitos específicos do sistema.
 
 </details>
-  
+
 <details>
   <summary>polling and streaming</summary>
 
@@ -512,7 +516,7 @@
 
   - Logging (Registro de Eventos):
     - O logging envolve a captura e o armazenamento de eventos e informações relevantes durante a execução de um sistema. É uma prática que permite registrar mensagens, erros, avisos, exceções e outros eventos importantes que ocorrem em um aplicativo ou infraestrutura. Os logs são geralmente gravados em arquivos ou enviados para um sistema de registro centralizado.
-  
+
     - Alguns benefícios do logging incluem:
 
       - Troubleshooting e diagnóstico: Os logs são úteis para identificar problemas e investigar falhas em um sistema. Eles fornecem pistas sobre o comportamento do sistema e podem ajudar a encontrar a causa raiz de um problema.
@@ -525,7 +529,7 @@
 
   - Monitoramento:
     - O monitoramento refere-se à coleta, processamento e análise de dados em tempo real para acompanhar o desempenho, a disponibilidade e a integridade de um sistema. Ele fornece informações em tempo real sobre a saúde e o status de um sistema, permitindo a detecção e a resolução rápida de problemas.
-  
+
     - Algumas características do monitoramento incluem:
 
       - Coleta de métricas: O monitoramento envolve a coleta de métricas e estatísticas relevantes, como uso de CPU, memória, latência, tempo de resposta, número de requisições, entre outros. Essas métricas são coletadas em intervalos regulares e podem ser visualizadas em tempo real.
@@ -546,27 +550,27 @@
 
   1. Etapa de mapeamento (Map):
      - Nesta etapa, os dados de entrada são divididos em partes menores e independentes, chamadas de "splits".
-      
+
       - Cada split é processado por uma função de mapeamento, que transforma os dados em pares chave-valor intermediários.
-    
+
       - A função de mapeamento é especificada pelo programador e pode ser aplicada a cada split de forma paralela em diferentes nós do cluster.
-  
+
   2. Etapa de redução (Reduce):
      - Nesta etapa, os pares chave-valor intermediários são agrupados com base na chave comum.
       - Cada grupo de pares com a mesma chave é processado por uma função de redução, que combina e resume os valores relacionados a essa chave.
-  
+
       - A função de redução também é especificada pelo programador e pode ser aplicada em paralelo para diferentes grupos de chaves em diferentes nós do cluster.
-  
+
       - O modelo MapReduce fornece uma abstração poderosa para lidar com tarefas de processamento de dados complexas em um ambiente distribuído. Ele oferece as seguintes vantagens:
-   
+
   - Escalabilidade: O modelo MapReduce pode lidar com grandes volumes de dados distribuídos em um cluster de computadores, permitindo o processamento paralelo e distribuído.
-  
+
   - Tolerância a falhas: Como os dados são processados em várias etapas e em diferentes nós do cluster, o modelo MapReduce oferece resiliência a falhas de nós individuais.
-  
+
   - Programação simplificada: Os programadores podem se concentrar nas funções de mapeamento e redução, sem se preocupar com detalhes de concorrência, particionamento de dados ou comunicação entre os nós do cluster.
-  
+
   - Reutilização: O modelo MapReduce é flexível e pode ser aplicado a uma ampla variedade de problemas de processamento de dados, facilitando a reutilização de código e o desenvolvimento rápido de soluções.
-     
+
   - O Hadoop é uma implementação popular e de código aberto do modelo MapReduce, fornecendo uma estrutura para processamento distribuído de dados em clusters. Além do Hadoop, existem outras ferramentas e frameworks que suportam o modelo MapReduce, como o Apache Spark e o Apache Flink, que oferecem recursos avançados e melhor desempenho em comparação com o Hadoop.
 
   - Alguns exemplos de utilização:
@@ -627,7 +631,7 @@
   - Em resumo, os API gateways são componentes essenciais para o gerenciamento, segurança e otimização de APIs. Eles fornecem recursos como gerenciamento de tráfego, segurança, transformação de dados, cache, monitoramento e análise, versionamento e controle, e integração de serviços. Essas funcionalidades ajudam a simplificar o desenvolvimento, melhorar a segurança, otimizar o desempenho e facilitar a integração de sistemas complex
 
   - https://www.redhat.com/en/topics/api/what-does-an-api-gateway-do
-  
+
 </details>
 
 <details>
@@ -656,7 +660,7 @@
 
 <details>
   <summary>serverless</summary>
-  
+
   - Serverless computing (computação sem servidor) é um modelo de computação em nuvem em que os desenvolvedores podem escrever e executar código sem a necessidade de gerenciar a infraestrutura subjacente. Nesse modelo, o provedor de serviços em nuvem é responsável por provisionar, dimensionar e gerenciar automaticamente os recursos necessários para executar o código.
 
   - Em um ambiente serverless, os desenvolvedores se concentram na escrita do código da aplicação em vez de lidar com a configuração e manutenção dos servidores. Eles criam funções individuais (também chamadas de funções serverless ou funções como serviço) que são acionadas por eventos específicos, como uma solicitação HTTP, uma atualização em um banco de dados ou um arquivo sendo enviado para um armazenamento em nuvem.
@@ -674,7 +678,7 @@
   5. Maior produtividade: Com a infraestrutura gerenciada pelo provedor de serviços em nuvem, os desenvolvedores podem se concentrar mais na lógica do aplicativo e na entrega de valor aos usuários finais. Isso aumenta a produtividade e acelera o processo de desenvolvimento.
 
   - Em resumo, o modelo serverless permite que os desenvolvedores se concentrem na lógica do código, enquanto a infraestrutura é gerenciada automaticamente pelo provedor de serviços em nuvem. Isso oferece escalabilidade, pagamento por uso, gerenciamento simplificado e maior produtividade.
-  
+
   - O modelo serverless pode ser utilizado em uma variedade de casos de uso, incluindo:
 
   1. Aplicações web: O serverless é adequado para o desenvolvimento de aplicações web que possuem demanda variável e podem enfrentar picos de tráfego. Ele permite que as aplicações sejam dimensionadas automaticamente para lidar com o aumento de usuários e solicitações, sem a necessidade de gerenciar manualmente a infraestrutura.
@@ -688,9 +692,9 @@
   5. Processamento de imagens e vídeos: O serverless é útil para processamento de mídia, como redimensionamento de imagens, transcodificação de vídeos, reconhecimento de imagens e processamento de vídeo em tempo real. As funções serverless podem ser acionadas por eventos de upload de arquivos e realizar o processamento necessário sem a necessidade de infraestrutura dedicada.
 
   - Esses são apenas alguns exemplos de casos de uso em que o modelo serverless pode ser aplicado. Sua flexibilidade e escalabilidade tornam-no uma opção atraente para uma ampla gama de aplicações e serviços.
-  
+
   - https://www.redhat.com/en/topics/cloud-native-apps/what-is-serverless
-  
+
 </details>
 
 <details>
@@ -701,9 +705,9 @@
   - Para uma operação ser idempotente, ela deve satisfazer duas condições:
 
   1. O resultado da operação deve ser o mesmo, independentemente do número de vezes que a operação é executada.
-  
+
   2. A execução repetida da operação não deve ter efeitos colaterais indesejados além da primeira execução.
-   
+
   - A idempotência é especialmente importante em sistemas distribuídos e em comunicações de rede, onde mensagens podem ser perdidas, duplicadas ou entregues fora de ordem. Ao projetar sistemas ou APIs, a idempotência é uma propriedade desejável para evitar resultados inesperados ou indesejados.
 
   - Alguns exemplos de operações idempotentes incluem:
@@ -772,7 +776,7 @@
   - Esses são apenas alguns exemplos de como o SSE pode ser aplicado. A flexibilidade do SSE em fornecer atualizações contínuas em tempo real torna-o uma opção viável em vários cenários onde a comunicação assíncrona e em tempo real é necessária.
 
 </details>
-  
+
 <details>
   <summary>WebSockets</summary>
 
@@ -792,7 +796,7 @@
 
   - Os WebSockets são amplamente utilizados em uma variedade de aplicativos e casos de uso, incluindo bate-papo em tempo real, jogos multiplayer, notificações push, colaboração em tempo real, streaming de dados, entre outros. Muitas linguagens de programação e frameworks têm suporte para implementação de servidores WebSocket, tornando relativamente fácil desenvolver aplicativos interativos em tempo real. Nos navegadores, a API WebSocket está disponível nativamente na maioria dos principais navegadores modernos.
 
-</details> 
+</details>
 
 <details>
   <summary>WebRTC</summary>
@@ -916,15 +920,15 @@
   - Como você irá documentar o sistema e compartilhar conhecimento sobre sua arquitetura e funcionamento?
 
 ### Example: Feed News
-  
+
   [Link para o exemplo](examples/feed-news.md)
 
 ### Example: Parking Garage
-  
+
   [Link para o exemplo](examples/parking-garage.md)
 
 ### Example: Instagram
-    
+
   [Link para o exemplo](examples/instagram.md)
 
 ### Example: Landing Page
@@ -935,8 +939,8 @@
 
   - [20 System Design Concepts Explained in 10 Minutes](https://www.youtube.com/watch?v=i53Gi_K3o7I)
   - [ENTREVISTA SYSTEM DESIGN: O ROADMAP PARA VOCÊ SER CONTRATADO!](https://www.youtube.com/watch?v=-NF06EaAr0I&list=PLs-l5bSgIMhAIi4QIWvzwdyoTFXj9CDFv&index=4)
-    - [miro](https://miro.com/app/board/uXjVPfOXbs8=/) 
-  - [Design a Payment System - System Design Interview](https://www.youtube.com/watch?v=olfaBgJrUBI) 
+    - [miro](https://miro.com/app/board/uXjVPfOXbs8=/)
+  - [Design a Payment System - System Design Interview](https://www.youtube.com/watch?v=olfaBgJrUBI)
   - [Design a Basic Search Engine (Google or Bing) | System Design Interview Prep](https://www.youtube.com/watch?v=0LTXCcVRQi0)
   - [System Design Mock Interview: Design WhatsApp](https://www.youtube.com/watch?v=0iyLURrWIgQ)
 
