@@ -1,0 +1,88 @@
+# Backend
+
+  - Internet
+  - Learn a language
+  - Version Control System
+  - Repositories
+  - OS and General Knowledge
+    - POSIX Basics (stdin, stdout, stderr, pipes)
+    - Memory Management
+    - Interprocess Communication
+    - I/O Management
+    - Basic Networking Concepts
+    - Threads and Concurrency
+    - Processes Management
+  - Relational Databases
+  - NoSQL Databases
+    - Document DBs
+    - Time Series
+    - Realtime
+    - Column DB
+    - Graph DB
+    - Key-Value
+  - More about Databases
+    - Profiling Performance
+    - Failure Modes
+    - Normalization
+    - N+1 Problem
+    - Transactions
+    - ACID
+    - ORMs
+  - Scaling Databases
+    - Database Indexes
+    - Data Replication
+    - Shardingn Strategies
+    - CAP Theorem
+  - APIs
+  - Caching
+    - Client Side
+    - Server Side
+    - CDN
+  - Web Security Knowledge
+    - Hashing Algorithms
+      - MD5 why not to use it
+      - SHA family
+      - scrypt
+      - bcrypt
+    - API Security Best Practices
+      - HTTPS
+      - CORS
+      - CSP
+      - OWASP Security Risks
+      - SSL/TLS
+      - Server Security
+  - Testing
+  - CI/CD
+  - Design and Development Principles
+    - GOF Design Patterns
+    - Domain Driven Design
+    - Test Driven Development
+    - CQRS
+    - Event Sourcing
+    - SOLID
+  - Architectural Patterns
+    - Monolithic Apps
+    - Microservices
+    - SOA
+    - Serverless
+    - Service Mesh
+    - Twelve Factor Apps
+  - Search Engines
+  - Message Brokers
+  - Containerization vs Virtualization
+  - GraphQL
+  - WebSockets
+  - Server Sent Events
+  - Web Servers
+  - Building for Scale
+    - Observability
+    - Types of Scaling
+    - Migration Strategies
+      - Circuit Breaker
+      - Loadshifting
+      - Backpressure
+      - Throttling
+      - Graceful Degradation
+
+## References:
+  - [Backend Roadmap](https://roadmap.sh/backend)
