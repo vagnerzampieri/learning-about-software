@@ -1,6 +1,6 @@
-## System Design
+# System Design
 
-### Summary of System Design
+## Summary of System Design
 
   - How do define system requirements?
 
@@ -137,7 +137,7 @@
     - Bulkhead
     - Shuffle sharding
 
-### System Design Basics
+## System Design Basics
 
 <details>
   <summary>client-server model</summary>
@@ -853,7 +853,7 @@
   ![Memory Unit table](./images/memory-unit-table.webp)
 </details>
 
-### Tecnologias
+## Tecnologias
 
 <details>
   <summary>Redis</summary>
@@ -899,7 +899,7 @@
 </details>
 
 
-### Perguntas para entender o problema
+## Perguntas para entender o problema
 
   Devemos fazer algumas perguntas para entender o problema e definir os requisitos do sistema, como:
 
@@ -919,23 +919,23 @@
   - Você considerou a modularidade e a extensibilidade do sistema? Ele pode ser facilmente adaptado a mudanças futuras?
   - Como você irá documentar o sistema e compartilhar conhecimento sobre sua arquitetura e funcionamento?
 
-### Example: Feed News
+## Example: Feed News
 
   [Link para o exemplo](examples/feed-news.md)
 
-### Example: Parking Garage
+## Example: Parking Garage
 
   [Link para o exemplo](examples/parking-garage.md)
 
-### Example: Instagram
+## Example: Instagram
 
   [Link para o exemplo](examples/instagram.md)
 
-### Example: Landing Page
+## Example: Landing Page
 
   [Link para o exemplo](examples/landing-page.md)
 
-### Videos:
+## Videos:
 
   - [20 System Design Concepts Explained in 10 Minutes](https://www.youtube.com/watch?v=i53Gi_K3o7I)
   - [ENTREVISTA SYSTEM DESIGN: O ROADMAP PARA VOCÊ SER CONTRATADO!](https://www.youtube.com/watch?v=-NF06EaAr0I&list=PLs-l5bSgIMhAIi4QIWvzwdyoTFXj9CDFv&index=4)
@@ -944,7 +944,7 @@
   - [Design a Basic Search Engine (Google or Bing) | System Design Interview Prep](https://www.youtube.com/watch?v=0LTXCcVRQi0)
   - [System Design Mock Interview: Design WhatsApp](https://www.youtube.com/watch?v=0iyLURrWIgQ)
 
-### References:
+## References:
 
 - [miro](https://miro.com/app/board/uXjVORFgFfA=/)
 - [architectural katas](https://nealford.com/katas/list.html)
