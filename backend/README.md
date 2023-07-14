@@ -11,6 +11,11 @@
     - I/O Management
     - Basic Networking Concepts
     - Threads and Concurrency
+      - Multi-threading
+      - Tread Safety
+      - Locks
+      - Deadlocks
+      - Race Conditions
     - Processes Management
   - Relational Databases
   - NoSQL Databases
