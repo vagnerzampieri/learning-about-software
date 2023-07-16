@@ -16,6 +16,9 @@
       - Locks
       - Deadlocks
       - Race Conditions
+      - Mutex
+      - Semaphores
+      - Monitors
     - Processes Management
   - Relational Databases
   - NoSQL Databases
@@ -84,7 +87,7 @@
     - Types of Scaling
     - Migration Strategies
       - Circuit Breaker
-      - Loadshifting
+      - Load Shifting
       - Backpressure
       - Throttling
       - Graceful Degradation
