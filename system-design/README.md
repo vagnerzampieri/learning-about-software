@@ -152,7 +152,7 @@
 
   Os protocolos de rede são conjuntos de regras e procedimentos que governam a comunicação entre dispositivos em uma rede. Eles definem como os dispositivos trocam dados, estabelecem conexões, detectam erros, gerenciam endereçamento e realizam outras funções essenciais para a comunicação eficiente na rede. Aqui estão alguns dos protocolos de rede mais comuns:
 
-  1. TCP/IP (Transmission Control Protocol/Internet Protocol): É o conjunto de protocolos mais amplamente utilizado na Internet. O TCP é responsável pelo controle de transmissão confiável dos dados, enquanto o IP é responsável pelo endereçamento e roteamento dos pacotes na rede.
+  1. TCP/IP (Transmission Control Protocol/Internet Protocol): É responsável pelo controle de transmissão confiável dos dados, enquanto o IP é responsável pelo endereçamento e roteamento dos pacotes na rede.
 
   2. UDP (User Datagram Protocol): O UDP é projetado para fornecer uma comunicação rápida e eficiente, sem os recursos adicionais de controle de fluxo, retransmissão de pacotes perdidos e garantia de entrega, presentes em outro protocolo de transporte amplamente utilizado, o TCP (Transmission Control Protocol). Ele é amplamente utilizado em aplicações que exigem baixa latência e têm tolerância a perdas de dados, como chamadas de voz, streaming de vídeo e jogos online.
 
