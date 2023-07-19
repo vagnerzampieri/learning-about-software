@@ -154,7 +154,7 @@
 
   1. TCP/IP (Transmission Control Protocol/Internet Protocol): É responsável pelo controle de transmissão confiável dos dados, orientado a conexão, controle de fluxo, ordenação de pacotes e cabeçalho mais complexo. Enquanto o IP é responsável pelo endereçamento e roteamento dos pacotes na rede.
 
-  2. UDP (User Datagram Protocol): O UDP é projetado para fornecer uma comunicação rápida e eficiente, sem os recursos adicionais de controle de fluxo, retransmissão de pacotes perdidos e garantia de entrega, presentes em outro protocolo de transporte amplamente utilizado, o TCP (Transmission Control Protocol). Ele é amplamente utilizado em aplicações que exigem baixa latência e têm tolerância a perdas de dados, como chamadas de voz, streaming de vídeo e jogos online.
+  2. UDP (User Datagram Protocol): É projetado para fornecer uma comunicação rápida e eficiente, sem os recursos adicionais de controle de fluxo, retransmissão de pacotes perdidos e garantia de entrega, presentes em outro protocolo de transporte amplamente utilizado, o TCP. Ele é amplamente utilizado em aplicações que exigem baixa latência e têm tolerância a perdas de dados, como chamadas de voz, streaming de vídeo e jogos online.
 
   3. HTTP (Hypertext Transfer Protocol): É um protocolo usado para transferir recursos, como páginas da web, na World Wide Web. Ele permite a comunicação entre clientes e servidores web.
 
