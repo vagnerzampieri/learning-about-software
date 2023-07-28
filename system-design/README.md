@@ -215,6 +215,26 @@
 </details>
 
 <details>
+  <summary>Integrity</summary>
+
+  - É um princípio fundamental que garante que os dados e informações não sejam corrompidos, alterados, destruídos ou acessados por pessoas não autorizadas durante o processo de armazenamento, transmissão ou manipulação.
+
+  - A integridade dos dados é essencial para garantir a precisão, consistência e confiança das informações em um sistema. Quando a integridade é comprometida, os dados podem tornar-se inúteis ou até mesmo prejudiciais para a tomada de decisões e a operação de um sistema. Algumas das principais formas de garantir a integridade dos dados incluem:
+
+  1. Mecanismos de detecção de erros: Utilização de algoritmos de detecção de erros, como soma de verificação (checksum) e hash, para verificar se os dados foram alterados ou corrompidos durante a transmissão ou armazenamento.
+
+  2. Autenticação: Verificação da identidade de usuários, dispositivos ou sistemas para garantir que apenas entidades autorizadas tenham permissão para acessar, modificar ou excluir dados.
+
+  3. Criptografia: Uso de técnicas de criptografia para proteger dados confidenciais e sensíveis contra acesso não autorizado.
+
+  4. Controle de acesso: Implementação de políticas de controle de acesso para determinar quem pode acessar, ler, gravar ou modificar determinados dados.
+
+  5. Auditoria: Registro de atividades e modificações nos dados, permitindo a identificação de alterações não autorizadas ou suspeitas.
+
+  6. Backup e recuperação: Realização de cópias de segurança (backups) dos dados para garantir que, em caso de perda ou corrupção, seja possível restaurar as informações para um estado anterior.
+</details>
+
+<details>
   <summary>caching</summary>
 
   Caching (ou cache) é uma técnica amplamente utilizada em sistemas de computação para melhorar o desempenho e a eficiência ao armazenar dados temporariamente em um local mais rápido e de acesso mais rápido do que a fonte original. O cache é uma memória auxiliar que armazena cópias de dados frequentemente acessados para fornecer acesso rápido a esses dados, reduzindo a necessidade de acessar a fonte original, que pode ser mais lenta.
