@@ -893,6 +893,33 @@
   - Por exemplo, um provedor de serviços de Internet pode oferecer um SLA que garante uma disponibilidade de rede de 99,9% durante um determinado período. Isso significa que o provedor se compromete a manter a rede em funcionamento e acessível aos clientes 99,9% do tempo. Se o provedor não cumprir esse compromisso, pode haver penalidades ou reembolsos conforme especificado no SLA.
 </details>
 
+<details>
+  <summary>Bastion Server</summary>
+
+  - Um bastion server (servidor bastião) é um servidor de acesso remoto que é colocado em uma rede pública e exposto diretamente à Internet. Ele é usado para fornecer acesso seguro a uma rede privada, geralmente para administradores de sistemas ou desenvolvedores. O bastion server é usado como um ponto de entrada para acessar os servidores privados na rede, fornecendo uma camada adicional de segurança.
+
+  - O bastion server é geralmente configurado com um firewall e outros mecanismos de segurança para proteger a rede privada. Ele também pode ser configurado para autenticar os usuários antes de permitir o acesso aos servidores privados. Isso ajuda a evitar ataques de força bruta e outros tipos de ataques de segurança.
+
+    - Ponto de Entrada Seguro: O bastion server é configurado com medidas de segurança rigorosas, como autenticação de dois fatores, autenticação forte ou chaves SSH, para garantir que apenas usuários autorizados tenham acesso.
+
+      - Acesso Controlado: Ele atua como um ponto de entrada único para a rede, reduzindo a exposição de outros servidores e sistemas internos. Isso ajuda a reduzir a superfície de ataque.
+
+      - Isolamento: O bastion server é tipicamente colocado em uma zona de rede desmilitarizada (DMZ), separada da rede interna e da internet pública. Isso ajuda a isolar o tráfego de entrada e saída, adicionando uma camada adicional de segurança.
+
+      - Registro e Monitoramento: O bastion server geralmente é configurado para registrar e monitorar todas as atividades de acesso. Isso permite a auditoria e rastreamento de quem acessou o servidor e quais ações foram realizadas.
+
+      - Túneis e Encaminhamento: O bastion server pode ser usado para criar túneis seguros para outros sistemas internos da rede, permitindo que administradores acessem esses sistemas de forma segura através do bastion.
+
+      - Atualizações e Manutenção: Como um servidor dedicado, o bastion server pode ser cuidadosamente mantido e atualizado para garantir um alto nível de segurança.
+
+      - Configuração Mínima: O bastion server é mantido com uma configuração mínima de serviços e aplicativos, reduzindo os pontos potenciais de vulnerabilidade.
+
+    - O bastion server é uma prática comum em ambientes corporativos e de data centers, onde a segurança é uma preocupação fundamental. Ele permite que os administradores acessem sistemas internos sem expor diretamente esses sistemas à internet. Em vez disso, eles se conectam primeiro ao bastion server, que atua como um guardião controlado de acesso.
+
+    - Em resumo, um bastion server é um componente de segurança essencial projetado para controlar e monitorar o acesso a sistemas internos protegidos, ajudando a garantir a segurança e a integridade da rede.
+
+</details>
+
 ## Tecnologias
 
 <details>
