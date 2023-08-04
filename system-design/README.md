@@ -875,6 +875,24 @@
   ![Memory Unit table](./images/memory-unit-table.webp)
 </details>
 
+<details>
+  <summary>ASN</summary>
+
+  - ASN é a sigla para "Autonomous System Number" (Número de Sistema Autônomo, em português). Um ASN é um número único atribuído a um sistema autônomo na Internet. Um sistema autônomo é um conjunto de roteadores e redes que compartilham uma política de roteamento comum e são controlados por uma única entidade, como um provedor de serviços de Internet (ISP) ou uma organização.
+
+  - Os números ASN são usados para identificar e distinguir diferentes sistemas autônomos na Internet. Eles são essenciais para o roteamento de tráfego na Internet, permitindo que os roteadores determinem a melhor rota para encaminhar os pacotes de dados entre os sistemas autônomos.
+</details>
+
+<details>
+  <summary>SLA</summary>
+
+  - SLA é a sigla para "Service Level Agreement" (Acordo de Nível de Serviço, em português). Um SLA é um contrato formal que estabelece os termos, metas e responsabilidades entre um provedor de serviços e um cliente. Ele define os níveis de qualidade e desempenho que o provedor de serviços se compromete a entregar, bem como as consequências em caso de descumprimento desses níveis.
+
+  - Um SLA pode abordar diversos aspectos de um serviço, como disponibilidade, tempo de resposta, tempo de resolução, desempenho, segurança, suporte técnico e outros indicadores de qualidade. Ele serve como uma maneira de estabelecer expectativas claras entre as partes envolvidas e pode ser uma ferramenta importante para garantir a prestação adequada de serviços.
+
+  - Por exemplo, um provedor de serviços de Internet pode oferecer um SLA que garante uma disponibilidade de rede de 99,9% durante um determinado período. Isso significa que o provedor se compromete a manter a rede em funcionamento e acessível aos clientes 99,9% do tempo. Se o provedor não cumprir esse compromisso, pode haver penalidades ou reembolsos conforme especificado no SLA.
+</details>
+
 ## Tecnologias
 
 <details>
