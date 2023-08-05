@@ -16,7 +16,76 @@
 - Você pode ter duas entidades de Médico no sistema, no financeiro é necessário para o pagamento por exemplo, e na enfermagem esse médico pode não ter mais acesso ao sistema, pois ele foi demitido. Nesse caso temos dois subdomínios, o financeiro e o de enfermagem, e cada um tem a sua entidade de Médico. Com esse tipo de abordagem você diminui o custo de manutenção do sistema, pois não precisa ficar fazendo gambiarra para atender a todos os requisitos. Mas aumenta o custo de desenvolvimento, pois você vai ter que implementar a mesma entidade em vários lugares e fazer sync de dados entre os subdomínios, quando necessário.
 - O domínio tem relação com você mudar os dados, mas se você precisa consultar os dados, você faz a consulta no banco de dados.
 
+#### Atacando a complexidade do domínio:
+
+![Complexidade do Software](./images/complexidade-do-software.png)
+
+A Complexidade do Domínio é a complexidade que faz alguém a querer a comprar um software. É a complexidade que faz o software ser necessário. Complexidade de Domínio é a complexidade do negócio.
+
+#### Linguagem Onipresente
+
+É a linguagem que o especialista do domínio usa para falar sobre o domínio. A ideia é a equipe técnica conversar com o especialista do domínio e aprender a linguagem que ele usa para falar sobre o domínio. E aí usar essa linguagem no código, nos nomes das classes, métodos, variáveis, etc. Não é para o programador tomar nota do problema e sim para ele aprender a linguagem do domínio e usar essa linguagem no código.
+
+O Especialista de Domínio vai acabar te trazendo excelentes cenários para fazer teste. Nenhum Especialista de Domínio conhece tudo sobre o negócio, o ideal é conversar com vários especialistas de domínio, e cada um vai trazer um cenário diferente para testar.
+
+
+#### Exemplo de Classe Anêmica
+
+É uma classe que não tem sentido, não tem contexto, não tem domínio. É uma classe que não tem nada, só tem os dados. É uma classe que não tem comportamento. É uma classe que não tem regras de negócio.
+
+Muitas vezes começamos a desenvolver pensando no Banco de Dados e não no negócio. Então criamos a classe pensando em como vamos armazenar os dados.
+
+Uma forma de identificar uma classe é anêmica é quando não tem necessidade de testes. Você não estaria testando o código e sim o Ruby, e isso não faz sentido.
+
+```ruby
+class Employee
+  attr_accessor :name, :age, :salary, :role
+end
+```
+
+#### Exemplo de Classe Anêmica com Contexto
+
+É uma classe que tem sentido, tem contexto, tem domínio. É uma classe que tem comportamento. É uma classe que tem regras de negócio.
+
+```ruby
+class Employee
+  attr_accessor :name, :age, :salary, :role
+
+  def promote
+    @salary += 1000
+  end
+end
+```
+
+No caso do aumento de salário, existem várias formas de aumentar o salário, e cada uma tem uma regra diferente. Então você pode ter vários métodos de aumentar o salário, e cada um com a sua regra. Por exemplo, um aumento por promoção, um aumento por dissídio, um aumento por acordo coletivo, etc. Mais uma vez, só é possível saber sobre isso se você conversar com o especialista do domínio.
+
+#### Espaço do Problema e Espaço da Solução
+
+O Espaço do Problema é onde você vai conversar com o especialista do domínio, e o Espaço da Solução é onde você vai implementar o código. É importante separar esses dois espaços, pois no Espaço do Problema você não vai pensar em tecnologia, e no Espaço da Solução você não vai pensar em negócio.
+
+![Espaço do Problema e Espaço da Solução](./images/espaco-do-problema.png)
+
+#### Subdomínios e Contextos Delimitados
+
+Um subdomínio é um contexto delimitado, é um contexto que tem um sentido, que tem um domínio. É um contexto que tem regras de negócio. É um contexto que tem um especialista do domínio.
+
+Por exemplo, em uma Empresa X, ela pode ter subdomínios Vendas, Produção, Marketing, Suporte, Financeiro, etc. Cada um desses subdomínios tem um especialista do domínio, e cada um desses subdomínios tem um domínio diferente.
+
+#### Tipos de Subdomínios
+
+Os tipos de subdomínios são:
+
+- Core Domain: É o domínio principal da empresa, é o domínio que faz a empresa ganhar dinheiro. É o centro do problema, por exemplo, em uma empresa de vendas, o Core Domain é o domínio de vendas.
+- Supporting Subdomain: É um domínio que suportam a operação principal da empresa.
+- Generic Subdomain: É um domínio que não é diretamente ligado ao funcionamento da empresa, mas é essencial.
+
+![Tipos de Subdomínios](./images/tipos-de-subdominios.png)
+
+
 #### References
 
 - [Domain Driven Design do Jeito Certo](https://www.youtube.com/watch?v=cz6EU7Z_BhE)
 - [DDD do Jeito Certo](https://ddd-do-jeito-certo.online/)
+- [Atacando a complexidade | DDD do jeito certo | Parte 01](https://www.youtube.com/watch?v=2X9Q97u4tUg)
+- [Linguagem Onipresente (Ubiquitous Language | DDD do jeito certo | Parte 02)](https://www.youtube.com/watch?v=HnvmpyUAITs)
+- [Subdomínios e contextos delimitados | DDD do jeito certo | Parte 03](https://www.youtube.com/watch?v=9hlRHZ4Pfyo)
