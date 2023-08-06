@@ -97,9 +97,16 @@ Os tipos de subdomínios são:
 #### Entidades e Objetos de Valor
 
 - Entidade: É um objeto que tem identidade, ou seja, que tem um ID. É um objeto que tem um ciclo de vida, que tem um estado. Por exemplo um Funcionário, Cliente, etc.
-- Objeto de Valor: Por exemplo um endereço de um Funcionário é um objeto de valor.
+- Objeto de Valor: Em um objeto de valor o id não é importante, o que vai dizer que se trata do mesmo objeto de valor, é comparar todos os dados daquele objeto, por exemplo o endereço. Por exemplo um endereço de um Funcionário é um objeto de valor.
 
-As entidades são a cola que une os bounded contexts.
+As entidades são a cola que une os bounded contexts. No Ruby você pode comparar dois objetos de valor com o método `==`, se você criar um struct por exemplo, é possível comparar os dois objetos facilmente.
+
+```ruby
+  Address = Struct.new(:street, :number)
+  address1 = Address.new('Rua A', 1)
+  address2 = Address.new('Rua A', 1)
+  address1 == address2 # true
+```
 
 ![Bounded Context](./images/bounded-context.png)
 
