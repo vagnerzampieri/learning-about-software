@@ -65,7 +65,7 @@ O Espaço do Problema é onde você vai conversar com o especialista do domínio
 
 ![Espaço do Problema e Espaço da Solução](./images/espaco-do-problema.png)
 
-#### Subdomínios e Contextos Delimitados
+#### Subdomínios e Contextos Delimitados (Bounded Context)
 
 Um subdomínio é um contexto delimitado, é um contexto que tem um sentido, que tem um domínio. É um contexto que tem regras de negócio. É um contexto que tem um especialista do domínio.
 
