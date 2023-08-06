@@ -94,6 +94,15 @@ Os tipos de subdomínios são:
 
 ![Context Mapping](./images/context-mapping.png)
 
+#### Entidades e Objetos de Valor
+
+- Entidade: É um objeto que tem identidade, ou seja, que tem um ID. É um objeto que tem um ciclo de vida, que tem um estado. Por exemplo um Funcionário, Cliente, etc.
+- Objeto de Valor: Por exemplo um endereço de um Funcionário é um objeto de valor.
+
+As entidades são a cola que une os bounded contexts.
+
+![Bounded Context](./images/bounded-context.png)
+
 #### References
 
 - [Domain Driven Design do Jeito Certo](https://www.youtube.com/watch?v=cz6EU7Z_BhE)
@@ -102,3 +111,4 @@ Os tipos de subdomínios são:
 - [Linguagem Onipresente (Ubiquitous Language | DDD do jeito certo | Parte 02)](https://www.youtube.com/watch?v=HnvmpyUAITs)
 - [Subdomínios e contextos delimitados | DDD do jeito certo | Parte 03](https://www.youtube.com/watch?v=9hlRHZ4Pfyo)
 - [Context Mapping | DDD do jeito certo | Parte 04](https://www.youtube.com/watch?v=yhlaNZ7c494)
+- [Entidades e Objetos de Valor | DDD do jeito certo | Parte 05](https://www.youtube.com/watch?v=6Pjod34OCnE)
