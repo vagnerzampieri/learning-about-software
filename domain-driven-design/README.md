@@ -81,6 +81,18 @@ Os tipos de subdomínios são:
 
 ![Tipos de Subdomínios](./images/tipos-de-subdominios.png)
 
+#### Context Mapping
+
+É a forma de mapear os contextos delimitados, os subdomínios. É a forma de mapear as relações entre os subdomínios.
+
+  - Shared Kernel: É quando dois subdomínios compartilham o mesmo código, a mesma base de código.
+  - Customer/Supplier: É quando um subdomínio é o cliente de outro subdomínio, ou seja, um subdomínio usa o outro subdomínio.
+  - Upstream/Downstream: É quando um subdomínio é o upstream de outro subdomínio, ou seja, um subdomínio é o responsável por enviar dados para outro subdomínio.
+  - Partnership: É quando dois subdomínios são parceiros, ou seja, eles trabalham juntos.
+  - Conformist: É quando um subdomínio é o conformista de outro subdomínio, ou seja, um subdomínio é o responsável por validar os dados de outro subdomínio.
+  - Anti-Corruption Layer (ACL): É quando um subdomínio é o responsável por traduzir os dados de outro subdomínio.
+
+![Context Mapping](./images/context-mapping.png)
 
 #### References
 
@@ -89,3 +101,4 @@ Os tipos de subdomínios são:
 - [Atacando a complexidade | DDD do jeito certo | Parte 01](https://www.youtube.com/watch?v=2X9Q97u4tUg)
 - [Linguagem Onipresente (Ubiquitous Language | DDD do jeito certo | Parte 02)](https://www.youtube.com/watch?v=HnvmpyUAITs)
 - [Subdomínios e contextos delimitados | DDD do jeito certo | Parte 03](https://www.youtube.com/watch?v=9hlRHZ4Pfyo)
+- [Context Mapping | DDD do jeito certo | Parte 04](https://www.youtube.com/watch?v=yhlaNZ7c494)
