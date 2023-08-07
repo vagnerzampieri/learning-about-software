@@ -110,6 +110,10 @@ As entidades são a cola que une os bounded contexts. No Ruby você pode compara
 
 ![Bounded Context](./images/bounded-context.png)
 
+#### Agregados
+
+É um conjunto de entidades e objetos de valor. É um conjunto de objetos que tem um sentido, que tem um domínio, regras de negócio e especialista do domínio.
+
 #### References
 
 - [Domain Driven Design do Jeito Certo](https://www.youtube.com/watch?v=cz6EU7Z_BhE)
@@ -119,3 +123,4 @@ As entidades são a cola que une os bounded contexts. No Ruby você pode compara
 - [Subdomínios e contextos delimitados | DDD do jeito certo | Parte 03](https://www.youtube.com/watch?v=9hlRHZ4Pfyo)
 - [Context Mapping | DDD do jeito certo | Parte 04](https://www.youtube.com/watch?v=yhlaNZ7c494)
 - [Entidades e Objetos de Valor | DDD do jeito certo | Parte 05](https://www.youtube.com/watch?v=6Pjod34OCnE)
+- [Agregados | DDD do jeito certo | Parte 06](https://www.youtube.com/watch?v=1AEOcQWQR2o)
