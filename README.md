@@ -7,3 +7,5 @@
 - [Backend](./backend/README.md)
 
 - [Services](./services/README.md)
+
+- [resumes](./resumes/README.md)
