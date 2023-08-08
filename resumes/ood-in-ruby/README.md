@@ -135,6 +135,6 @@ def cog
 end
 ```
 
-
+O primeiro exemplo é uma mudança simples, o segundo é uma mudança mais complexa. Mas em ambos os casos, o resto do sistema não precisa saber que a implementação mudou.
 
 
