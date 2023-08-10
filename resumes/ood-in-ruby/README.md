@@ -138,3 +138,103 @@ end
 O primeiro exemplo é uma mudança simples, o segundo é uma mudança mais complexa. Mas em ambos os casos, o resto do sistema não precisa saber que a implementação mudou.
 
 
+#### Hide Data Structures
+
+Se você tem uma coleção de dados, como um Array ou Hash, você pode encapsular a coleção em um objeto. Isso permite que você mude a implementação sem afetar o resto do sistema.
+
+```ruby
+class ObscruingReferences
+  attr_reader :data
+
+  def initialize(data)
+    @data = data
+  end
+
+  def diameters
+    # 0 is rim, 1 is tire
+    data.collect {|cell|
+      cell[0] + (cell[1] * 2)}
+  end
+end
+```
+
+```ruby
+# rim and tire sizes (now in milimeters!) in a 2d array
+@data = [[622, 20], [622, 23], [559, 30], [559, 40]]
+```
+
+Caso você mude a estrutura, teria que mudar a implementação do método `diameters`. Mas se você encapsular a coleção em um objeto, você pode mudar a implementação sem afetar o resto do sistema. Este exemplo já é ruim, imagine as consequências se o `data` retornasse um array de hashes que fossem referidos em vários lugares, uma mudança de estrutura poderia cascatiar em vários lugares.
+
+```ruby
+class RevealingReferences
+  attr_reader :wheels
+
+  def initialize(data)
+    @wheels = wheelify(data)
+  end
+
+  def diameters
+    wheels.collect {|wheel|
+      wheel.rim + (wheel.tire * 2)}
+  end
+
+  # now everyone can send rim/tire to wheel
+  Wheel = Struct.new(:rim, :tire)
+  def wheelify(data)
+    data.collect { |cell| Wheel.new(cell[0], cell[1]) }
+  end
+end
+```
+
+Essa abordagem é melhor e faz com que `diameters` não se preocupe com a estrutura de `data`, já que esse dado é encapsulado em um objeto. Caso a estrutura mude, você só precisa mudar o método `wheelify`.
+
+**Nota Pessoal:**
+> Nesse caso eu passaria o `wheelify` no parâmetro do construtor, para essa classe nem saber o que precisava transformar o dado e botaria um comentário no topo da classe recomendando sempre usar o `wheelify` para transformar o dado.
+
+#### Enforce Single Responsibility Everywhere
+
+Métodos são como classes, eles devem ter uma única responsabilidade. No caso anterior `diameters` faz mais de uma ação, ele percorre o array e calcula o diâmetro. Neste caso você não vai se preocupar com performance, o objetivo é deixar o código mais fácil de mudar.
+
+```ruby
+# first - iterate over the array
+def diameters
+  wheels.collect {|wheel| diameter(wheel)}
+end
+
+# second - calculate diameter of ONE wheel
+def diameter(wheel)
+  wheel.rim + (wheel.tire * 2)
+end
+```
+
+Neste caso a refatoração não se tornou overdesign, já que o mesmo cálculo já foi usado em outro lugar.
+
+```ruby
+def gear_inches
+  # tire goes around rim twice for diameter
+  ratio * (rim + (tire * 2))
+end
+```
+
+Claramente o método `gear_inches` está fazendo mais de uma coisa, ele calcula o diâmetro e multiplica pelo `ratio`. Neste caso você pode usar o método `diameter` para deixar o código mais simples.
+
+```ruby
+def gear_inches
+  ratio * diameter
+end
+
+def diameter
+  rim + (tire * 2)
+end
+```
+
+Além de separar as reposabilidades o método ficou mais fácil de ler. Esse problema fez responder que `gear_inches` é uma responsabilidade de `Gear`, mas `diameter` não é. O impacto dessa refatoração é pequeno, mas a acumulação desse efeito no código é gigante. Métodos com responsabilidade única tem os seguintes benefícios:
+
+- **Expose previously hidden qualities:** Refatorar uma classe para ter métodos com responsabilidade única faz com que você entenda melhor a classe e o que ela faz.
+- **Avoid the need for comments:** Métodos com responsabilidade única são mais fáceis de ler e entender, não precisando de comentários. Uma documentação bem escrita é melhor que um comentário.
+- **Encourage reuse:** Métodos com responsabilidade única são mais fáceis de reutilizar. Dessa forma acaba encorajando a reutilização de código.
+- **Are easy to move to another class:** Métodos com responsabilidade única são mais fáceis de mover para outra classe. Dessa forma você pode mover métodos para onde eles pertencem.
+
+**Nota pessoal:**
+> Concordo muito com o fato de tentarmos isolar as resposabilidades o máximo possível e tentar deixar o código mais claro, fica muito mais fácil de remover e reutilizar, pra mim por exemplo, toda fórmula deveria ser construída em uma classe de Ruby puro e só ser chamada, se não existe aquele cálculo, vai lá e cria. Uma coisa que não concordo é a interpretação do uso de comentários, em um ambiente real nem todo mundo leu um livro de OOD por exemplo, ou está codando com um prazo apertado, às vezes não tem experiência o suficiente, podem ter diversos motivos para necessitar o uso de comentários, e já vi diversas vezez alguém convencendo todos os outros programadores que é uma prática ruim. Acaba que todos continuam a não fazer documentação, o código permanece ruim e sem a possibilidade de você entender facilmente, comentários são bem vindos sim para sinalizar a intenção por trás daquele código, mas claro, não é pra sair comentando tudo, mas também não é pra sair removendo todos os comentários.
+
