@@ -920,51 +920,19 @@
 
 </details>
 
-## Tecnologias
-
 <details>
-  <summary>Redis</summary>
+  <summary>P99</summary>
 
-  - O Redis é um banco de dados em memória de código aberto, altamente escalável e de alto desempenho. Ele é projetado para armazenar e recuperar dados em formato chave-valor, sendo conhecido por sua velocidade e versatilidade. O nome Redis é uma abreviação de "Remote Dictionary Server" (Servidor de Dicionário Remoto), mas hoje em dia é comumente referido como "REmote DIctionary Server".
+  - P99 refere-se a um valor estatístico que representa o percentil 99 de um conjunto de dados. É uma medida usada para avaliar o desempenho ou latência de um sistema em relação a um determinado conjunto de eventos ou medições.
 
-  - Características principais do Redis:
+  - O valor P99 é um tipo de medida estatística de desempenho que indica que 99% dos dados ou eventos estão abaixo ou são iguais a esse valor. Em outras palavras, apenas 1% dos dados ou eventos excedem o valor P99.
 
-  1. Armazenamento em memória: O Redis armazena todos os dados em memória principal, o que permite tempos de acesso muito rápidos. Ele é frequentemente usado como um cache de dados, onde os resultados de consultas de banco de dados ou de cálculos computacionais podem ser armazenados temporariamente para acelerar o acesso posterior.
+  - Na análise de desempenho de sistemas, o P99 é frequentemente usado para avaliar os tempos de resposta ou latência em cenários em que a maioria das respostas é rápida, mas um pequeno número de respostas pode ser significativamente mais lento. Isso ajuda a identificar os cenários de pior caso em que o desempenho pode ser mais crítico.
 
-  2. Modelos de dados flexíveis: O Redis suporta uma variedade de estruturas de dados, incluindo strings, listas, conjuntos, hashes, conjuntos ordenados e bitmaps. Essas estruturas de dados são otimizadas para operações rápidas e eficientes, permitindo que os desenvolvedores escolham a estrutura mais adequada para suas necessidades.
+  - Por exemplo, se estamos medindo o tempo de resposta de uma página da web, o valor P99 indicaria o tempo em que 99% das solicitações receberam uma resposta em um determinado período de tempo, enquanto 1% das solicitações levaram mais tempo do que o valor P99.
 
-  3. Operações atômicas: O Redis oferece operações atômicas em nível de comando, o que significa que cada comando é executado de forma isolada e sem interferência de outros comandos. Isso garante consistência nos dados e permite construir aplicações robustas.
-
-  4. Suporte a pub/sub e mensagens em tempo real: O Redis inclui recursos para comunicação em tempo real, como pub/sub (publicar/assinar) e filas de mensagens. Esses recursos permitem a construção de sistemas de mensagens assíncronas, notificações em tempo real, salas de bate-papo e outros aplicativos que requerem troca de mensagens entre os clientes.
-
-  5. Replicação e alta disponibilidade: O Redis suporta replicação mestre-escravo, onde os dados podem ser replicados em vários nós para alta disponibilidade. Se o nó mestre falhar, um dos nós escravos pode ser promovido como novo mestre para manter a continuidade do serviço.
-
-  6. Extensibilidade: O Redis possui um sistema de plug-in chamado Redis Modules, que permite estender sua funcionalidade básica com recursos adicionais. Existem módulos disponíveis para pesquisa em texto completo, análise de dados geoespaciais, aprendizado de máquina e muito mais.
-
-  - O Redis é amplamente utilizado em uma variedade de casos de uso, como armazenamento em cache, contagem de visualizações, análise em tempo real, gerenciamento de sessões, fila de tarefas, geospatial indexing, entre outros. Ele possui uma ampla comunidade de desenvolvedores e uma documentação rica, facilitando sua adoção e aprendizado.
-
-  - É importante mencionar que, embora o Redis seja altamente eficiente para armazenamento em memória, ele não é projetado como um substituto completo para bancos de dados tradicionais. É comum usá-lo em conjunto com outros bancos de dados, onde o Redis é usado para armazenar dados em cache e otimizar o acesso rápido, enquanto o banco de dados principal é usado para armazenamento persistente e consultas complexas.
-
-  - Há várias maneiras de otimizar a velocidade de uma aplicação que utiliza o Redis como banco de dados em cache. Aqui estão algumas dicas para tornar sua aplicação mais rápida:
-
-  - Escolha a configuração adequada do Redis: O Redis oferece várias configurações que podem ser ajustadas para melhorar o desempenho. Por exemplo, você pode configurar o Redis para usar mais memória como cache ou ajustar o número máximo de conexões simultâneas. Verifique a documentação do Redis para obter mais detalhes sobre as opções de configuração disponíveis.
-
-  1. Utilize estruturas de dados apropriadas: O Redis oferece diferentes estruturas de dados, como strings, listas, conjuntos e hashes. Certifique-se de escolher a estrutura de dados correta para o tipo de operação que você está realizando. Isso pode ajudar a reduzir a complexidade e melhorar o desempenho.
-
-  2. Minimize a serialização e desserialização: Se você estiver armazenando objetos complexos no Redis, certifique-se de minimizar a serialização e desserialização necessárias. Essas operações podem ser custosas em termos de desempenho. Considere usar um formato de serialização leve e eficiente, como o MessagePack, em vez de JSON ou XML.
-
-  3. Utilize operações atômicas do Redis: O Redis oferece várias operações atômicas que permitem realizar várias operações em uma única chamada de rede. Por exemplo, em vez de obter e atualizar um valor em duas operações separadas, você pode usar a operação "GETSET" para obter e definir um novo valor de forma atômica. Isso pode reduzir a latência da rede e melhorar o desempenho.
-
-  4. Utilize pipelines e transações: O Redis suporta pipelines e transações para agrupar várias operações em uma única chamada de rede. Isso pode ajudar a reduzir a latência da rede e melhorar o desempenho, especialmente quando você precisa executar várias operações em sequência.
-
-  5. Considere o uso de clusterização: Se sua aplicação estiver enfrentando problemas de escalabilidade ou se você estiver lidando com um grande volume de dados, pode ser útil considerar a clusterização do Redis. A clusterização permite distribuir os dados em vários nós Redis, o que pode melhorar o desempenho e a capacidade de lidar com cargas de trabalho pesadas.
-
-  6. Faça o uso adequado de índices: Se você estiver usando o Redis para armazenar dados indexados, certifique-se de criar índices apropriados para agilizar as consultas. Você pode usar estruturas de dados como conjuntos ordenados ou hashes para criar índices eficientes no Redis.
-
-  - Lembre-se de que a otimização de desempenho é um processo contínuo. Monitore o desempenho da sua aplicação, faça testes e ajustes para garantir que você esteja obtendo o máximo de desempenho do Redis em sua aplicação.
-
+  - O uso de P99 é particularmente útil para identificar outliers ou anomalias nos dados, que podem ser críticas em sistemas de alta disponibilidade ou em cenários em que o desempenho previsível é importante. Além do P99, outros percentis, como P90, P95 e P99.9, também são frequentemente usados para avaliar diferentes níveis de desempenho.
 </details>
-
 
 ## Perguntas para entender o problema
 
