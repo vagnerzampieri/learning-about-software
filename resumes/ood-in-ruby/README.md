@@ -243,7 +243,7 @@ Além de separar as reposabilidades o método ficou mais fácil de ler. Esse pro
 Quando você tem um método com mais de uma responsabilidade, você pode isolar as responsabilidades em classes diferentes. Isso é um pouco mais complexo que isolar em métodos, mas o resultado é um código mais fácil de entender e de mudar.
 
 ```ruby
-Class Gear
+class Gear
   attr_reader :chainring, :cog, :wheel
 
   def initialize(chainring, cog, rim, tire)
@@ -326,5 +326,67 @@ puts Gear.new(52, 11).ratio # 4.72727272727273
 As duas classes tem responsabilidades únicas, o código não é perfeito, mas conseguiu chegar a um nível de muito bom.
 
 ## Chapter 3 - Managing Dependencies
+
+### Understanding Dependencies
+
+`Um objeto depende de outro se quando um objeto muda, o outro objeto é forçado a mudar também.`
+
+Se você examinar o código antigo de `Gear` e `Wheel`, você vai perceber o uso de várias dependências que não eram necessárias para `Gear` funcionar. Essas dependências tinham efeitos sobre o estilo do código. Estou falando do código abaixo:
+
+```ruby
+class Gear
+  attr_reader :chainring, :cog, :rim, :tire
+
+  def initialize(chainring, cog, rim, tire)
+    @chainring = chainring
+    @cog       = cog
+    @rim       = rim
+    @tire      = tire
+  end
+
+  def ratio
+    chainring / cog.to_f
+  end
+
+  def gear_inches
+    ratio * Wheel.new(rim, tire).diameter
+  end
+end
+
+class Wheel
+  attr_reader :rim, :tire
+
+  def initialize(rim, tire)
+    @rim = rim
+    @tire = tire
+  end
+
+  def diameter
+    rim + (tire * 2)
+  end
+end
+
+Gear.new(52, 11, 26, 1.5).gear_inches # 137.090909090909
+```
+
+#### Recognizing Dependencies
+
+Um objeto depende de outro se ele sabe:
+- O nome de outra classe. `Gear` espera uma classe com nome de `Wheel` exista.
+- O nome da mensagem que ele pretende enviar para alguém que ele conhece. `Gear` sabe que `Wheel` tem um método chamado `diameter`.
+- Os argumentos da mensagem são requeridos. `Gear` sabe que `Wheel.new` requer `rim` e `tire`.
+- A ordem dos argumentos. `Gear` sabe a ordem dos argumentos de `Wheel.new`.
+
+Cada uma das dependencias criam uma chance de `Gear` mudar. Se `Wheel` mudar o nome do método `diameter` para `wheel_circumference`, `Gear` vai ter que mudar também. Se `Wheel` mudar a ordem dos argumentos, `Gear` vai ter que mudar também.
+
+Essas dependências desnecessárias deixam o código mais difícil de reusar e qualquer pequena mudança gerar uma cascata de modificações em todo o código.
+
+#### Coupling Between Objects (CBO)
+
+`CBO` é uma medida de quanto uma classe conhece sobre outra classe. Quanto mais uma classe conhece sobre outra, mais elas estão acopladas. `Gear` e `Wheel` estão acopladas, pois `Gear` conhece o nome de `Wheel` e o nome do método `diameter`.
+
+![Acoplamento imagem do livro](images/acoplamento.png)
+
+A ilustração acima demontra o acoplamento entre as classes. Quando um código é escrito pela primeira vez, tudo fica bem, são as interações constantes sem o devido cuidado que fazem o código ficar ruim. As classes que antes eram independentes, começam a ficar acopladas. E o acoplamento gera dificuldade de reutilizar a classe, então em vez de usar uma classe para resolver o problema, você está tendo que levar junto outras classes que não deveriam ser necessárias.
 
 
