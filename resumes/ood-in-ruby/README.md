@@ -238,3 +238,93 @@ Além de separar as reposabilidades o método ficou mais fácil de ler. Esse pro
 **Nota pessoal:**
 > Concordo muito com o fato de tentarmos isolar as resposabilidades o máximo possível e tentar deixar o código mais claro, fica muito mais fácil de remover e reutilizar, pra mim por exemplo, toda fórmula deveria ser construída em uma classe de Ruby puro e só ser chamada, se não existe aquele cálculo, vai lá e cria. Uma coisa que não concordo é a interpretação do uso de comentários, em um ambiente real nem todo mundo leu um livro de OOD por exemplo, ou está codando com um prazo apertado, às vezes não tem experiência o suficiente, podem ter diversos motivos para necessitar o uso de comentários, e já vi diversas vezez alguém convencendo todos os outros programadores que é uma prática ruim. Acaba que todos continuam a não fazer documentação, o código permanece ruim e sem a possibilidade de você entender facilmente, comentários são bem vindos sim para sinalizar a intenção por trás daquele código, mas claro, não é pra sair comentando tudo, mas também não é pra sair removendo todos os comentários.
 
+#### Isolate Extra Responsibilities in Classes
+
+Quando você tem um método com mais de uma responsabilidade, você pode isolar as responsabilidades em classes diferentes. Isso é um pouco mais complexo que isolar em métodos, mas o resultado é um código mais fácil de entender e de mudar.
+
+```ruby
+Class Gear
+  attr_reader :chainring, :cog, :wheel
+
+  def initialize(chainring, cog, rim, tire)
+    @chainring = chainring
+    @cog       = cog
+    @wheel     = Wheel.new(rim, tire)
+  end
+
+  def ratio
+    chainring / cog.to_f
+  end
+
+  def gear_inches
+    ratio * wheel.diameter
+  end
+
+  Wheel = Struct.new(:rim, :tire) do
+    def diameter
+      rim + (tire * 2)
+    end
+  end
+end
+```
+
+O uso de `Wheel` dentro de `Gear` não é muito comum, pode parecer que necessita extrair essa classe, mas como ela só funciona no contexto de `Gear` no momento, não tem por que fazer essa movimentação. Se você tiver muitas responsabilidades em uma classe, separe-as em classes diferentes. Concentre-se nas responsabilidades da classe principal, não deixe que as responsabilidades secundárias atrapalhem, lembre que outra pessoa vai olhar seu código e pode acrescentar algo se você não deixar claro o que está acontecendo.
+
+**Nota pessoal:**
+> No mundo real essa técnica é pouca usada e já vi até ser desencorajada, as pessoas sempre vão reclamar, uma coisa que se pode fazer para diminuir o atrito é explicar o fato de ela não necessitar ser extraída no momento, mas seria interessante já criar o teste de forma separada, uma coisa não depende da outra.
+
+> Não tenha medo de postergar uma decisão, mas também não pode ter medo de modificar uma classe, por isso que é importante deixar suas intenções claras em comentários.
+
+#### Finally, the Real Wheel
+
+Agora é necessário aplicar uma nova funcionalidade em `Wheel`, é necessário fazer o cálculo para saber a circunferência. Com isso faz todo o sentido separar `Wheel` de `Gear`.
+
+```ruby
+class Gear
+  attr_reader :chainring, :cog, :wheel
+
+  def initialize(chainring, cog, wheel=nil)
+    @chainring = chainring
+    @cog = cog
+    @wheel = wheel
+  end
+
+  def ratio
+    chainring / cog.to_f
+  end
+
+  def gear_inches
+    ratio * wheel.diameter
+  end
+end
+
+class Wheel
+  attr_reader :rim, :tire
+
+  def initialize(rim, tire)
+    @rim = rim
+    @tire = tire
+  end
+
+  def diameter
+    rim + (tire * 2)
+  end
+
+  def circumference
+    diameter * Math::PI
+  end
+end
+
+@wheel = Wheel.new(26, 1.5)
+puts @wheel.circumference # 91.106186954104
+
+puts Gear.new(52, 11, @wheel).gear_inches # 137.090909090909
+
+puts Gear.new(52, 11).ratio # 4.72727272727273
+```
+
+As duas classes tem responsabilidades únicas, o código não é perfeito, mas conseguiu chegar a um nível de muito bom.
+
+## Chapter 3 - Managing Dependencies
+
+
