@@ -389,4 +389,34 @@ Essas dependências desnecessárias deixam o código mais difícil de reusar e q
 
 A ilustração acima demontra o acoplamento entre as classes. Quando um código é escrito pela primeira vez, tudo fica bem, são as interações constantes sem o devido cuidado que fazem o código ficar ruim. As classes que antes eram independentes, começam a ficar acopladas. E o acoplamento gera dificuldade de reutilizar a classe, então em vez de usar uma classe para resolver o problema, você está tendo que levar junto outras classes que não deveriam ser necessárias.
 
+### Writing Loosely Coupled Code
+
+Para diminuir o acoplamento entre as classes, é necessário diminuir a dependência entre elas. Para isso é necessário diminuir o conhecimento que uma classe tem sobre a outra. Reduzir dependências significa reconhecer e remover o que você não precisa.
+
+#### Inject Dependencies
+
+Para diminuir o acoplamento entre `Gear` e `Wheel`, é necessário remover a dependência de `Gear` sobre `Wheel`. Para isso é necessário injetar `Wheel` em `Gear`. Isso ocorre por que `Wheel` pode vir a mudar de nome e `Gear` não precisa lidar com isso, mesmo sendo uma mudança simples de fazer, por isso muitas vezes acabamos não fazendo, mas não é apenas esse o problema `Wheel` não interage com `Gear`, então não faz sentido `Gear` conhecer `Wheel`.
+
+```ruby
+class Gear
+  attr_reader :chainring, :cog, :wheel
+
+  def initialize(chainring, cog, wheel)
+    @chainring = chainring
+    @cog       = cog
+    @wheel     = wheel
+  end
+
+  def ratio
+    chainring / cog.to_f
+  end
+
+  def gear_inches
+    ratio * wheel.diameter
+  end
+end
+
+# Gear expects a 'Duck' that knows 'diameter'
+Gear.new(52, 11, Wheel.new(26, 1.5)).gear_inches # 137.090909090909
+```
 
