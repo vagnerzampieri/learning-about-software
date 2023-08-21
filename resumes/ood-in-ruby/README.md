@@ -420,3 +420,82 @@ end
 Gear.new(52, 11, Wheel.new(26, 1.5)).gear_inches # 137.090909090909
 ```
 
+Uma grande vantagem dessa pequena modificação é que agora `Gear`, pode colaborar com qualquer método que responda a `diameter`. Essa técnica se chama `Dependency Injection` e é uma das técnicas mais poderosas para escrever código flexível e reutilizável.
+
+#### Isolate Dependencies
+
+Muitas vezes não é possível injetar uma dependência, uma coisa que pote fazer é isolar a dependência. Isolar a criação da dependência é uma alternativa para diminuir o acoplamento entre as classes.
+
+```ruby
+class Gear
+  attr_reader :chainring, :cog, :wheel
+
+  def initialize(chainring, cog, rim, tire)
+    @chainring = chainring
+    @cog       = cog
+    @wheel     = Wheel.new(rim, tire)
+  end
+
+  def ratio
+    chainring / cog.to_f
+  end
+
+  def gear_inches
+    ratio * wheel.diameter
+  end
+end
+```
+
+```ruby
+class Gear
+  attr_reader :chainring, :cog, :rim, :tire
+
+  def initialize(chainring, cog, rim, tire)
+    @chainring = chainring
+    @cog       = cog
+    @rim       = rim
+    @tire      = tire
+  end
+
+  def ratio
+    chainring / cog.to_f
+  end
+
+  def gear_inches
+    ratio * wheel.diameter
+  end
+
+  def wheel
+    @wheel ||= Wheel.new(rim, tire)
+  end
+end
+```
+
+Em ambos os casos `Gear` sabe muito sobre `Wheel`, recebe `rim` e `tire` na sua inicialização, que para a classe `Gear` é inútil, mas foi feito alguma melhoria.
+
+O jeito que voê administra as dependências com nomes de classes externas, tem um profundo efeito na sua aplicação. Se você tem o hábito de injetar dependências, suas classes naturalmente vão perder acoplamento. Se você ignora isso, suas classes vão ficar acopladas e inflexíveis. Um código precisa ser consiso, explícito, isolado e fácil adaptação.
+
+**Nota pessoal:**
+> A minha experiência diz que tudo é questão de consistência, então se você desiste de fazer algo por que é difícil fazer no começo, você está desistindo do fato que aquilo vai facilitar no futuro, por que você está treinando para ficar fácil. No começo para mim era muito difícil testar, mas a prática levou a perfeição, não foi fácil, mas hoje é muito fácil e ajuda muito no meu dia a dia.
+
+#### Isolate Vulnerable External Messages
+
+Quando sua classe tem um método complexo demais, é necessário tmabém isolar as mensagens externas. Isolar mensagens externas é uma forma de diminuir o acoplamento entre as classes.
+
+```ruby
+def gear_inches
+  ratio * wheel.diameter
+end
+```
+
+```ruby
+def gear_inches
+  ratio * diameter
+end
+
+def diameter
+  wheel.diameter
+end
+```
+
+Essa técnica não é necessária de usar quando o uso dela é isolado e em algum lugar simples, você deve analisar o contexto e ver se vale a pena.
