@@ -2,21 +2,37 @@
 
   Muitas vezes você chega em uma empresa e te mostram diversos serviços externos que você ainda não conhece, aqui quero listar alguns deles e explicar o que são e como funcionam.
 
+## Algolia
+
+  - Algolia é uma empresa que oferece uma plataforma de pesquisa e busca altamente personalizável para aplicativos e sites. Ela é conhecida por fornecer uma infraestrutura de busca robusta e rápida que pode ser facilmente integrada em diferentes tipos de aplicativos, desde comércio eletrônico até aplicativos móveis e sites de notícias. A principal característica do Algolia é a sua capacidade de entregar resultados de pesquisa instantaneamente, o que é essencial para proporcionar uma experiência de usuário eficaz.
+
+  - Aqui estão alguns dos principais conceitos e recursos associados ao Algolia:
+
+    1. Indexação: O Algolia permite que você crie índices de busca personalizados para os dados do seu aplicativo. Você pode importar dados de várias fontes, como bancos de dados, planilhas ou JSON, e depois configurar esses índices para atender às necessidades específicas do seu aplicativo.
+
+    2. Busca de texto completo: O Algolia oferece uma pesquisa poderosa que suporta busca de texto completo, o que significa que ele pode encontrar resultados relevantes com base nas palavras-chave inseridas pelos usuários. Além disso, ele pode lidar com sinônimos, erros de digitação e consultas complexas.
+
+    3. Relevância personalizável: Você pode ajustar a relevância dos resultados da pesquisa para atender às necessidades do seu aplicativo. Isso inclui a capacidade de ponderar diferentes atributos dos objetos indexados, para que os resultados sejam classificados de acordo com critérios específicos.
+
+    4. Filtros e Facetas: O Algolia permite que você aplique filtros e facetas aos resultados da pesquisa. Isso é útil para refinar os resultados com base em categorias, preços, datas e outros atributos relevantes.
+
+    5. Autocompletar e Sugestões: O Algolia suporta recursos de autocompletar e sugestões de pesquisa em tempo real, o que melhora a experiência do usuário, tornando mais fácil para os usuários encontrarem o que estão procurando.
+
+    6. Alta velocidade e escalabilidade: O Algolia é conhecido por sua velocidade e escalabilidade. Ele utiliza uma infraestrutura distribuída que garante que as consultas de pesquisa sejam processadas rapidamente, independentemente do tamanho do conjunto de dados.
+
+    7. Integrações: O Algolia oferece integrações com uma variedade de tecnologias e plataformas populares, incluindo JavaScript, Python, Ruby, PHP, WordPress, Magento e muitos outros.
+
+    8. Analytics: A plataforma Algolia fornece análises detalhadas sobre o desempenho da pesquisa, o que ajuda os desenvolvedores a entender como os usuários estão interagindo com os resultados da pesquisa e a otimizar a experiência.
+
+    9. Segurança: O Algolia oferece recursos de segurança, como controle de acesso baseado em funções e proteção contra ataques DDoS.
+
+  - No geral, o Algolia é uma ferramenta poderosa para melhorar a funcionalidade de pesquisa em aplicativos e sites, proporcionando aos desenvolvedores a capacidade de criar experiências de pesquisa altamente personalizadas e eficazes para os usuários.
+
 ## Azion
 
-  A Azion é uma empresa brasileira que oferece serviços de CDN, WAF, DNS, Load Balancer, etc. A Azion é uma empresa que está crescendo muito e tem um produto muito bom, além de ser uma empresa brasileira, o que é muito bom para o mercado nacional.
+  - A Azion é uma empresa brasileira que oferece serviços de CDN, WAF, DNS, Load Balancer, etc. A Azion é uma empresa que está crescendo muito e tem um produto muito bom, além de ser uma empresa brasileira, o que é muito bom para o mercado nacional.
 
-  A Azion tem diversos produtos, como o Edge Application, Edge Firewall, Edge Orchestrator, Intelligent DNS, Data Streaming, Edge Pulse, Real-Time Metrics e Real-Time Events. Uma rede completa de coisas para você utilizar em seus projetos e o melhor, na nossa região.
-
-## ScyllaDB
-
-  O ScyllaDB é um banco de dados NoSQL, que é compatível com o Apache Cassandra, ou seja, você pode utilizar o ScyllaDB como se fosse o Cassandra, mas com um desempenho muito melhor. Ele utiliza o C++ como linguagem de programação, o que faz com que ele seja muito mais rápido que o Cassandra, que utiliza o Java. Pode ser utilizado em qualquer lugar, seja em um cluster Kubernetes, em um cluster Docker Swarm, em um cluster de máquinas virtuais ou até mesmo em um cluster de máquinas físicas.
-
-  Um exemplo de utilização dele foi no caso do [Discord](https://discord.com/blog/how-discord-stores-trillions-of-messages), que utilizava o Cassandra e teve problemas de desempenho, então eles migraram para o ScyllaDB e tiveram um desempenho muito melhor. Rodando mais de 1 bilhão de requisições.
-
-## Tokio
-
-  O Tokio é um framework para desenvolvimento de aplicações assíncronas em Rust. Também utiliza o conceito de Event Loop, que é um conceito muito utilizado em linguagens como JavaScript, Python, etc.
+  - A Azion tem diversos produtos, como o Edge Application, Edge Firewall, Edge Orchestrator, Intelligent DNS, Data Streaming, Edge Pulse, Real-Time Metrics e Real-Time Events. Uma rede completa de coisas para você utilizar em seus projetos e o melhor, na nossa região.
 
 ## Redis
 
@@ -57,3 +73,14 @@
   6. Faça o uso adequado de índices: Se você estiver usando o Redis para armazenar dados indexados, certifique-se de criar índices apropriados para agilizar as consultas. Você pode usar estruturas de dados como conjuntos ordenados ou hashes para criar índices eficientes no Redis.
 
   - Lembre-se de que a otimização de desempenho é um processo contínuo. Monitore o desempenho da sua aplicação, faça testes e ajustes para garantir que você esteja obtendo o máximo de desempenho do Redis em sua aplicação.
+
+## ScyllaDB
+
+  - O ScyllaDB é um banco de dados NoSQL, que é compatível com o Apache Cassandra, ou seja, você pode utilizar o ScyllaDB como se fosse o Cassandra, mas com um desempenho muito melhor. Ele utiliza o C++ como linguagem de programação, o que faz com que ele seja muito mais rápido que o Cassandra, que utiliza o Java. Pode ser utilizado em qualquer lugar, seja em um cluster Kubernetes, em um cluster Docker Swarm, em um cluster de máquinas virtuais ou até mesmo em um cluster de máquinas físicas.
+
+  - Um exemplo de utilização dele foi no caso do [Discord](https://discord.com/blog/how-discord-stores-trillions-of-messages), que utilizava o Cassandra e teve problemas de desempenho, então eles migraram para o ScyllaDB e tiveram um desempenho muito melhor. Rodando mais de 1 bilhão de requisições.
+
+## Tokio
+
+  - O Tokio é um framework para desenvolvimento de aplicações assíncronas em Rust. Também utiliza o conceito de Event Loop, que é um conceito muito utilizado em linguagens como JavaScript, Python, etc.
+
