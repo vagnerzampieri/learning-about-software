@@ -499,3 +499,153 @@ end
 ```
 
 Essa técnica não é necessária de usar quando o uso dela é isolado e em algum lugar simples, você deve analisar o contexto e ver se vale a pena.
+
+#### Remove Argument-Order Dependencies
+
+Uma preocupação são os argumentos de uma classe, precisar passar os argumentos em uma certa ordem pode gerar dificuldade para mudança depois, já que terá que mudar em todos os lugares que usa aquela classe. Para resolver isso podemos usar no Ruby < 2.1 o Keyword Arguments, que permite passar os argumentos sem ordem, mas no Ruby >= 2.1 já temos o Keyword Arguments nativo.
+
+```ruby
+class Gear
+  attr_reader :chainring, :cog, :wheel
+
+  def initialize(chainring:, cog:, wheel:)
+    @chainring = chainring
+    @cog       = cog
+    @wheel     = wheel
+  end
+
+  # ...
+end
+
+chainring = 52
+
+Gear.new(
+  chainring:,
+  cog: 11,
+  wheel: Wheel.new(26, 1.5)).gear_inches # 137.090909090909
+```
+
+**Nota pessoal:**
+> Não uso se tiver apenas um argumento, mais de um normalmente uso. Se o Ruby não estiver na versão correta, pode se usar Hash como argumento, mas não é a mesma coisa. Fica mais fácil de entender o que está acontecendo, e não precisa passar em uma ordem específica.
+
+Caso queira usar com Hash:
+
+```ruby
+class Gear
+  attr_reader :chainring, :cog, :wheel
+
+  def initialize(args)
+    @chainring = args[:chainring]
+    @cog       = args[:cog]
+    @wheel     = args[:wheel]
+  end
+
+  # ...
+end
+
+Gear.new(
+  chainring: 52,
+  cog: 11,
+  wheel: Wheel.new(26, 1.5)).gear_inches # 137.090909090909
+```
+
+Outra vantagem dessa utilização é que a dependência de nomear os argumentos gera um tipo de documentação, em que fica fácil de entender o que está acontecendo, sem precisar abrir a classe.
+
+#### Eplicitly Define Defaults
+
+Quando você precisa definir um valor paadrão para o argumento:
+
+```ruby
+
+class Gear
+  attr_reader :chainring, :cog, :wheel
+
+  def initialize(chainring:, cog: 10, wheel:)
+    @chainring = chainring
+    @cog       = cog
+    @wheel     = wheel
+  end
+
+  # ...
+end
+
+class Gear
+  attr_reader :chainring, :cog, :wheel
+
+  def initialize(args)
+    @chainring = args[:chainring] || 40
+    @cog       = args[:cog]       || 18
+    @wheel     = args[:wheel]
+  end
+
+  # ...
+end
+```
+
+No caso do Hash, ele não vai funcionar se você passar `nil` como argumento, então você pode usar o `fetch`:
+
+```ruby
+class Gear
+  attr_reader :chainring, :cog, :wheel
+
+  def initialize(args)
+    @chainring = args.fetch(:chainring, 40)
+    @cog       = args.fetch(:cog, 18)
+    @wheel     = args[:wheel]
+  end
+
+  # ...
+end
+```
+
+Usando o Hash, você pode ignorar os métodos enviados, como:
+
+```ruby
+# specifying defaults by merging a defaults hash
+def initialize(args)
+  args = defaults.merge(args)
+  @chainring = args[:chainring]
+  @cog       = args[:cog]
+  @wheel     = args[:wheel]
+end
+
+def defaults
+  {:chainring => 40, :cog => 18}
+end
+```
+
+#### Isolate Multiparameter Initialization
+
+Algumas vezes não conseguimos controlar o código que estamos usando, às vezes ele pode fazer parte de uma interface externa. Imagina essa interface sendo chamada em várias partes do seu código e algo mudando, você tendo que mudar em todo código, a dor de cabeça seria gigantesca. Nesses casos é necessário isolar a inicialização multiparametro.
+
+```ruby
+# When Gear is part of an external interface
+module SomeFramework
+  class Gear
+    attr_reader :chainring, :cog, :wheel
+    def initialize(chainring, cog, wheel)
+      @chainring = chainring
+      @cog       = cog
+      @wheel     = wheel
+    end
+    # ...
+  end
+end
+
+# wrap the interface to protect yourself from changes
+module GearWrapper
+  def self.gear(args)
+    SomeFramework::Gear.new(args[:chainring],
+                            args[:cog],
+                            args[:wheel])
+  end
+end
+
+# Now you can create a new Gear using an arguments hash.
+GearWrapper.gear(
+  :chainring => 52,
+  :cog       => 11,
+  :wheel     => Wheel.new(26, 1.5)).gear_inches # 137.090909090909
+```
+
+Tem duas coisas que são necessárias serem olhadas nesse código. A primeira é que não usamos uma `class` e sim um `module`, então você não vai precisar ficar instânciando essa classe em todo lugar. A outra coisa interessante é o uso de `Factories`, que é uma forma de encapsular a criação de um objeto. O uso de `Factories` é uma forma de diminuir o acoplamento entre as classes.
