@@ -80,6 +80,28 @@
 
   - Um exemplo de utilização dele foi no caso do [Discord](https://discord.com/blog/how-discord-stores-trillions-of-messages), que utilizava o Cassandra e teve problemas de desempenho, então eles migraram para o ScyllaDB e tiveram um desempenho muito melhor. Rodando mais de 1 bilhão de requisições.
 
+## Stitch Data
+
+  - O Stitch Data é uma plataforma de integração de dados na nuvem que permite que as empresas coletem, armazenem e movimentem dados de várias fontes para seus sistemas de análise e armazenamento de dados. A plataforma é projetada para simplificar o processo de ingestão e transformação de dados, ajudando as empresas a obter informações valiosas a partir de seus dados de maneira eficiente.
+
+  - Aqui estão alguns pontos-chave sobre o Stitch Data:
+
+    1. Conexão com diversas fontes de dados: O Stitch Data permite que você se conecte a uma ampla variedade de fontes de dados, incluindo bancos de dados SQL e NoSQL, serviços na nuvem, aplicativos de SaaS (Software as a Service) e muito mais. Isso é útil porque muitas empresas têm dados distribuídos em várias fontes, e o Stitch permite consolidá-los em um único local.
+
+    2. Integração fácil: A plataforma foi projetada para ser fácil de usar, com uma interface amigável que permite aos usuários configurar e gerenciar integrações de dados sem a necessidade de habilidades de programação avançadas. Isso reduz a barreira de entrada para a integração de dados.
+
+    3. Transformação de dados: Stitch Data não é apenas uma ferramenta de ingestão de dados, mas também permite a transformação de dados. Isso significa que você pode limpar, enriquecer e manipular os dados enquanto eles são movidos para o destino desejado, tornando-os prontos para análise.
+
+    4. Suporte para análise em tempo real: Muitas empresas estão buscando análises em tempo real para tomar decisões rápidas. O Stitch Data oferece suporte para integração de dados em tempo real, permitindo que os dados sejam transmitidos e analisados imediatamente à medida que são gerados.
+
+    5. Escalabilidade e confiabilidade: A plataforma é construída na nuvem e é escalável, o que significa que ela pode lidar com grandes volumes de dados à medida que sua empresa cresce. Além disso, oferece recursos de monitoramento e alerta para garantir a confiabilidade das integrações.
+
+    6. Segurança: A segurança dos dados é uma preocupação fundamental. O Stitch Data oferece recursos de segurança, como criptografia de dados em repouso e em trânsito, para proteger os dados durante a ingestão e a transferência.
+
+    7. Integração com destinos de dados populares: O Stitch Data se integra facilmente com muitos destinos populares, como data warehouses (por exemplo, Amazon Redshift, Google BigQuery, Snowflake), serviços de análise e visualização de dados, permitindo que você armazene e analise seus dados de maneira eficaz.
+
+  - No geral, o Stitch Data é uma ferramenta valiosa para empresas que desejam simplificar o processo de coleta e análise de dados de várias fontes, permitindo uma tomada de decisão mais informada e estratégica. Por meio da integração de dados, as empresas podem obter insights valiosos que podem impulsionar o crescimento e a eficiência operacional.
+
 ## Tokio
 
   - O Tokio é um framework para desenvolvimento de aplicações assíncronas em Rust. Também utiliza o conceito de Event Loop, que é um conceito muito utilizado em linguagens como JavaScript, Python, etc.
