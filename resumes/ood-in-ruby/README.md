@@ -649,3 +649,11 @@ GearWrapper.gear(
 ```
 
 Tem duas coisas que são necessárias serem olhadas nesse código. A primeira é que não usamos uma `class` e sim um `module`, então você não vai precisar ficar instânciando essa classe em todo lugar. A outra coisa interessante é o uso de `Factories`, que é uma forma de encapsular a criação de um objeto. O uso de `Factories` é uma forma de diminuir o acoplamento entre as classes.
+
+### Managing Dependency Direction
+
+A escolha da direção da dependência pode causar um grande impacto no seu código. Se você não tomar cuidado, você pode acabar com um código que é difícil de mudar.
+
+#### Choosing Dependency Direction
+
+
