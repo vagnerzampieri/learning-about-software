@@ -124,3 +124,4 @@ As entidades são a cola que une os bounded contexts. No Ruby você pode compara
 - [Context Mapping | DDD do jeito certo | Parte 04](https://www.youtube.com/watch?v=yhlaNZ7c494)
 - [Entidades e Objetos de Valor | DDD do jeito certo | Parte 05](https://www.youtube.com/watch?v=6Pjod34OCnE)
 - [Agregados | DDD do jeito certo | Parte 06](https://www.youtube.com/watch?v=1AEOcQWQR2o)
+- [O que é DDD – Domain Driven Design](https://fullcycle.com.br/domain-driven-design/)

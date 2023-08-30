@@ -8,4 +8,4 @@
 
 - [Services](./services/README.md)
 
-- [resumes](./resumes/README.md)
+- [Resumes](./resumes/README.md)

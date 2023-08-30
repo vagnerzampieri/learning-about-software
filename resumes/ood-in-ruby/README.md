@@ -654,6 +654,38 @@ Tem duas coisas que são necessárias serem olhadas nesse código. A primeira é
 
 A escolha da direção da dependência pode causar um grande impacto no seu código. Se você não tomar cuidado, você pode acabar com um código que é difícil de mudar.
 
-#### Choosing Dependency Direction
+## Chapter 4 - Creating Flexible Interfaces
 
+Interface é uma parte visível de uma classe e usada para expor as funcionalidades. Pense em uma cozinha de restaurante, a interface é o cardápio, que é a única coisa que o cliente precisa saber. O cliente não precisa saber como a comida é feita, ele só precisa saber o que ele pode pedir. A classe cozinha tem uma responsabilidade única, que é entregar os pratos que estão no cardápio, mas implementa muitos métodos dentro da cozinha, por que ela tem toda uma dinâmica para saber como os pratos são feitos.
 
+**Nota pessoal:**
+> Essa analogia do menu é excelente para falar em interface e para pensar no geral o que é Single Responsability. Ter responsabilidade única é diferente de ter apenas um método, é ter uma responsabilidade única, que pode ser implementada em vários métodos.
+
+### Public Interfaces
+
+Os métodos que compoem uma interface pública, tem as seguintes características:
+
+- Revelam a responsabilidade principal da classe.
+- São esperados para serem invocados por outros objetos/classes.
+- Não são vulneráveis a mudanças.
+- São seguros para serem reutilizados em outro contexto.
+- São documentados e testados.
+
+Encontrar as Interfaces Públicas é um desafio que vai ficando mais fácil com o tempo. Uma forma de encontrar é olhar os testes, eles vão te mostrar o que é esperado que a classe faça. Outra forma é olhar o código e ver o que é usado em outros lugares.
+
+### Private Interfaces
+
+Todos os outros métodos da classes são os privados:
+
+- Lidam com detalhes de implementação.
+- Não são esperados para serem invocados por outros objetos/classes.
+- Podem mudar por qualquer motivo.
+- Não são seguros para quem depende deles.
+- Não são referidos nos testes.
+
+### An Example Application: Bicycle Touring Company
+
+FastFeet, Inc., é uma empresa de turismo com bicicleta, o negócio funciona no papel e caneta. Os passeios podem ser de Mountain Bike ou de ciclismo de estrada, as rotas são pensadas refletindo a dificuldade técnica com seus participantes. Os participantes podem usar suas próprias bicicletas ou contratar da FastFeet, a FastFeet oferece o passeio com guia e carro de apoio com mecânico. As bicicletas alugadas podem ter vários tamanhos e modelos.
+
+**Nota pessoal:**
+> Eu conversaria primeiro com as pessoas que fazem o software para tentar entender como agir em cima do Domínio, para poder consolidar a Linguagem Ubíqua, que é a linguagem que todos entendem. A partir disso, partiria para estruturar tudo.
