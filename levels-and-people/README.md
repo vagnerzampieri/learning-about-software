@@ -21,7 +21,7 @@ Em algumas empresas, o título "Staff Engineer" pode ser seguido por níveis adi
 Lembre-se de que a nomenclatura e as responsabilidades específicas podem variar entre empresas e setores. Portanto, é importante verificar a estrutura de carreira da empresa em que você está interessado para entender melhor como o título de "Staff Engineer" é definido e o que ele representa em um contexto específico.
 
 ### Books
-- Staff Engineer: Leadership beyond the management track - Will Larson
+- [Staff Engineer: Leadership beyond the management track - Will Larson](../resumes/staff-engineer/README-en.md)
 
 # Mentoring
 
