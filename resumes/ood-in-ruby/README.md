@@ -689,3 +689,40 @@ FastFeet, Inc., é uma empresa de turismo com bicicleta, o negócio funciona no 
 
 **Nota pessoal:**
 > Eu conversaria primeiro com as pessoas que fazem o software para tentar entender como agir em cima do Domínio, para poder consolidar a Linguagem Ubíqua, que é a linguagem que todos entendem. A partir disso, partiria para estruturar tudo.
+
+### Create Explicit Interfaces
+
+O seu objetivo é criar uma interface que funcione agora, que seja fácil de reusar e se adapte em um inexperado uso no futuro. Outras pessoas irão invocar seus métodos, é sua obrigação comunicar quais são dependentes.
+
+Toda vez que criar uma classe, declare sua interfaces. Os métodos que estão `public` devem ter:
+
+- Seja explícito
+- Seja mais sobre `o que` do que `como`
+- Tenha nomes que, até onde você possa prever, não mudarão
+- Sempre que possível use keywords arguments
+
+### Public, Protected, and Private Keywords
+
+`Public` é o padrão, então não precisa declarar. `Protected` é usado para métodos que são usados apenas dentro da classe e suas subclasses. `Private` é usado para métodos que são usados apenas dentro da classe.
+
+Tenha cuidado com os métodos privados, não deixe eles virarem uma dependência perigosa.
+
+## The Law of Demeter
+
+LoD é um grupo de regras que resulta em perder acoplamento nos objetos. Fraco acoplamento é quase sempre uma virtude, mas é apenas um componente do design
+e deve ser equilibrado com necessidades concorrentes.
+
+### Defining Demeter
+
+Demeter restringe o grupo de objetos no qual um método deveria enviar mensagens. Proíbe
+rotear uma mensagem para um terceiro objeto através de um segundo objeto de um tipo diferente. Demeter é parafrazeado como "só fale com seus amigos imediatos", ou "use apenas um ponto". Exemplo:
+
+```ruby
+customer.bicycle.wheel.tire
+customer.bicycle.wheel.rotate
+hash.keys.sort.join(', ') # is ok because has the same object
+```
+
+Cada linha é uma mensagem encadeada por um número de pontos. Esse encadeamento é conhecido por `train wrecks`, cada nome de método representa um carro de trem e os pontos são as conexões. Esse trem é a indicação que você está violando Demeter.
+
+Uma forma de esconder um `train wrecks` é o uso do `delegate`, que é uma mensagem sendo passada por outro objeto, via a `wrapper method`. Um `wrapper method` encapsula, um conhecimento que de outra forma seria incorporado na cadeia de mensagens. Delegar para esconder forte acoplamento não é o mesmo que desacoplar código.
