@@ -726,3 +726,12 @@ hash.keys.sort.join(', ') # is ok because has the same object
 Cada linha é uma mensagem encadeada por um número de pontos. Esse encadeamento é conhecido por `train wrecks`, cada nome de método representa um carro de trem e os pontos são as conexões. Esse trem é a indicação que você está violando Demeter.
 
 Uma forma de esconder um `train wrecks` é o uso do `delegate`, que é uma mensagem sendo passada por outro objeto, via a `wrapper method`. Um `wrapper method` encapsula, um conhecimento que de outra forma seria incorporado na cadeia de mensagens. Delegar para esconder forte acoplamento não é o mesmo que desacoplar código.
+
+O problema de ter `chain methods` é que uma classe além que só queria se preocupar com o `rotate` por exemplo, está passando por diferentes métodos até chegar ao que ela realmente precisa.
+
+**Summary:**
+> Aplicações orientadas a objetos são definidas pelas mensagens que passam entre objetos.Essa passagem de mensagens ocorre em interfaces “públicas”. Public interfaces bem definidas, que consistem em métodos estáveis ​​que expõem as responsabilidades de suas classes e fornecer o máximo benefício a um custo mínimo. Focar nas mensagens revela objetos que, de outra forma, poderiam passar despercebidos. Quando as mensagens são confiáveis ​​​​e perguntam o que o remetente deseja em vez de dizer ao destinatário como se comportar, os objetos evoluem naturalmente em interfaces públicas que são flexíveis e reutilizáveis de maneiras novas e inesperadas.
+
+## Chapter 5 - Reducing Costs with Duck Typing
+
+Duck types são interfaces pública que não são vinculadas a uma classe específica, mas sim a um comportamento. Elas tem uma enorme flexibilidade para sua aplicação, removendo o custo de dependências na classe.
