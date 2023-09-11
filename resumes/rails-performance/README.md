@@ -82,3 +82,14 @@ Para entender como um website performa links para dólares, vamos pensar como we
 Downtime é algo ruim e companias estão sempre evitar isso, mas ter um slowdown é a mesma coisa e ainda não aparece na maioria dos dashboards de monitoramento.
 
 Por exemplo, se você tiver um serviço externo que demora alguns segundos para responder, como uma fonte externa, o cliente vai estar esperando a fonte carregar, para o cliente a sensação é a mesma que um site tiver caído.
+
+## Longer Load Times are an Expense
+
+Vários estudos relacionam o tempo de carregamento de um site com a taxa de conversão, quanto mais rápido o site carregar, mais conversões ele vai ter. Foi verificado que 100ms de melhoria pode aumentar entre 0.2-1% a taxa de conversão, dependendo do tamanho da empresa.
+
+## Longer Load Times Turn Away Customers
+
+Nem todas os tipos de empresas necessitam de conversão, empresas com `ad-focused business` precisam de pageviews, com a diminuição do tempo de carregamento, mais pageviews eles vão ter.
+
+## Mobile and Global Users are Hardest-Hit
+
