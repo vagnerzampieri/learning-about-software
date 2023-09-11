@@ -61,3 +61,24 @@ Isso só mostra que `microbenchmarks e comparações relativas` podem trazer mal
 A otimização prematura é ignorar essas lições e otimizar “quando temos vontade”, ou otimizando constantemente o tempo todo. É uma perda de tempo garantida.
 
 ## The Business Case for Performance
+
+Muitas vezes temos aplicações que tem toneladas de informações na tela sendo carregadas que deixam o sistema mais lento, ou que carregam dados sem serem usados, ou fazem métricas de tudo sem estarem usando, isso acaba gerando problemas de lentidão. E normalmente essas coisas são pedidas por outros departamentos.
+
+> Os empresários, cara, eles só entendem de números. Se você pode justificar isso com números, eles farão o que você mandar
+eles.
+
+## The Case for Performance
+
+Um grande problema que temos é não quantificar e explicar os custos do sacrifício da performance para o `business`. Muito da performance em um site começa a ficar ruim quando outras áreas pedem para adicionarmos algum script no site para que eles tenham mains informações do usuário, em vez de avaliarmos essa adição de forma mais crítica, acabamos aceitando e colocando no site, sem pensar no impacto que isso pode causar.
+
+E na realidade deveríamos aceitar fazer o teste, mensurar e verificar o impacto que isso pode causar. Temos que ter uma estimativa de quanto nossas views podem demorar, ou o tamanho delas e o quanto colocar esse script pode ser prejudicial se ele extrapolar muito o tamanho da view. Temos sempre que pensar em números e trazer as respostas para a mesa baseado em números.
+
+O time técnico e de produto sempre precisam se alinhar na questão dos objetivos de performance. Um site que tem estudos relacionados a performance é o [WPO Stats](https://wpostats.com/).
+
+## Slowdowns are Outages
+
+Para entender como um website performa links para dólares, vamos pensar como websites slowdowns são como um downtime.
+
+Downtime é algo ruim e companias estão sempre evitar isso, mas ter um slowdown é a mesma coisa e ainda não aparece na maioria dos dashboards de monitoramento.
+
+Por exemplo, se você tiver um serviço externo que demora alguns segundos para responder, como uma fonte externa, o cliente vai estar esperando a fonte carregar, para o cliente a sensação é a mesma que um site tiver caído.
