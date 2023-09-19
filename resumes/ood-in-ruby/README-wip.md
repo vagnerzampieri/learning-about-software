@@ -735,3 +735,5 @@ O problema de ter `chain methods` é que uma classe além que só queria se preo
 ## Chapter 5 - Reducing Costs with Duck Typing
 
 Duck types são interfaces pública que não são vinculadas a uma classe específica, mas sim a um comportamento. Elas tem uma enorme flexibilidade para sua aplicação, removendo o custo de dependências na classe.
+
+Polimorfismo é a habilidade de de diferentes objetos responderem a mesma classe.
