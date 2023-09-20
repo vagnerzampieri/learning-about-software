@@ -8,8 +8,6 @@
 
 - [Performance](./performance/README.md)
 
-- [Resumes](./resumes/README.md)
-
 - [Services](./services/README.md)
 
 - [System Design](./system-design/README.md)
