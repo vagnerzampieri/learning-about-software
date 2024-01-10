@@ -986,3 +986,4 @@
 - [system design course](https://github.com/karanpratapsingh/system-design)
 - [sytem desgin roadmap](https://roadmap.sh/system-design)
 - [chatGPT](https://chat.openai.com)
+- [concorrência e paralelismo](https://fidelissauro.dev/concorrencia-paralelismo/)
