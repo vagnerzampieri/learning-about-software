@@ -933,6 +933,22 @@
 
   - O uso de P99 é particularmente útil para identificar outliers ou anomalias nos dados, que podem ser críticas em sistemas de alta disponibilidade ou em cenários em que o desempenho previsível é importante. Além do P99, outros percentis, como P90, P95 e P99.9, também são frequentemente usados para avaliar diferentes níveis de desempenho.
 </details>
+<details>
+  <summary>ActivityPub</summary>
+
+  - Federação Descentralizada: O ActivityPub permite a federação, o que significa que diferentes instâncias (servidores) de uma plataforma social podem se comunicar entre si. Isso cria uma rede descentralizada onde os usuários em diferentes instâncias podem interagir, seguir, compartilhar conteúdo, etc.
+
+  - Atividades e Objetos: O protocolo trabalha com o conceito de "atividades" e "objetos". Atividades representam ações, como criar uma postagem ou seguir um usuário, enquanto objetos representam os conteúdos dessas atividades, como o texto de uma postagem.
+
+  - Identificadores e URLS de Atividades: As atividades são identificadas por URLs, o que permite referenciar de forma única cada atividade. Isso é essencial para garantir que as instâncias possam compartilhar informações sem ambiguidade.
+
+  - Protocolo de Comunicação: O ActivityPub usa o formato JSON para estruturar os dados e HTTP como protocolo de comunicação. Isso facilita a integração com a web e permite que diferentes instâncias troquem mensagens e informações de maneira padronizada.
+
+  - Interoperabilidade: Uma das metas do ActivityPub é promover a interoperabilidade entre diferentes implementações. Isso significa que diferentes plataformas de redes sociais que adotam o ActivityPub podem interagir entre si, aumentando a diversidade e a descentralização na web social.
+
+  - Exemplo de Implementação: Mastodon é um exemplo de uma plataforma de microblogging que implementa o ActivityPub. Mastodon é uma rede social federada onde diferentes instâncias podem se comunicar.
+
+</details>
 
 ## Perguntas para entender o problema
 
@@ -987,3 +1003,4 @@
 - [sytem desgin roadmap](https://roadmap.sh/system-design)
 - [chatGPT](https://chat.openai.com)
 - [concorrência e paralelismo](https://fidelissauro.dev/concorrencia-paralelismo/)
+- [ActivityPub](https://seb.jambor.dev/posts/understanding-activitypub/)
